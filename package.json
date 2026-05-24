@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "img": "node scripts/gen-image.mjs",
-    "pdf": "node scripts/gen-pdf.mjs"
+    "pdf": "node scripts/gen-pdf.mjs",
+    "pdf:catalogo": "node scripts/gen-pdf.mjs 3002 ./out-artes/catalogo.pdf /catalogo"
   },
   "dependencies": {
     "marked": "^18.0.4",

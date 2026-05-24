@@ -35,7 +35,8 @@ async function findBrowser() {
 
 const PORT = process.argv[2] || "3002";
 const OUT = process.argv[3] || `./out-artes/plano-de-negocio.pdf`;
-const URL = `http://localhost:${PORT}/plano-de-negocio`;
+const PATH = process.argv[4] || "/plano-de-negocio";
+const URL = `http://localhost:${PORT}${PATH}`;
 
 const outPath = resolve(OUT);
 await mkdir(dirname(outPath), { recursive: true });
