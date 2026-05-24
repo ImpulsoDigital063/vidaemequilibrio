@@ -41,17 +41,18 @@ const FRASES = [
 ];
 
 function Frase({ n }: { n: number }) {
+  // Renderiza apenas na capa (n=0) · resto das frases vai no @page bottom-center via CSS print.
+  if (n !== 0) return null;
   const f = FRASES[n % FRASES.length];
   return (
     <footer style={{
-      marginTop: 36,
-      paddingTop: 22,
+      marginTop: 24,
+      paddingTop: 18,
       borderTop: "1px dotted var(--p-border-soft)",
       textAlign: "center",
-      pageBreakInside: "avoid",
     }}>
       <div style={{
-        fontFamily: "var(--font-fraunces), Georgia, serif",
+        fontFamily: "var(--p-font-display)",
         fontStyle: "italic",
         fontWeight: 300,
         fontSize: 14.5,
@@ -65,7 +66,7 @@ function Frase({ n }: { n: number }) {
       {f.autor && (
         <div style={{
           marginTop: 8,
-          fontFamily: "var(--font-inter), sans-serif",
+          fontFamily: "var(--p-font-body)",
           fontSize: 9.5,
           letterSpacing: "0.22em",
           textTransform: "uppercase",
@@ -82,14 +83,16 @@ export default function PlanoVidaEquilibrio() {
   return (
     <>
       <style jsx global>{`
+        @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@300;400;500;600&display=swap');
+
         :root {
           --p-bg: #F2EBE0;
           --p-bg-soft: #E8DFD2;
           --p-bg-card: #FBF6EC;
           --p-bg-warm: #F7ECDD;
-          --p-text: #2C1810;
-          --p-text-soft: #5a4232;
-          --p-text-muted: #8A7D6F;
+          --p-text: #3D2517;
+          --p-text-soft: #6B4E37;
+          --p-text-muted: #998571;
           --p-burgundy: #6E2A4A;
           --p-burgundy-deep: #4A1B30;
           --p-burgundy-soft: rgba(110, 42, 74, 0.08);
@@ -97,22 +100,24 @@ export default function PlanoVidaEquilibrio() {
           --p-champagne-deep: #9F8B6A;
           --p-terracota: #8B6342;
           --p-tungsten: #1A1310;
-          --p-border: rgba(44, 24, 16, 0.18);
-          --p-border-soft: rgba(44, 24, 16, 0.08);
+          --p-border: rgba(61, 37, 23, 0.16);
+          --p-border-soft: rgba(61, 37, 23, 0.08);
+          --p-font-display: "Instrument Serif", Georgia, "Times New Roman", serif;
+          --p-font-body: "Manrope", -apple-system, "Segoe UI", sans-serif;
         }
         body { background: var(--p-bg) !important; color: var(--p-text) !important; }
         .plano-doc {
-          font-family: "Inter", -apple-system, sans-serif;
+          font-family: var(--p-font-body);
           font-weight: 400;
           line-height: 1.65;
           color: var(--p-text);
           background: var(--p-bg);
         }
         .plano-doc h1, .plano-doc h2, .plano-doc h3, .plano-doc h4 {
-          font-family: var(--font-fraunces), Georgia, serif;
-          font-weight: 300;
-          line-height: 1.15;
-          letter-spacing: -0.01em;
+          font-family: var(--p-font-display);
+          font-weight: 400;
+          line-height: 1.1;
+          letter-spacing: -0.005em;
           color: var(--p-text);
         }
         .plano-doc h2 {
@@ -126,7 +131,7 @@ export default function PlanoVidaEquilibrio() {
           margin: 32px 0 10px;
         }
         .plano-doc h4 {
-          font-family: "Inter", sans-serif;
+          font-family: var(--p-font-body);
           font-weight: 500;
           font-style: normal;
           font-size: 14px;
@@ -292,16 +297,31 @@ export default function PlanoVidaEquilibrio() {
           @page {
             size: A4;
             margin: 18mm 16mm 22mm 16mm;
+            @bottom-left {
+              content: "Vida em Equilíbrio";
+              font-family: var(--p-font-body);
+              font-size: 7.5pt;
+              color: var(--p-text-muted);
+              padding-top: 8mm;
+            }
             @bottom-center {
-              content: "Vida em Equilíbrio · Plano de Negócio · página " counter(page) " de " counter(pages);
-              font-family: "Inter", sans-serif;
-              font-size: 8pt;
+              content: "“Consagre ao Senhor tudo o que você faz, e os seus planos serão bem-sucedidos.”  —  Provérbios 16:3";
+              font-family: var(--p-font-display);
+              font-style: italic;
+              font-size: 9pt;
+              color: var(--p-champagne-deep);
+              padding-top: 7mm;
+            }
+            @bottom-right {
+              content: "página " counter(page) " · " counter(pages);
+              font-family: var(--p-font-body);
+              font-size: 7.5pt;
               color: var(--p-text-muted);
               padding-top: 8mm;
             }
             @top-right {
               content: "Confidencial · Leandro Timóteo";
-              font-family: "Inter", sans-serif;
+              font-family: var(--p-font-body);
               font-size: 7.5pt;
               color: var(--p-champagne-deep);
               padding-bottom: 6mm;
@@ -448,7 +468,7 @@ export default function PlanoVidaEquilibrio() {
               ["27", "15 · Riscos e mitigações", "secao-riscos"],
               ["28", "16 · Investimento inicial estimado", "secao-investimento"],
               ["29", "17 · Setup completo + próximos serviços", "secao-pricing"],
-              ["31", "18 · Checklist próximos 30 dias", "secao-checklist"],
+              ["30", "18 · Checklist próximos 30 dias", "secao-checklist"],
             ].map(([pg, label, id]) => (
               <li key={id}>
                 <span className="plano-toc-page">Pág. {pg}</span>
@@ -1239,7 +1259,7 @@ export default function PlanoVidaEquilibrio() {
               </h3>
               <div style={{ textAlign: "right" }}>
                 <div style={{ fontSize: 9, letterSpacing: "0.22em", textTransform: "uppercase", color: "var(--p-champagne-deep)", marginBottom: 2 }}>Investimento</div>
-                <div style={{ fontFamily: "var(--font-fraunces), Georgia, serif", fontSize: 34, fontWeight: 300, color: "var(--p-burgundy)", lineHeight: 1 }}>
+                <div style={{ fontFamily: "var(--p-font-display)", fontSize: 34, fontWeight: 300, color: "var(--p-burgundy)", lineHeight: 1 }}>
                   R$ <span style={{ fontStyle: "italic" }}>1.997</span>
                 </div>
                 <div style={{ fontSize: 11, color: "var(--p-text-muted)", marginTop: 2 }}>à vista PIX · ou 3× cartão sem juros</div>
@@ -1311,32 +1331,6 @@ export default function PlanoVidaEquilibrio() {
           <Frase n={17} />
         </section>
 
-        {/* ═══════════════════ 17 · INVESTIMENTO OPERACIONAL DO CLIENTE (apêndice) ═══════════════════ */}
-        <section className="plano-section" id="secao-investimento">
-          <div className="plano-page-marker">Página 30 · Seção 17 · Apêndice</div>
-          <h2>Outros investimentos operacionais (responsabilidade do Vida em Equilíbrio)</h2>
-
-          <p>Além do setup da Impulso, o Vida em Equilíbrio precisa cobrir alguns custos próprios pra operação física e capital de giro inicial. <strong>Esses valores são do Leandro, não da Impulso</strong> — listados aqui só pra ter planejamento financeiro completo.</p>
-
-          <table>
-            <thead><tr><th>Item</th><th>Faixa de valor</th><th>Por que</th></tr></thead>
-            <tbody>
-              <tr><td>Domínio vidaemequilibrio.com.br + hospedagem 1 ano</td><td>~R$200</td><td>Registro Registro.br + Vercel/Cloudflare</td></tr>
-              <tr><td>Ensaio fotográfico profissional</td><td>R$1.500-2.500</td><td>Foto do Leandro + espaço CYOX · substitui placeholders</td></tr>
-              <tr><td>Produtos profissionais iniciais</td><td>R$2.000-3.500</td><td>Esfoliantes, óleos, velas, ventosas, bambus pros primeiros 30 dias</td></tr>
-              <tr><td>Maca portátil pra domicílio</td><td>R$800-1.200</td><td>Atendimento em casa exige equipamento próprio</td></tr>
-              <tr><td>Papelaria</td><td>R$500-800</td><td>Cartão de visita + etiquetas + kit boas-vindas (opcional)</td></tr>
-              <tr><td>Catálogo PDF impresso (50 un.)</td><td>R$300-500</td><td>Pra entregar em parcerias B2B (associações, hotéis)</td></tr>
-              <tr><td>Sistema de pagamento</td><td>R$200-500</td><td>Maquininha ou app (InfinitePay, Stripe, etc)</td></tr>
-              <tr><td>Reserva técnica 90 dias (aluguel CYOX + ads + atendente WA)</td><td>R$8.000-12.000</td><td>Capital de giro até a operação começar a se pagar</td></tr>
-            </tbody>
-          </table>
-
-          <div className="plano-callout is-champagne">
-            <strong>Retorno esperado do conjunto (setup Impulso + investimento operacional):</strong> break-even operacional Mês 4-5 · retorno do investimento total Mês 8-10 · lucro crescente a partir do Mês 11 com escala via parcerias B2B e Plano de Horas (projeção detalhada na Seção 13).
-          </div>
-          <Frase n={18} />
-        </section>
 
         {/* ═══════════════════ 18 · CHECKLIST 30 DIAS ═══════════════════ */}
         <section className="plano-section" id="secao-checklist">
