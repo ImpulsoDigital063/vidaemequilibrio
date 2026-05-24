@@ -297,12 +297,21 @@ export default function PlanoVidaEquilibrio() {
           @page {
             size: A4;
             margin: 18mm 16mm 22mm 16mm;
-            @bottom-left {
+            @top-left {
               content: "Vida em Equilíbrio";
               font-family: var(--p-font-body);
+              font-weight: 500;
+              font-size: 8pt;
+              letter-spacing: 0.01em;
+              color: var(--p-text);
+              padding-bottom: 6mm;
+            }
+            @top-right {
+              content: "Confidencial · Leandro Timóteo";
+              font-family: var(--p-font-body);
               font-size: 7.5pt;
-              color: var(--p-text-muted);
-              padding-top: 8mm;
+              color: var(--p-champagne-deep);
+              padding-bottom: 6mm;
             }
             @bottom-center {
               content: "“Consagre ao Senhor tudo o que você faz, e os seus planos serão bem-sucedidos.”  —  Provérbios 16:3";
@@ -318,13 +327,6 @@ export default function PlanoVidaEquilibrio() {
               font-size: 7.5pt;
               color: var(--p-text-muted);
               padding-top: 8mm;
-            }
-            @top-right {
-              content: "Confidencial · Leandro Timóteo";
-              font-family: var(--p-font-body);
-              font-size: 7.5pt;
-              color: var(--p-champagne-deep);
-              padding-bottom: 6mm;
             }
           }
           .plano-doc h2 { font-size: 18pt; page-break-after: avoid; }
