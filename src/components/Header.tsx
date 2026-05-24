@@ -6,9 +6,10 @@ import { LogoMark, IconMenu, IconClose } from "./Icons";
 
 const NAV = [
   { href: "/#massagens", label: "Massagens" },
+  { href: "/catalogo", label: "Catálogo" },
+  { href: "/blog", label: "Blog" },
   { href: "/#manifesto", label: "Quem cuida" },
   { href: "/#como-chegar", label: "Como chegar" },
-  { href: "/#corridas", label: "Corridas" },
   { href: "/#contato", label: "Contato" },
 ];
 
