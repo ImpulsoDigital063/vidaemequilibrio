@@ -293,22 +293,48 @@ export default function GridObjetivos() {
           })}
         </Stagger>
 
-        {/* Linha de apoio · ajuda escolha */}
-        <Reveal direction="up" className="mt-12 text-center">
-          <p className="text-ve-text-dark/65 text-sm">
-            Em dúvida sobre qual escolher?{" "}
+        {/* Linha de apoio · ajuda escolha + link catálogo completo */}
+        <Reveal direction="up" className="mt-14 grid md:grid-cols-2 gap-px bg-ve-text-dark/10 border-t border-ve-text-dark/15">
+          {/* Coluna 1 · ajuda WhatsApp */}
+          <div className="bg-ve-cream p-8 md:p-10 flex flex-col gap-3">
+            <p className="eyebrow text-ve-terracota">Em dúvida?</p>
+            <p className="display text-xl md:text-2xl text-ve-text-dark leading-tight">
+              Conta o que está sentindo no WhatsApp.
+            </p>
+            <p className="text-ve-text-dark/65 text-sm leading-relaxed">
+              Respondo com a indicação certa pra seu caso · sem fórmula.
+            </p>
             <a
               href={waLink(
                 "Oi Leandro, está em dúvida qual massagem é a certa pra mim. Pode me ajudar a decidir?"
               )}
               target="_blank"
               rel="noopener"
-              className="text-ve-burgundy underline underline-offset-4 hover:text-ve-terracota transition-colors"
+              className="mt-2 inline-flex items-center gap-2 text-sm font-medium text-ve-burgundy hover:gap-3 transition-all"
             >
-              Conta o que está sentindo no WhatsApp
-            </a>{" "}
-            · respondo com a indicação certa.
-          </p>
+              Falar com o Leandro
+              <IconArrowRight className="w-4 h-4" />
+            </a>
+          </div>
+
+          {/* Coluna 2 · catálogo completo + enhancements */}
+          <div className="bg-ve-cream p-8 md:p-10 flex flex-col gap-3">
+            <p className="eyebrow text-ve-terracota">Quer ver tudo organizado?</p>
+            <p className="display text-xl md:text-2xl text-ve-text-dark leading-tight">
+              Catálogo completo com adicionais.
+            </p>
+            <p className="text-ve-text-dark/65 text-sm leading-relaxed">
+              Página detalhada com massagens, enhancements (pedras · vela ·
+              bambu · ventosa) e PDF pra baixar.
+            </p>
+            <Link
+              href="/catalogo"
+              className="mt-2 inline-flex items-center gap-2 text-sm font-medium text-ve-burgundy hover:gap-3 transition-all"
+            >
+              Abrir o catálogo
+              <IconArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
         </Reveal>
       </div>
     </section>
