@@ -5,6 +5,7 @@ import ManifestoLeandro from "@/components/ManifestoLeandro";
 import CardapioRituais from "@/components/CardapioRituais";
 import Metricas from "@/components/Metricas";
 import Espaco from "@/components/Espaco";
+import ComoChegar from "@/components/ComoChegar";
 import CalendarioCorridas from "@/components/CalendarioCorridas";
 import Blog from "@/components/Blog";
 import FAQ from "@/components/FAQ";
@@ -24,6 +25,7 @@ export default function Home() {
         <CardapioRituais />
         <Metricas />
         <Espaco />
+        <ComoChegar />
         <CalendarioCorridas />
         <Blog />
         <FAQ />
