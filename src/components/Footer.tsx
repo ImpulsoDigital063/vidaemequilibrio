@@ -9,7 +9,7 @@ export default function Footer() {
           <div className="md:col-span-5">
             <LogoMark className="h-12 w-auto text-ve-cream" />
             <p className="mt-4 text-sm leading-relaxed font-light max-w-sm">
-              Massagem terapêutica feminina em Palmas-TO. Atendimento privativo
+              Massagem terapêutica em Palmas-TO. Atendimento privativo
               em clínica parceira ou em domicílio.
             </p>
           </div>

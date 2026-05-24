@@ -9,11 +9,11 @@ import Stagger, { StaggerItem } from "./motion/Stagger";
 const PERGUNTAS = [
   {
     q: "Quem é o profissional do Vida em Equilíbrio?",
-    a: "Leandro Timóteo, massoterapeuta dedicado exclusivamente ao público feminino em Palmas-TO. Cada atendimento é feito pessoalmente por ele, em sessão privativa de uma cliente por turno.",
+    a: "Leandro Timóteo, massoterapeuta em Palmas-TO. Cada atendimento é feito pessoalmente por ele, em sessão privativa de uma cliente por turno.",
   },
   {
-    q: "Por que atende só mulheres?",
-    a: "É escolha profissional. A técnica do Vida em Equilíbrio foi desenhada e refinada com foco no corpo feminino — desde a calibragem da pressão até o ambiente da sessão. Atendimento exclusivo é o que sustenta a profundidade do cuidado.",
+    q: "Quem pode agendar?",
+    a: "A prática do Vida em Equilíbrio é desenhada pra cuidado feminino — desde a calibragem da pressão até o ambiente da sessão. Se você é mulher e está considerando o atendimento, a primeira conversa pelo WhatsApp já esclarece se faz sentido pra você.",
   },
   {
     q: "Por que os valores não aparecem no site?",

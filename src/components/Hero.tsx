@@ -67,7 +67,7 @@ export default function Hero() {
           transition={{ duration: 0.9, delay: 0.4, ease: EASE }}
           className="eyebrow text-ve-champagne mb-6"
         >
-          Vida em Equilíbrio · Massagem terapêutica feminina · Palmas-TO
+          Vida em Equilíbrio · Massagem terapêutica · Palmas-TO
         </motion.p>
 
         <motion.h1

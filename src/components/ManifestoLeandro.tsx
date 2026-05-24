@@ -58,7 +58,7 @@ export default function ManifestoLeandro() {
           <h2 className="display text-3xl md:text-5xl leading-[1.1]">
             Leandro Timóteo.{" "}
             <span className="display-italic text-ve-champagne">
-              Massoterapeuta dedicado ao cuidado feminino.
+              Cuidado real, presente, com tempo dedicado a você.
             </span>
           </h2>
 
@@ -73,8 +73,8 @@ export default function ManifestoLeandro() {
               domicílio, sempre com a mesma escuta antes da manobra.
             </p>
             <p>
-              É um cuidado profissional, presente, e exclusivo para mulheres —
-              porque é nessa direção que a minha técnica ganhou profundidade.
+              É um cuidado profissional, presente, desenhado caso a caso — com
+              a calma de quem conversa antes de tocar.
             </p>
           </div>
 
@@ -90,8 +90,8 @@ export default function ManifestoLeandro() {
               <p className="eyebrow text-ve-muted mt-1">Clínica e domicílio</p>
             </StaggerItem>
             <StaggerItem direction="up">
-              <p className="display text-3xl text-ve-cream">Exclusivo</p>
-              <p className="eyebrow text-ve-muted mt-1">Público feminino</p>
+              <p className="display text-3xl text-ve-cream">Dedicado</p>
+              <p className="eyebrow text-ve-muted mt-1">Escuta antes da manobra</p>
             </StaggerItem>
           </Stagger>
         </Reveal>
