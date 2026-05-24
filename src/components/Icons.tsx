@@ -239,6 +239,24 @@ export function IconPlus(props: IconProps) {
   );
 }
 
+export function IconSearch(props: IconProps) {
+  return (
+    <svg {...baseProps} {...props}>
+      <circle cx="11" cy="11" r="7" />
+      <path d="M21 21l-4.3 -4.3" />
+    </svg>
+  );
+}
+
+export function IconCommand(props: IconProps) {
+  return (
+    <svg {...baseProps} {...props}>
+      <path d="M9 3h6v6h-6zM9 15h6v6h-6zM3 9h6v6H3zM15 9h6v6h-6z" />
+      <path d="M9 9V6a3 3 0 0 0 -3 -3M15 9V6a3 3 0 0 1 3 -3M9 15v3a3 3 0 0 1 -3 3M15 15v3a3 3 0 0 0 3 3" />
+    </svg>
+  );
+}
+
 // ============ DECORATIVOS ============
 
 export function IconLeaf(props: IconProps) {
