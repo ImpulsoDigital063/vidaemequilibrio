@@ -109,15 +109,15 @@ export default function PlanoVidaEquilibrio() {
         .plano-doc {
           font-family: var(--p-font-body);
           font-weight: 400;
-          line-height: 1.6;
+          line-height: 1.78;
           color: var(--p-text);
           background: var(--p-bg);
-          letter-spacing: -0.005em;
+          letter-spacing: -0.003em;
         }
         .plano-doc h1, .plano-doc h2, .plano-doc h3, .plano-doc h4 {
           font-family: var(--p-font-display);
           font-weight: 600;
-          line-height: 1.15;
+          line-height: 1.2;
           letter-spacing: -0.018em;
           color: var(--p-text);
         }
