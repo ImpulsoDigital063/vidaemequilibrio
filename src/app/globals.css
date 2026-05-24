@@ -299,6 +299,96 @@ body {
 }
 
 /* ============================================================
+   POST-BODY · tipografia legível pra leitura de blog
+   ============================================================ */
+
+.post-body {
+  font-family: var(--font-inter), system-ui, sans-serif;
+  color: var(--ve-text-dark);
+  font-weight: 400;
+  line-height: 1.78;
+  font-size: 1rem;
+}
+
+.post-body h2 {
+  font-family: var(--font-fraunces), Georgia, serif;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 1.2;
+  color: var(--ve-burgundy);
+  margin: 3rem 0 1rem;
+  letter-spacing: -0.01em;
+}
+
+.post-body h3 {
+  font-family: var(--font-fraunces), Georgia, serif;
+  font-weight: 500;
+  font-size: 1.4rem;
+  color: var(--ve-text-dark);
+  margin: 2.5rem 0 0.75rem;
+}
+
+.post-body p {
+  margin: 0 0 1.25rem;
+}
+
+.post-body strong {
+  font-weight: 500;
+  color: var(--ve-burgundy);
+}
+
+.post-body em {
+  font-style: italic;
+}
+
+.post-body ul,
+.post-body ol {
+  margin: 1rem 0 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.post-body li {
+  margin: 0.5rem 0;
+}
+
+.post-body ul li {
+  list-style: none;
+  position: relative;
+}
+
+.post-body ul li::before {
+  content: "·";
+  position: absolute;
+  left: -1rem;
+  color: var(--ve-burgundy);
+  font-weight: 700;
+  font-size: 1.2em;
+}
+
+.post-body ol li::marker {
+  color: var(--ve-burgundy);
+  font-weight: 500;
+}
+
+.post-body blockquote {
+  border-left: 3px solid var(--ve-champagne);
+  padding-left: 1.5rem;
+  margin: 1.5rem 0;
+  font-style: italic;
+  color: var(--ve-text-dark);
+  opacity: 0.8;
+}
+
+.post-body code {
+  font-family: ui-monospace, "Cascadia Code", monospace;
+  font-size: 0.85em;
+  background: rgba(110, 42, 74, 0.08);
+  color: var(--ve-burgundy);
+  padding: 0.1em 0.4em;
+  border-radius: 3px;
+}
+
+/* ============================================================
    PRINT · regras pra Ctrl+P virar PDF impecável
    ============================================================ */
 
