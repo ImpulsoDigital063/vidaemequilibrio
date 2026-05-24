@@ -154,7 +154,7 @@ export default function PlanoVidaEquilibrio() {
         .plano-doc table {
           width: 100%;
           border-collapse: collapse;
-          margin: 14px 0 20px;
+          margin: 20px 0 28px;
           font-size: 13px;
           page-break-inside: avoid;
         }
@@ -163,21 +163,22 @@ export default function PlanoVidaEquilibrio() {
           color: var(--p-burgundy);
           font-weight: 500;
           text-align: left;
-          padding: 10px 12px;
+          padding: 14px 14px;
           border-bottom: 2px solid var(--p-burgundy);
           font-size: 10.5px;
           letter-spacing: 0.08em;
           text-transform: uppercase;
         }
         .plano-doc td {
-          padding: 10px 12px;
+          padding: 14px 14px;
           border-bottom: 1px solid var(--p-border-soft);
           color: var(--p-text);
           vertical-align: top;
+          line-height: 1.55;
         }
         .plano-doc tr:last-child td { border-bottom: none; }
-        .plano-doc ul, .plano-doc ol { margin: 8px 0 16px; padding-left: 22px; }
-        .plano-doc li { margin: 5px 0; }
+        .plano-doc ul, .plano-doc ol { margin: 14px 0 22px; padding-left: 24px; }
+        .plano-doc li { margin: 10px 0; line-height: 1.65; }
         .plano-doc ul li { list-style: none; position: relative; }
         .plano-doc ul li::before {
           content: "·";
@@ -201,8 +202,8 @@ export default function PlanoVidaEquilibrio() {
           background: var(--p-bg-card);
           border: 1px solid var(--p-border-soft);
           border-left: 3px solid var(--p-terracota);
-          padding: 16px 22px;
-          margin: 16px 0;
+          padding: 22px 26px;
+          margin: 22px 0;
           border-radius: 4px;
           page-break-inside: avoid;
         }
@@ -275,7 +276,7 @@ export default function PlanoVidaEquilibrio() {
           text-align: center;
         }
         .plano-page { page-break-after: always; }
-        .plano-section { margin-bottom: 36px; }
+        .plano-section { margin-bottom: 56px; }
         .plano-section h2 { font-size: 30px; }
         .plano-cor-swatch {
           display: flex;
