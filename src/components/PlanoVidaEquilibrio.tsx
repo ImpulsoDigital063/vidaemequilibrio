@@ -768,6 +768,20 @@ export default function PlanoVidaEquilibrio() {
             <li>Esfoliante corporal · pedras quentes · vela aromática · bambu terapêutico · ventosa · bolinha massageadora nos pés</li>
           </ul>
 
+          <h3>Vale-Presente (lançamento desde Mês 1)</h3>
+          <p>Produto pra presentear · alto potencial em datas comemorativas (Dia das Mães, Dia dos Namorados, aniversários). Funciona como gift card editorial: quem presenteia paga via PIX, recebe PDF cravado da marca com mensagem personalizada, e a beneficiária agenda direto pelo WhatsApp.</p>
+          <table>
+            <thead><tr><th>Modalidade</th><th>Faixa</th><th>Característica</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Vale Massagem</strong></td><td>R$180-280</td><td>Presenteia uma massagem específica · validade 6 meses</td></tr>
+              <tr><td><strong>Vale Crédito</strong></td><td>R$200 / 400 / 600</td><td>Valor flexível · beneficiária escolhe no atendimento · validade 6 meses</td></tr>
+              <tr><td><strong>Vale Day Premium</strong></td><td>R$520-680</td><td>Produto-âncora de presente · 120min · 6 técnicas</td></tr>
+            </tbody>
+          </table>
+          <div className="plano-callout is-champagne">
+            <strong>Por que importa:</strong> Dia das Mães + Dia dos Namorados + aniversários geram pico sazonal de vendas. Vale-Presente em formato premium (PDF editorial) diferencia da concorrência (Honório, Edna Borges, etc não oferecem) · vira ativo de receita de janelas comerciais sem depender de cliente nova fazendo cold contact.
+          </div>
+
           <h3>Plano de Horas (pós-MVP · Mês 4-6)</h3>
           <table>
             <thead><tr><th>Plano</th><th>Total horas</th><th>À vista</th><th>Por sessão</th><th>Validade</th></tr></thead>

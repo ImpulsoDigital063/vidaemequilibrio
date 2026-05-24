@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import GridObjetivos from "@/components/GridObjetivos";
 import ManifestoLeandro from "@/components/ManifestoLeandro";
 import CardapioRituais from "@/components/CardapioRituais";
+import ValePresente from "@/components/ValePresente";
 import Metricas from "@/components/Metricas";
 import Espaco from "@/components/Espaco";
 import ComoChegar from "@/components/ComoChegar";
@@ -23,6 +24,7 @@ export default function Home() {
         <GridObjetivos />
         <ManifestoLeandro />
         <CardapioRituais />
+        <ValePresente />
         <Metricas />
         <Espaco />
         <ComoChegar />
