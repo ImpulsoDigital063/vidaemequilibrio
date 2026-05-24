@@ -27,27 +27,29 @@ export default function ManifestoLeandro() {
         className="absolute -right-32 top-1/2 -translate-y-1/2 w-[640px] pointer-events-none"
       />
       <div className="container-x relative grid md:grid-cols-12 gap-10 items-center">
-        {/* Coluna foto · entra da esquerda + parallax sutil interno */}
+        {/* Coluna foto · retrato editorial Leandro · entra da esquerda + parallax */}
         <Reveal direction="right" className="md:col-span-5 order-2 md:order-1" duration={1}>
           <div className="aspect-[4/5] border border-[color:var(--ve-line)] relative overflow-hidden">
             <Parallax speed={-0.2} className="absolute inset-0">
               <Image
-                src="/img/stillManifesto.png"
-                alt=""
+                src="/img/leandro-manifesto.jpg"
+                alt="Leandro Timóteo · massoterapeuta · Vida em Equilíbrio · Palmas-TO"
                 fill
-                sizes="(max-width: 768px) 100vw, 40vw"
+                sizes="(max-width: 768px) 100vw, (max-width: 1280px) 40vw, 480px"
                 className="object-cover scale-110"
+                style={{ objectPosition: "50% 30%" }}
+                priority
               />
             </Parallax>
             <div
               className="absolute inset-0 pointer-events-none"
               style={{
                 background:
-                  "linear-gradient(180deg, rgba(15,11,8,0) 60%, rgba(15,11,8,0.65) 100%)",
+                  "linear-gradient(180deg, rgba(15,11,8,0) 55%, rgba(15,11,8,0.55) 100%)",
               }}
             />
             <p className="absolute bottom-5 left-5 eyebrow text-ve-champagne text-[10px] z-10">
-              Foto ensaio em curso · Leandro Timóteo
+              Leandro Timóteo · Palmas-TO
             </p>
           </div>
         </Reveal>
