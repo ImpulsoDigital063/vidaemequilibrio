@@ -1,5 +1,7 @@
 import { IconWhatsApp, IconArrowRight, MarcaDagua } from "./Icons";
 import Reveal from "./motion/Reveal";
+import Spotlight from "./motion/Spotlight";
+import GlowOrb from "./motion/GlowOrb";
 
 export default function WhatsAppCTA() {
   return (
@@ -7,6 +9,23 @@ export default function WhatsAppCTA() {
       id="contato"
       className="relative bg-ve-burgundy text-ve-cream py-24 md:py-36 overflow-hidden"
     >
+      {/* Spotlight do mouse · efeito cream sobre burgundy */}
+      <Spotlight color="rgba(242, 235, 224, 0.35)" size={520} intensity={0.5} />
+
+      {/* GlowOrbs cream nos cantos · profundidade */}
+      <GlowOrb
+        color="#F2EBE0"
+        size="500px"
+        opacity={0.08}
+        position={{ left: "-100px", top: "-100px" }}
+      />
+      <GlowOrb
+        color="#C9B79C"
+        size="600px"
+        opacity={0.1}
+        position={{ right: "-150px", bottom: "-150px" }}
+      />
+
       <MarcaDagua
         color="#F2EBE0"
         opacity={0.07}

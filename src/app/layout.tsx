@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Fraunces, Inter } from "next/font/google";
 import "./globals.css";
+import NoiseOverlay from "@/components/motion/NoiseOverlay";
 
 const fraunces = Fraunces({
   variable: "--font-fraunces",
@@ -60,6 +61,7 @@ export default function RootLayout({
       className={`${fraunces.variable} ${inter.variable} antialiased`}
     >
       <body className="min-h-screen flex flex-col bg-ve-bg text-ve-cream">
+        <NoiseOverlay />
         {children}
       </body>
     </html>

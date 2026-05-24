@@ -10,6 +10,7 @@ import {
 } from "./Icons";
 import Reveal from "./motion/Reveal";
 import Stagger, { StaggerItem } from "./motion/Stagger";
+import TiltCard from "./motion/TiltCard";
 
 const OBJETIVOS = [
   {
@@ -83,26 +84,28 @@ export default function GridObjetivos() {
           {OBJETIVOS.map((o) => {
             const Icon = o.icon;
             return (
-              <StaggerItem key={o.massagem} direction="up">
-                <Link
-                  href={o.href}
-                  className="group bg-ve-cream p-8 md:p-10 flex flex-col gap-6 hover:bg-ve-cream-soft transition-colors h-full"
-                >
-                  <Icon className="w-10 h-10 text-ve-burgundy" />
-                  <div>
-                    <p className="eyebrow text-ve-terracota mb-2">{o.estado}</p>
-                    <h3 className="display text-2xl md:text-3xl text-ve-text-dark">
-                      {o.massagem}
-                    </h3>
-                  </div>
-                  <p className="text-ve-text-dark/70 text-sm leading-relaxed">
-                    {o.descricao}
-                  </p>
-                  <span className="mt-auto inline-flex items-center gap-2 text-sm font-medium text-ve-text-dark group-hover:text-ve-burgundy transition-colors">
-                    Conhecer
-                    <IconArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-                  </span>
-                </Link>
+              <StaggerItem key={o.massagem} direction="up" className="h-full">
+                <TiltCard max={3} className="h-full">
+                  <Link
+                    href={o.href}
+                    className="group bg-ve-cream p-8 md:p-10 flex flex-col gap-6 hover:bg-ve-cream-soft transition-colors h-full shadow-[0_1px_0_rgba(44,24,16,0.06)] hover:shadow-[0_8px_30px_rgba(110,42,74,0.15)]"
+                  >
+                    <Icon className="w-10 h-10 text-ve-burgundy" />
+                    <div>
+                      <p className="eyebrow text-ve-terracota mb-2">{o.estado}</p>
+                      <h3 className="display text-2xl md:text-3xl text-ve-text-dark">
+                        {o.massagem}
+                      </h3>
+                    </div>
+                    <p className="text-ve-text-dark/70 text-sm leading-relaxed">
+                      {o.descricao}
+                    </p>
+                    <span className="mt-auto inline-flex items-center gap-2 text-sm font-medium text-ve-text-dark group-hover:text-ve-burgundy transition-colors">
+                      Conhecer
+                      <IconArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                    </span>
+                  </Link>
+                </TiltCard>
               </StaggerItem>
             );
           })}

@@ -1,5 +1,7 @@
 import { IconMapa, IconArrowRight } from "./Icons";
 import Reveal from "./motion/Reveal";
+import GlowOrb from "./motion/GlowOrb";
+import Spotlight from "./motion/Spotlight";
 
 // Endereço da clínica parceira CYOX
 const ENDERECO = "ACNO 01, Rua O1, LT 06, Sala 01";
@@ -18,9 +20,16 @@ export default function ComoChegar() {
   return (
     <section
       id="como-chegar"
-      className="bg-ve-bg text-ve-cream py-24 md:py-32 border-t border-[color:var(--ve-line)]"
+      className="relative bg-ve-bg text-ve-cream py-24 md:py-32 border-t border-[color:var(--ve-line)] overflow-hidden"
     >
-      <div className="container-x">
+      <Spotlight color="rgba(201, 183, 156, 0.4)" size={500} intensity={0.35} />
+      <GlowOrb
+        color="#6E2A4A"
+        size="650px"
+        opacity={0.12}
+        position={{ right: "-180px", top: "30%" }}
+      />
+      <div className="container-x relative">
         {/* Cabeçalho */}
         <Reveal direction="up" className="grid md:grid-cols-12 gap-10 mb-12">
           <div className="md:col-span-5">

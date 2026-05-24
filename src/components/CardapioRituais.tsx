@@ -11,6 +11,7 @@ import {
 } from "./Icons";
 import Reveal from "./motion/Reveal";
 import Stagger, { StaggerItem } from "./motion/Stagger";
+import GlowOrb from "./motion/GlowOrb";
 
 // Estrutura por CATEGORIAS (estilo Alivièr) — adaptado pra língua do Leandro
 
@@ -98,8 +99,22 @@ const ENHANCEMENTS = [
 
 export default function CardapioRituais() {
   return (
-    <section id="massagens" className="bg-ve-bg-soft text-ve-cream py-24 md:py-32">
-      <div className="container-x">
+    <section id="massagens" className="relative bg-ve-bg-soft text-ve-cream py-24 md:py-32 overflow-hidden">
+      {/* GlowOrbs · profundidade espacial */}
+      <GlowOrb
+        color="#6E2A4A"
+        size="800px"
+        opacity={0.12}
+        position={{ right: "-300px", top: "20%" }}
+      />
+      <GlowOrb
+        color="#8B6342"
+        size="600px"
+        opacity={0.08}
+        position={{ left: "-200px", bottom: "10%" }}
+      />
+
+      <div className="container-x relative">
         <Reveal direction="up">
           <p className="eyebrow text-ve-champagne mb-6">O catálogo</p>
           <h2 className="display text-3xl md:text-5xl leading-[1.1] max-w-4xl">
@@ -111,8 +126,8 @@ export default function CardapioRituais() {
           </h2>
         </Reveal>
 
-        {/* DAY PREMIUM — destaque · scale-in pra dar peso */}
-        <Reveal direction="scale" className="mt-16 group block" duration={1}>
+        {/* DAY PREMIUM — destaque · scale-in pra dar peso · sombra cinematográfica */}
+        <Reveal direction="scale" className="mt-16 group block relative shadow-[0_20px_60px_rgba(110,42,74,0.35)]" duration={1}>
           <Link href={DAY_PREMIUM.href} className="block">
             <div className="grid md:grid-cols-12 gap-0 items-stretch bg-ve-burgundy hover:bg-ve-burgundy/90 transition-colors overflow-hidden">
               <div className="md:col-span-5 aspect-[4/3] md:aspect-auto relative">

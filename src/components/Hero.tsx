@@ -1,20 +1,26 @@
 "use client";
 
 import Image from "next/image";
-import { motion } from "motion/react";
+import { motion, useScroll, useTransform } from "motion/react";
 import { IconArrowDown, MarcaDagua } from "./Icons";
 
 const EASE = [0.16, 1, 0.3, 1] as const;
 
 export default function Hero() {
+  // Parallax: foto se move mais devagar que conteúdo · sensação de profundidade
+  const { scrollY } = useScroll();
+  const fotoY = useTransform(scrollY, [0, 800], [0, 180]);
+  const conteudoY = useTransform(scrollY, [0, 800], [0, -40]);
+
   return (
     <section className="relative min-h-[92vh] flex items-end overflow-hidden bg-ve-bg">
-      {/* Foto · ken-burns sutil (zoom slow) + fade in */}
+      {/* Foto · ken-burns sutil (zoom slow) + fade in + parallax y */}
       <motion.div
         className="absolute inset-0"
         initial={{ scale: 1.08, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 1.6, ease: EASE }}
+        style={{ y: fotoY }}
       >
         <Image
           src="/img/heroFeminino.jpg"
@@ -53,8 +59,8 @@ export default function Hero() {
         <MarcaDagua color="#F2EBE0" opacity={1} className="w-full" />
       </motion.div>
 
-      {/* Conteúdo · stagger words */}
-      <div className="container-x relative z-10 pb-20 md:pb-28 pt-32">
+      {/* Conteúdo · stagger words · parallax oposto (sobe enquanto rola) */}
+      <motion.div className="container-x relative z-10 pb-20 md:pb-28 pt-32" style={{ y: conteudoY }}>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -114,7 +120,7 @@ export default function Hero() {
           <IconArrowDown className="w-3 h-3 animate-pulse" />
           <span className="eyebrow">Comece pela pergunta certa</span>
         </motion.div>
-      </div>
+      </motion.div>
 
       {/* Crédito foto · canto inferior esquerdo · sutil */}
       <p className="absolute bottom-3 left-4 md:left-8 text-[9px] eyebrow text-ve-cream/40 z-10">

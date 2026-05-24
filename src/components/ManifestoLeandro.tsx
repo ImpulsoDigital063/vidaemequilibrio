@@ -2,10 +2,24 @@ import Image from "next/image";
 import { MarcaDagua } from "./Icons";
 import Reveal from "./motion/Reveal";
 import Stagger, { StaggerItem } from "./motion/Stagger";
+import Parallax from "./motion/Parallax";
+import GlowOrb from "./motion/GlowOrb";
+import Spotlight from "./motion/Spotlight";
 
 export default function ManifestoLeandro() {
   return (
     <section id="manifesto" className="relative bg-ve-bg text-ve-cream py-24 md:py-32 overflow-hidden">
+      {/* Spotlight do mouse · sutil · só desktop */}
+      <Spotlight color="rgba(110, 42, 74, 0.55)" size={520} intensity={0.45} />
+
+      {/* GlowOrb burgundy · profundidade espacial */}
+      <GlowOrb
+        color="#6E2A4A"
+        size="700px"
+        opacity={0.18}
+        position={{ left: "-200px", top: "40%" }}
+      />
+
       {/* Marca d'água decorativa atrás do conteúdo */}
       <MarcaDagua
         color="#C9B79C"
@@ -13,24 +27,26 @@ export default function ManifestoLeandro() {
         className="absolute -right-32 top-1/2 -translate-y-1/2 w-[640px] pointer-events-none"
       />
       <div className="container-x relative grid md:grid-cols-12 gap-10 items-center">
-        {/* Coluna foto · still life mãos cinematográfico · entra da esquerda */}
+        {/* Coluna foto · entra da esquerda + parallax sutil interno */}
         <Reveal direction="right" className="md:col-span-5 order-2 md:order-1" duration={1}>
           <div className="aspect-[4/5] border border-[color:var(--ve-line)] relative overflow-hidden">
-            <Image
-              src="/img/stillManifesto.png"
-              alt=""
-              fill
-              sizes="(max-width: 768px) 100vw, 40vw"
-              className="object-cover"
-            />
+            <Parallax speed={-0.2} className="absolute inset-0">
+              <Image
+                src="/img/stillManifesto.png"
+                alt=""
+                fill
+                sizes="(max-width: 768px) 100vw, 40vw"
+                className="object-cover scale-110"
+              />
+            </Parallax>
             <div
-              className="absolute inset-0"
+              className="absolute inset-0 pointer-events-none"
               style={{
                 background:
                   "linear-gradient(180deg, rgba(15,11,8,0) 60%, rgba(15,11,8,0.65) 100%)",
               }}
             />
-            <p className="absolute bottom-5 left-5 eyebrow text-ve-champagne text-[10px]">
+            <p className="absolute bottom-5 left-5 eyebrow text-ve-champagne text-[10px] z-10">
               Foto ensaio em curso · Leandro Timóteo
             </p>
           </div>
