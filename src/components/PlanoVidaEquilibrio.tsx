@@ -290,51 +290,105 @@ export default function PlanoVidaEquilibrio() {
         .plano-cor-block { width: 60px; height: 60px; border-radius: 4px; flex-shrink: 0; border: 1px solid var(--p-border-soft); }
         @media print {
           .no-print { display: none !important; }
-          body, .plano-doc {
-            background: var(--p-bg) !important;
-            color: var(--p-text) !important;
-            font-size: 10.5pt;
+          /* OVERRIDE pra impressão · texto mais escuro · fundo papel branco · economia */
+          :root {
+            --p-text: #1F0E08 !important;
+            --p-text-soft: #3D2517 !important;
+            --p-text-muted: #6B4E37 !important;
+            --p-border: rgba(31, 14, 8, 0.32) !important;
+            --p-border-soft: rgba(31, 14, 8, 0.18) !important;
           }
+          body {
+            background: white !important;
+            color: #1F0E08 !important;
+            font-size: 9.5pt;
+            -webkit-font-smoothing: antialiased;
+          }
+          .plano-doc {
+            background: white !important;
+            color: #1F0E08 !important;
+            font-weight: 450;
+            line-height: 1.55;
+            max-width: none !important;
+            padding: 0 !important;
+          }
+          /* main wrapper · sem padding extra em print */
+          main.plano-doc { padding: 0 !important; }
+
           @page {
             size: A4;
-            margin: 18mm 16mm 22mm 16mm;
+            margin: 12mm 13mm 16mm 13mm;
             @top-left {
               content: "Vida em Equilíbrio";
               font-family: var(--p-font-body);
               font-weight: 500;
-              font-size: 8pt;
+              font-size: 7.5pt;
               letter-spacing: 0.01em;
-              color: var(--p-text);
-              padding-bottom: 6mm;
+              color: #1F0E08;
+              padding-bottom: 4mm;
             }
             @top-right {
               content: "Confidencial · Leandro Timóteo";
               font-family: var(--p-font-body);
-              font-size: 7.5pt;
-              color: var(--p-champagne-deep);
-              padding-bottom: 6mm;
+              font-size: 7pt;
+              color: #6B4E37;
+              padding-bottom: 4mm;
             }
             @bottom-center {
               content: "“Consagre ao Senhor tudo o que você faz, e os seus planos serão bem-sucedidos.”  —  Provérbios 16:3";
               font-family: var(--p-font-display);
-              font-weight: 300;
-              font-size: 8.5pt;
-              color: var(--p-champagne-deep);
-              padding-top: 7mm;
+              font-weight: 400;
+              font-size: 7.5pt;
+              color: #6B4E37;
+              padding-top: 5mm;
             }
             @bottom-right {
-              content: "página " counter(page) " · " counter(pages);
+              content: "p. " counter(page) "/" counter(pages);
               font-family: var(--p-font-body);
-              font-size: 7.5pt;
-              color: var(--p-text-muted);
-              padding-top: 8mm;
+              font-size: 7pt;
+              color: #6B4E37;
+              padding-top: 5mm;
             }
           }
-          .plano-doc h2 { font-size: 18pt; page-break-after: avoid; }
-          .plano-doc h3 { font-size: 13pt; page-break-after: avoid; }
-          .plano-doc p, .plano-doc li, .plano-doc td { font-size: 10pt; }
-          .plano-section { page-break-inside: auto; }
+
+          /* Tipografia compacta em print */
+          .plano-doc h2 { font-size: 15pt !important; page-break-after: avoid; margin: 0 0 6px !important; color: #4A1B30 !important; }
+          .plano-doc h3 { font-size: 11.5pt !important; page-break-after: avoid; margin: 18px 0 6px !important; color: #1F0E08 !important; font-weight: 600 !important; }
+          .plano-doc h4 { font-size: 10pt !important; margin: 14px 0 5px !important; color: #6B4E37 !important; }
+          .plano-doc p, .plano-doc li, .plano-doc td { font-size: 9.5pt !important; }
+          .plano-doc p { margin: 0 0 8px !important; }
+          .plano-doc li { margin: 5px 0 !important; line-height: 1.5 !important; }
+          .plano-doc ul, .plano-doc ol { margin: 8px 0 14px !important; }
+          .plano-doc strong { color: #4A1B30 !important; font-weight: 600 !important; }
+
+          /* Seções · menos espaço entre */
+          .plano-section { margin-bottom: 28px !important; page-break-inside: auto; }
+
+          /* Marker de página · menor */
+          .plano-page-marker { font-size: 7.5pt !important; padding: 3px 10px !important; margin-bottom: 10px !important; background: transparent !important; border-color: rgba(31, 14, 8, 0.2) !important; color: #6B4E37 !important; }
+
+          /* Callouts · menor padding + sem fundo (economia tinta) */
+          .plano-callout { padding: 14px 18px !important; margin: 14px 0 !important; background: transparent !important; border: 1px solid rgba(31, 14, 8, 0.18) !important; border-left-width: 3px !important; border-radius: 0 !important; }
+          .plano-callout.is-burgundy { background: transparent !important; border-left-color: #4A1B30 !important; }
+          .plano-callout.is-champagne { background: transparent !important; border-left-color: #9F8B6A !important; }
+          .plano-callout.is-warm { background: transparent !important; border-left-color: #8B6342 !important; }
+
+          /* Quote · menor padding */
+          .plano-quote { padding: 8px 16px !important; margin: 10px 0 !important; font-size: 10pt !important; background: transparent !important; color: #3D2517 !important; }
+
+          /* Tabelas · linhas mais finas + texto escuro */
+          .plano-doc table { margin: 12px 0 18px !important; font-size: 9pt !important; }
+          .plano-doc th { padding: 8px 10px !important; font-size: 8.5pt !important; background: rgba(74, 27, 48, 0.07) !important; color: #4A1B30 !important; border-bottom-width: 1.5px !important; }
+          .plano-doc td { padding: 7px 10px !important; line-height: 1.45 !important; color: #1F0E08 !important; }
+
+          /* Flow blocks · sem fundo */
+          .plano-flow { padding: 12px 16px !important; margin: 10px 0 !important; background: transparent !important; border: 1px solid rgba(31, 14, 8, 0.16) !important; font-size: 9.5pt !important; line-height: 1.7 !important; }
+
+          /* Page break · só capa força */
           .plano-page { page-break-after: always; }
+          #sumario.plano-page { page-break-after: always; }
+          /* Outras seções fluem · só evita break dentro de callout/tabela */
+
           * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
         }
       `}</style>
@@ -1260,26 +1314,55 @@ export default function PlanoVidaEquilibrio() {
             }}
           >
             {/* Bloco de preço · centralizado, peso visual grande */}
-            <div style={{ textAlign: "center", padding: "8px 0 32px", borderBottom: "1px solid var(--p-border-soft)", marginBottom: 32 }}>
-              <p style={{ fontSize: 10, letterSpacing: "0.3em", textTransform: "uppercase", color: "var(--p-champagne-deep)", marginBottom: 18, fontWeight: 500 }}>
+            <div style={{ textAlign: "center", padding: "8px 0 24px", borderBottom: "1px solid var(--p-border-soft)", marginBottom: 24 }}>
+              <p style={{ fontSize: 10, letterSpacing: "0.3em", textTransform: "uppercase", color: "var(--p-champagne-deep)", marginBottom: 14, fontWeight: 500 }}>
                 Investimento único · setup completo
               </p>
               <div style={{ display: "flex", alignItems: "baseline", justifyContent: "center", gap: 6, lineHeight: 1 }}>
-                <span style={{ fontSize: 28, fontWeight: 500, color: "var(--p-burgundy)" }}>R$</span>
-                <span style={{ fontSize: 84, fontWeight: 600, color: "var(--p-burgundy)", letterSpacing: "-0.04em" }}>1.997</span>
+                <span style={{ fontSize: 26, fontWeight: 500, color: "var(--p-burgundy)" }}>R$</span>
+                <span style={{ fontSize: 78, fontWeight: 600, color: "var(--p-burgundy)", letterSpacing: "-0.04em" }}>1.997</span>
               </div>
-              <p style={{ fontSize: 13, color: "var(--p-text-soft)", marginTop: 14, marginBottom: 0 }}>
-                à vista no PIX · ou <strong>3× de R$ 665,67</strong> no cartão (sem juros)
+              <p style={{ fontSize: 13, color: "var(--p-text-soft)", marginTop: 10, marginBottom: 0 }}>
+                pago uma vez · vira ativo permanente da marca
               </p>
-              <div style={{ display: "inline-flex", alignItems: "center", gap: 16, marginTop: 18, padding: "8px 18px", background: "var(--p-bg-card)", borderRadius: 999, fontSize: 11, color: "var(--p-text-soft)" }}>
+            </div>
+
+            {/* CONDIÇÕES DE PAGAMENTO · cravadas */}
+            <div style={{ marginBottom: 28, padding: "20px 24px", background: "var(--p-bg-card)", border: "1px solid var(--p-border-soft)", borderLeft: "3px solid var(--p-burgundy)", borderRadius: 4 }}>
+              <p style={{ fontSize: 10, letterSpacing: "0.24em", textTransform: "uppercase", color: "var(--p-champagne-deep)", fontWeight: 500, marginBottom: 12 }}>
+                Como pagar
+              </p>
+              <div style={{ display: "grid", gridTemplateColumns: "auto 1fr", gap: "10px 16px", alignItems: "baseline", fontSize: 13.5 }}>
+                <strong style={{ color: "var(--p-burgundy)", fontVariantNumeric: "tabular-nums" }}>50% entrada</strong>
+                <span style={{ color: "var(--p-text)" }}>R$ 998,50 · libera produção · PIX ou cartão</span>
+                <strong style={{ color: "var(--p-burgundy)", fontVariantNumeric: "tabular-nums" }}>50% saldo</strong>
+                <span style={{ color: "var(--p-text)" }}>Você decide: à vista na entrega · ou parcelado no cartão (até 3×)</span>
+              </div>
+              <div style={{ display: "inline-flex", alignItems: "center", gap: 14, marginTop: 16, padding: "7px 16px", background: "var(--p-bg)", borderRadius: 999, fontSize: 11, color: "var(--p-text-soft)" }}>
                 <span><strong style={{ color: "var(--p-burgundy)" }}>7 dias</strong> de garantia incondicional</span>
                 <span style={{ width: 3, height: 3, borderRadius: "50%", background: "var(--p-champagne)" }} />
                 <span><strong style={{ color: "var(--p-burgundy)" }}>1 mês</strong> de calibragem pós-entrega</span>
               </div>
             </div>
 
-            <p style={{ fontSize: 14, textAlign: "center", maxWidth: 560, margin: "0 auto 36px", color: "var(--p-text-soft)" }}>
-              Tudo que o Vida em Equilíbrio precisa pra entrar no ar com identidade profissional, materiais prontos pros primeiros 30 dias, sistema completo de captação e direção estratégica do que vem depois. <strong>Pago uma vez · vira ativo permanente da marca.</strong>
+            {/* BÔNUS · 12 MESES DE HOSPEDAGEM */}
+            <div style={{ marginBottom: 32, padding: "22px 26px", background: "linear-gradient(135deg, rgba(110, 42, 74, 0.10) 0%, rgba(201, 183, 156, 0.18) 100%)", border: "1px dashed var(--p-burgundy)", borderRadius: 6, textAlign: "center" }}>
+              <p style={{ fontSize: 10, letterSpacing: "0.32em", textTransform: "uppercase", color: "var(--p-burgundy)", fontWeight: 600, marginBottom: 10 }}>
+                ★ Bônus incluso
+              </p>
+              <p style={{ fontSize: 22, fontWeight: 600, color: "var(--p-burgundy)", marginBottom: 8, letterSpacing: "-0.01em" }}>
+                12 meses de hospedagem · grátis
+              </p>
+              <p style={{ fontSize: 13, color: "var(--p-text)", margin: "0 auto 10px", maxWidth: 480, lineHeight: 1.6 }}>
+                Site no ar pelo primeiro ano sem cobrança mensal de hospedagem. Já incluso no Setup.
+              </p>
+              <p style={{ fontSize: 12, color: "var(--p-text-soft)", margin: 0 }}>
+                Economia direta no bolso: <strong style={{ color: "var(--p-burgundy)" }}>R$ 600 a R$ 1.000/ano</strong> que ficariam recorrentes em hospedagem profissional.
+              </p>
+            </div>
+
+            <p style={{ fontSize: 14, textAlign: "center", maxWidth: 560, margin: "0 auto 32px", color: "var(--p-text-soft)" }}>
+              Tudo que o Vida em Equilíbrio precisa pra entrar no ar com identidade profissional, materiais prontos pros primeiros 30 dias, sistema completo de captação e direção estratégica do que vem depois.
             </p>
 
             {/* 5 categorias de entrega · número grande + lista enxuta */}
