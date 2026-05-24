@@ -83,7 +83,7 @@ export default function PlanoVidaEquilibrio() {
   return (
     <>
       <style jsx global>{`
-        @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@300;400;500;600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap');
 
         :root {
           --p-bg: #F2EBE0;
@@ -102,22 +102,23 @@ export default function PlanoVidaEquilibrio() {
           --p-tungsten: #1A1310;
           --p-border: rgba(61, 37, 23, 0.16);
           --p-border-soft: rgba(61, 37, 23, 0.08);
-          --p-font-display: "Instrument Serif", Georgia, "Times New Roman", serif;
+          --p-font-display: "Manrope", -apple-system, "Segoe UI", sans-serif;
           --p-font-body: "Manrope", -apple-system, "Segoe UI", sans-serif;
         }
         body { background: var(--p-bg) !important; color: var(--p-text) !important; }
         .plano-doc {
           font-family: var(--p-font-body);
           font-weight: 400;
-          line-height: 1.65;
+          line-height: 1.6;
           color: var(--p-text);
           background: var(--p-bg);
+          letter-spacing: -0.005em;
         }
         .plano-doc h1, .plano-doc h2, .plano-doc h3, .plano-doc h4 {
           font-family: var(--p-font-display);
-          font-weight: 400;
-          line-height: 1.1;
-          letter-spacing: -0.005em;
+          font-weight: 600;
+          line-height: 1.15;
+          letter-spacing: -0.018em;
           color: var(--p-text);
         }
         .plano-doc h2 {
@@ -125,8 +126,7 @@ export default function PlanoVidaEquilibrio() {
           margin: 0 0 8px;
         }
         .plano-doc h3 {
-          font-weight: 400;
-          font-style: italic;
+          font-weight: 500;
           color: var(--p-text);
           margin: 32px 0 10px;
         }
@@ -275,7 +275,7 @@ export default function PlanoVidaEquilibrio() {
           text-align: center;
         }
         .plano-page { page-break-after: always; }
-        .plano-section { page-break-inside: avoid; margin-bottom: 36px; }
+        .plano-section { margin-bottom: 36px; }
         .plano-section h2 { font-size: 30px; }
         .plano-cor-swatch {
           display: flex;
@@ -307,8 +307,8 @@ export default function PlanoVidaEquilibrio() {
             @bottom-center {
               content: "“Consagre ao Senhor tudo o que você faz, e os seus planos serão bem-sucedidos.”  —  Provérbios 16:3";
               font-family: var(--p-font-display);
-              font-style: italic;
-              font-size: 9pt;
+              font-weight: 300;
+              font-size: 8.5pt;
               color: var(--p-champagne-deep);
               padding-top: 7mm;
             }
@@ -330,7 +330,7 @@ export default function PlanoVidaEquilibrio() {
           .plano-doc h2 { font-size: 18pt; page-break-after: avoid; }
           .plano-doc h3 { font-size: 13pt; page-break-after: avoid; }
           .plano-doc p, .plano-doc li, .plano-doc td { font-size: 10pt; }
-          .plano-section { page-break-inside: avoid; }
+          .plano-section { page-break-inside: auto; }
           .plano-page { page-break-after: always; }
           * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
         }
@@ -699,17 +699,6 @@ export default function PlanoVidaEquilibrio() {
               </div>
             </div>
           ))}
-
-          <h3>Regra dura · sem preto puro</h3>
-          <div className="plano-callout is-burgundy">
-            <p style={{ margin: 0 }}><strong>O Vida em Equilíbrio NÃO usa preto puro</strong> (<code>#000000</code>) em lugar nenhum — nem no site, nem em impressão, nem em peças digitais. Três razões:</p>
-            <ol style={{ marginTop: 8 }}>
-              <li><strong>Razão técnica (impressão):</strong> "tinta preta CMYK pura não existe na prática". K100 sai opaco, sem vida, com falhas em áreas grandes. Designers profissionais usam rich black ou warm dark equivalente.</li>
-              <li><strong>Razão estética (mood):</strong> preto puro é frio, médico, mortuário. Quebra a atmosfera tungsten warm. Onde a marca diz "aqui você descansa", preto puro diz "aqui é institucional".</li>
-              <li><strong>Razão de diferenciação:</strong> todo concorrente em Palmas usa preto puro em textos. Vida em Equilíbrio usa <code>#2C1810</code> (warm brown deep) — diferença sutil que o subconsciente percebe.</li>
-            </ol>
-            <p style={{ marginTop: 12, marginBottom: 0 }}><strong>Em vez de preto puro, use:</strong> <code>#0F0B08</code> (tungsten warm dark) ou <code>#2C1810</code> (warm brown deep).</p>
-          </div>
 
           <h3>Tipografia</h3>
           <ul>
