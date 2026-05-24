@@ -1259,42 +1259,114 @@ export default function PlanoVidaEquilibrio() {
               borderRadius: 8,
             }}
           >
-            <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between", flexWrap: "wrap", gap: 16, marginBottom: 14 }}>
-              <h3 style={{ marginTop: 0, marginBottom: 0, fontSize: 26, color: "var(--p-burgundy)" }}>
-                Setup completo Vida em Equilíbrio
-              </h3>
-              <div style={{ textAlign: "right" }}>
-                <div style={{ fontSize: 9, letterSpacing: "0.22em", textTransform: "uppercase", color: "var(--p-champagne-deep)", marginBottom: 2 }}>Investimento</div>
-                <div style={{ fontFamily: "var(--p-font-display)", fontSize: 34, fontWeight: 300, color: "var(--p-burgundy)", lineHeight: 1 }}>
-                  R$ <span style={{ fontStyle: "italic" }}>1.997</span>
-                </div>
-                <div style={{ fontSize: 11, color: "var(--p-text-muted)", marginTop: 2 }}>à vista PIX · ou 3× cartão sem juros</div>
+            {/* Bloco de preço · centralizado, peso visual grande */}
+            <div style={{ textAlign: "center", padding: "8px 0 32px", borderBottom: "1px solid var(--p-border-soft)", marginBottom: 32 }}>
+              <p style={{ fontSize: 10, letterSpacing: "0.3em", textTransform: "uppercase", color: "var(--p-champagne-deep)", marginBottom: 18, fontWeight: 500 }}>
+                Investimento único · setup completo
+              </p>
+              <div style={{ display: "flex", alignItems: "baseline", justifyContent: "center", gap: 6, lineHeight: 1 }}>
+                <span style={{ fontSize: 28, fontWeight: 500, color: "var(--p-burgundy)" }}>R$</span>
+                <span style={{ fontSize: 84, fontWeight: 600, color: "var(--p-burgundy)", letterSpacing: "-0.04em" }}>1.997</span>
+              </div>
+              <p style={{ fontSize: 13, color: "var(--p-text-soft)", marginTop: 14, marginBottom: 0 }}>
+                à vista no PIX · ou <strong>3× de R$ 665,67</strong> no cartão (sem juros)
+              </p>
+              <div style={{ display: "inline-flex", alignItems: "center", gap: 16, marginTop: 18, padding: "8px 18px", background: "var(--p-bg-card)", borderRadius: 999, fontSize: 11, color: "var(--p-text-soft)" }}>
+                <span><strong style={{ color: "var(--p-burgundy)" }}>7 dias</strong> de garantia incondicional</span>
+                <span style={{ width: 3, height: 3, borderRadius: "50%", background: "var(--p-champagne)" }} />
+                <span><strong style={{ color: "var(--p-burgundy)" }}>1 mês</strong> de calibragem pós-entrega</span>
               </div>
             </div>
 
-            <p style={{ marginTop: 0 }}>
-              Tudo que o Vida em Equilíbrio precisa pra entrar no ar com identidade profissional, materiais prontos pros primeiros 30 dias, sistema completo de captação e direção estratégica do que vem depois. Pago uma vez · vira ativo permanente da marca.
+            <p style={{ fontSize: 14, textAlign: "center", maxWidth: 560, margin: "0 auto 36px", color: "var(--p-text-soft)" }}>
+              Tudo que o Vida em Equilíbrio precisa pra entrar no ar com identidade profissional, materiais prontos pros primeiros 30 dias, sistema completo de captação e direção estratégica do que vem depois. <strong>Pago uma vez · vira ativo permanente da marca.</strong>
             </p>
 
-            <h4 style={{ marginTop: 20, marginBottom: 12 }}>Tudo que vem no R$ 1.997:</h4>
+            {/* 5 categorias de entrega · número grande + lista enxuta */}
+            {[
+              {
+                num: "01",
+                titulo: "Site profissional completo",
+                itens: [
+                  "Home + 6 páginas internas (uma por massagem)",
+                  "Blog estruturado + FAQ + seção Como Chegar",
+                  "Rodando em Next.js no Vercel · domínio próprio",
+                  "Schema.org LocalBusiness + FAQPage · SEO técnico completo",
+                  "Sitemap.xml · robots.txt · cadastro Google Search Console",
+                ],
+              },
+              {
+                num: "02",
+                titulo: "Identidade visual autoral",
+                itens: [
+                  "Logo arco + ponto cravado · 3 variações entregues + escolhida aplicada",
+                  "Paleta Editorial Tungsten · 8 cores documentadas + uso por contexto",
+                  "Tipografia editorial (Fraunces + Inter)",
+                  "Marca d'água sistemática · digital + papelaria",
+                  "OG image dinâmica · favicon · cartão de visita",
+                ],
+              },
+              {
+                num: "03",
+                titulo: "Captação Google + IA (AEO)",
+                itens: [
+                  "Google Ads configurado · 11 termos long-tail + criativos prontos",
+                  "llms.txt cravado · marca aparece em ChatGPT/Gemini/Perplexity",
+                  "Blog editorial · 12 títulos pré-pesquisados (palavras-chave reais)",
+                  "Único negócio de massagem em Palmas com AEO ativo",
+                ],
+              },
+              {
+                num: "04",
+                titulo: "Inteligência de mercado",
+                itens: [
+                  "Análise de 39 concorrentes ativos em Palmas",
+                  "5 dossiês profundos (Alivièr, Eliá, C'Alma, Aurora, Edna Borges)",
+                  "Dossiê Alivièr Deep Dive · 45+ combos mapeados",
+                  "Gaps identificados + posicionamento defensável cravado",
+                ],
+              },
+              {
+                num: "05",
+                titulo: "Plano de Negócio + Marketing",
+                itens: [
+                  "Este documento · 30+ páginas executivas",
+                  "Cronograma trimestral · 12 meses mês a mês",
+                  "Catálogo PDF separado · pra enviar no WhatsApp e B2B",
+                  "Estratégia de migração @timoteoofficial → @vidaemequilibrio (3 fases)",
+                  "Métricas-alvo + indicadores de sucesso",
+                ],
+              },
+            ].map((cat) => (
+              <div key={cat.num} style={{ marginBottom: 24, display: "grid", gridTemplateColumns: "60px 1fr", gap: 18, padding: "20px 0", borderBottom: "1px solid var(--p-border-soft)" }}>
+                <div>
+                  <p style={{ fontSize: 36, fontWeight: 600, color: "var(--p-burgundy)", margin: 0, lineHeight: 1, fontVariantNumeric: "tabular-nums" }}>{cat.num}</p>
+                </div>
+                <div>
+                  <h4 style={{ fontFamily: "var(--p-font-body)", fontWeight: 600, fontSize: 16, color: "var(--p-text)", margin: "0 0 10px", textTransform: "none", letterSpacing: "-0.01em" }}>
+                    {cat.titulo}
+                  </h4>
+                  <ul style={{ margin: 0, padding: 0, listStyle: "none" }}>
+                    {cat.itens.map((it) => (
+                      <li key={it} style={{ position: "relative", paddingLeft: 16, margin: "5px 0", fontSize: 12.5, lineHeight: 1.6, color: "var(--p-text-soft)" }}>
+                        <span style={{ position: "absolute", left: 0, color: "var(--p-champagne-deep)" }}>—</span>
+                        {it}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            ))}
 
-            <ol style={{ margin: 0 }}>
-              <li><strong>Site profissional completo</strong> · 1 home + 6 páginas internas dedicadas (uma por massagem) + blog estruturado + FAQ + CTA WhatsApp unificado · rodando em Next.js premium hospedado no Vercel</li>
-              <li><strong>Identidade visual autoral</strong> · logo (arco + ponto cravado pelo storytelling do equilíbrio) + paleta Editorial Tungsten (8 cores documentadas) + tipografia editorial (Fraunces + Inter) + manual de aplicação</li>
-              <li><strong>Marca d'água sistemática</strong> aplicada em peças digitais e preparada para papelaria/impressos · com regras de uso por contexto</li>
-              <li><strong>Catálogo PDF público</strong> hospedado em Google Drive (modelo Alivièr validado pelo cliente) · 8-10 páginas editoriais Editorial Tungsten · atualizável sem custo</li>
-              <li><strong>Estratégia de migração</strong> da audiência pessoal (@timoteoofficial · 11,6k seguidores) pra @vidaemequilibrio em 3 fases · cronograma claro · sem perder seguidor</li>
-              <li><strong>Google Ads</strong> configurado · 11 termos long-tail pesquisados + criativos prontos + segmentação geográfica Palmas-TO · pronto pra rodar no dia 1</li>
-              <li><strong>SEO técnico completo</strong> · schema.org LocalBusiness · FAQPage Schema · OpenGraph · sitemap.xml · robots.txt · IndexNow · cadastro Google Search Console</li>
-              <li><strong>llms.txt · AEO (Answer Engine Optimization)</strong> · única empresa de massagem em Palmas com esse vetor · Vida em Equilíbrio passa a ser oferecido por ChatGPT/Gemini/Perplexity quando alguém pergunta sobre massagem feminina premium em Palmas</li>
-              <li><strong>Blog estruturado</strong> com 12 títulos pré-pesquisados (palavras-chave Google reais com volume mensurado) · template de post pronto pra produção contínua</li>
-              <li><strong>Plano de Negócio + Marketing</strong> 30+ páginas (este documento) · cronograma trimestral 12 meses · métricas-alvo claras · paleta+logo+manual aplicados</li>
-              <li><strong>Análise da concorrência local</strong> · 39 operadores ativos em Palmas mapeados · 5 dossiês profundos (Alivièr, Eliá, C'Alma, Aurora, Edna Borges) · gaps identificados</li>
-              <li><strong>Dossiê Alivièr Deep Dive</strong> · catálogo completo do principal concorrente (45+ combos), princípios extraídos · prontos pra cravar o posicionamento</li>
-              <li><strong>3 conceitos de logo</strong> entregues em variações (já apresentados em <code>/logo-preview</code> e <code>/logo-preview/v2</code>) · escolha cravada</li>
-              <li><strong>1 mês de calibragem pós-entrega</strong> · trocamos placeholders por fotos reais conforme você nos passa</li>
-              <li><strong>7 dias de garantia incondicional</strong> pós-pagamento</li>
-            </ol>
+            {/* Selo de valor */}
+            <div style={{ marginTop: 32, padding: "20px 28px", background: "var(--p-bg-warm)", borderLeft: "4px solid var(--p-champagne-deep)", borderRadius: 4 }}>
+              <p style={{ fontSize: 10, letterSpacing: "0.24em", textTransform: "uppercase", color: "var(--p-champagne-deep)", fontWeight: 500, marginBottom: 8 }}>
+                Comparativo de mercado
+              </p>
+              <p style={{ fontSize: 13, color: "var(--p-text)", margin: 0, lineHeight: 1.7 }}>
+                Site profissional avulso em Palmas: <strong>R$ 2.500-5.000</strong> · identidade visual com manual: <strong>R$ 2.000-4.000</strong> · plano de marketing: <strong>R$ 1.500-3.000</strong> · análise de concorrência: <strong>R$ 800-2.000</strong>. Contratados separados, fica entre <strong>R$ 6.800 e R$ 14.000</strong> · sem integração entre as peças. O Setup Vida em Equilíbrio entrega tudo integrado por <strong style={{ color: "var(--p-burgundy)" }}>R$ 1.997</strong>.
+              </p>
+            </div>
           </div>
 
           <div className="plano-quote">
