@@ -1,5 +1,7 @@
 import Image from "next/image";
 import { MarcaDagua } from "./Icons";
+import Reveal from "./motion/Reveal";
+import Stagger, { StaggerItem } from "./motion/Stagger";
 
 export default function ManifestoLeandro() {
   return (
@@ -11,8 +13,8 @@ export default function ManifestoLeandro() {
         className="absolute -right-32 top-1/2 -translate-y-1/2 w-[640px] pointer-events-none"
       />
       <div className="container-x relative grid md:grid-cols-12 gap-10 items-center">
-        {/* Coluna foto · still life mãos cinematográfico */}
-        <div className="md:col-span-5 order-2 md:order-1">
+        {/* Coluna foto · still life mãos cinematográfico · entra da esquerda */}
+        <Reveal direction="right" className="md:col-span-5 order-2 md:order-1" duration={1}>
           <div className="aspect-[4/5] border border-[color:var(--ve-line)] relative overflow-hidden">
             <Image
               src="/img/stillManifesto.png"
@@ -32,10 +34,10 @@ export default function ManifestoLeandro() {
               Foto ensaio em curso · Leandro Timóteo
             </p>
           </div>
-        </div>
+        </Reveal>
 
-        {/* Coluna texto */}
-        <div className="md:col-span-7 order-1 md:order-2">
+        {/* Coluna texto · entra da direita */}
+        <Reveal direction="left" className="md:col-span-7 order-1 md:order-2" duration={1}>
           <p className="eyebrow text-ve-champagne mb-6">Quem cuida</p>
           <h2 className="display text-3xl md:text-5xl leading-[1.1]">
             Leandro Timóteo.{" "}
@@ -62,21 +64,21 @@ export default function ManifestoLeandro() {
 
           <div className="hairline my-10" />
 
-          <div className="grid sm:grid-cols-3 gap-6">
-            <div>
+          <Stagger className="grid sm:grid-cols-3 gap-6" step={0.12}>
+            <StaggerItem direction="up">
               <p className="display text-3xl text-ve-cream">Privativo</p>
               <p className="eyebrow text-ve-muted mt-1">Uma cliente por turno</p>
-            </div>
-            <div>
+            </StaggerItem>
+            <StaggerItem direction="up">
               <p className="display text-3xl text-ve-cream">Híbrido</p>
               <p className="eyebrow text-ve-muted mt-1">Clínica e domicílio</p>
-            </div>
-            <div>
+            </StaggerItem>
+            <StaggerItem direction="up">
               <p className="display text-3xl text-ve-cream">Exclusivo</p>
               <p className="eyebrow text-ve-muted mt-1">Público feminino</p>
-            </div>
-          </div>
-        </div>
+            </StaggerItem>
+          </Stagger>
+        </Reveal>
       </div>
     </section>
   );

@@ -1,4 +1,6 @@
 import { IconArrowRight, MarcaDagua } from "./Icons";
+import Reveal from "./motion/Reveal";
+import Stagger, { StaggerItem } from "./motion/Stagger";
 
 const WA_MSG = encodeURIComponent(
   "Oi Leandro, quero presentear alguém com um vale do Vida em Equilíbrio."
@@ -43,7 +45,7 @@ export default function ValePresente() {
       />
 
       <div className="container-x relative">
-        <div className="grid md:grid-cols-12 gap-10 mb-14">
+        <Reveal direction="up" className="grid md:grid-cols-12 gap-10 mb-14">
           <div className="md:col-span-5">
             <p className="eyebrow text-ve-champagne mb-6">Pra presentear</p>
             <h2 className="display text-3xl md:text-5xl leading-[1.1]">
@@ -59,14 +61,16 @@ export default function ValePresente() {
               entregar digital ou impresso. Ela agenda quando quiser.
             </p>
           </div>
-        </div>
+        </Reveal>
 
-        {/* Modalidades */}
-        <div className="grid md:grid-cols-3 gap-px bg-[color:var(--ve-line)]">
+        {/* Modalidades · stagger up · destaque (vale day premium) entra com peso */}
+        <Stagger className="grid md:grid-cols-3 gap-px bg-[color:var(--ve-line)]" step={0.12}>
           {MODALIDADES.map((m) => (
-            <div
+            <StaggerItem
               key={m.nome}
-              className={`p-8 md:p-10 ${m.destaque ? "bg-ve-burgundy" : "bg-ve-bg-soft"}`}
+              direction={m.destaque ? "scale" : "up"}
+              distance={30}
+              className={`p-8 md:p-10 h-full ${m.destaque ? "bg-ve-burgundy" : "bg-ve-bg-soft"}`}
             >
               <p className="eyebrow text-ve-champagne mb-3">Modalidade</p>
               <h3 className="display text-2xl md:text-3xl text-ve-cream">
@@ -77,28 +81,28 @@ export default function ValePresente() {
                 {m.descricao}
               </p>
               <p className="eyebrow text-ve-cream/60 mt-5">{m.detalhe}</p>
-            </div>
+            </StaggerItem>
           ))}
-        </div>
+        </Stagger>
 
-        {/* Como funciona */}
-        <div className="mt-16 grid md:grid-cols-4 gap-px bg-[color:var(--ve-line)]">
+        {/* Como funciona · stagger left-to-right pra dar sensação de fluxo */}
+        <Stagger className="mt-16 grid md:grid-cols-4 gap-px bg-[color:var(--ve-line)]" step={0.1}>
           {[
             { n: "01", t: "Você escolhe", d: "A massagem ou o valor do crédito · combinamos pelo WhatsApp" },
             { n: "02", t: "Paga pelo PIX", d: "À vista · você recebe o vale em até 2h em horário comercial" },
             { n: "03", t: "Entrega", d: "PDF editorial digital · ou imprime e entrega na mão (envelope cravado da marca)" },
             { n: "04", t: "Ela agenda", d: "Beneficiária fala direto comigo pelo WhatsApp · sem fricção" },
           ].map((p) => (
-            <div key={p.n} className="bg-ve-bg-soft p-6 md:p-8">
+            <StaggerItem key={p.n} direction="right" distance={22} className="bg-ve-bg-soft p-6 md:p-8 h-full">
               <p className="display text-3xl text-ve-burgundy">{p.n}</p>
               <p className="display text-lg text-ve-cream mt-3">{p.t}</p>
               <p className="text-ve-cream/70 text-sm mt-2 leading-relaxed">{p.d}</p>
-            </div>
+            </StaggerItem>
           ))}
-        </div>
+        </Stagger>
 
-        {/* CTA */}
-        <div className="mt-16 text-center">
+        {/* CTA · scale */}
+        <Reveal direction="scale" className="mt-16 text-center">
           <p className="display-italic text-ve-cream/85 text-xl md:text-2xl max-w-2xl mx-auto">
             "Presentear cuidado é uma das formas mais bonitas de dizer obrigada."
           </p>
@@ -111,7 +115,7 @@ export default function ValePresente() {
             Quero presentear alguém
             <IconArrowRight className="w-4 h-4" />
           </a>
-        </div>
+        </Reveal>
       </div>
     </section>
   );

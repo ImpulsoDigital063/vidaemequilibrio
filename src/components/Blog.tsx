@@ -8,6 +8,8 @@ import {
   IconFlorescer,
 } from "./Icons";
 import { POSTS_PUBLICADOS, POSTS_DRAFT } from "@/content/posts";
+import Reveal from "./motion/Reveal";
+import Stagger, { StaggerItem } from "./motion/Stagger";
 
 const EIXOS = [
   {
@@ -42,7 +44,7 @@ export default function Blog() {
     <section id="blog" className="bg-ve-cream text-ve-text-dark py-24 md:py-32">
       <div className="container-x">
         {/* HERO da seção · promessa editorial */}
-        <div className="grid md:grid-cols-12 gap-10 mb-16 md:mb-20">
+        <Reveal direction="up" className="grid md:grid-cols-12 gap-10 mb-16 md:mb-20">
           <div className="md:col-span-7">
             <p className="eyebrow text-ve-terracota mb-5">
               Blog · Vida em Equilíbrio
@@ -66,18 +68,21 @@ export default function Blog() {
               Conteúdo escrito por <strong className="text-ve-burgundy">Leandro Timóteo</strong> · publicado mensalmente.
             </p>
           </div>
-        </div>
+        </Reveal>
 
-        {/* 4 eixos editoriais · o que vão aprender */}
+        {/* 4 eixos editoriais · stagger horizontal */}
         <div className="mb-16 md:mb-20">
-          <p className="eyebrow text-ve-terracota mb-8">O que você vai aprender</p>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-ve-text-dark/10">
+          <Reveal direction="up">
+            <p className="eyebrow text-ve-terracota mb-8">O que você vai aprender</p>
+          </Reveal>
+          <Stagger className="grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-ve-text-dark/10" step={0.08}>
             {EIXOS.map((eixo) => {
               const { Icon } = eixo;
               return (
-                <div
+                <StaggerItem
                   key={eixo.titulo}
-                  className="bg-ve-cream p-7 md:p-8 flex flex-col"
+                  direction="up"
+                  className="bg-ve-cream p-7 md:p-8 flex flex-col h-full"
                 >
                   <Icon className="w-7 h-7 text-ve-burgundy mb-5" />
                   <h3 className="display text-lg md:text-xl text-ve-text-dark leading-tight mb-3">
@@ -86,25 +91,32 @@ export default function Blog() {
                   <p className="text-ve-text-dark/70 text-sm leading-relaxed">
                     {eixo.descricao}
                   </p>
-                </div>
+                </StaggerItem>
               );
             })}
-          </div>
+          </Stagger>
         </div>
 
-        {/* Destaques publicados */}
+        {/* Destaques publicados · cards entrando alternados (esquerda/direita) */}
         {destaques.length > 0 && (
           <div>
-            <p className="eyebrow text-ve-terracota mb-8">
-              Leitura disponível agora
-            </p>
-            <div className="grid md:grid-cols-2 gap-px bg-ve-text-dark/10 mb-10">
-              {destaques.map((p) => (
-                <Link
+            <Reveal direction="up">
+              <p className="eyebrow text-ve-terracota mb-8">
+                Leitura disponível agora
+              </p>
+            </Reveal>
+            <Stagger className="grid md:grid-cols-2 gap-px bg-ve-text-dark/10 mb-10" step={0.12}>
+              {destaques.map((p, idx) => (
+                <StaggerItem
                   key={p.slug}
-                  href={`/blog/${p.slug}`}
-                  className="group bg-ve-cream p-6 md:p-8 flex flex-col hover:bg-ve-cream-soft transition-colors"
+                  direction={idx === 0 ? "right" : "left"}
+                  distance={32}
+                  className="h-full"
                 >
+                  <Link
+                    href={`/blog/${p.slug}`}
+                    className="group bg-ve-cream p-6 md:p-8 flex flex-col hover:bg-ve-cream-soft transition-colors h-full"
+                  >
                   {p.hero && (
                     <div className="aspect-[16/10] relative overflow-hidden mb-5 -mx-6 md:-mx-8 -mt-6 md:-mt-8">
                       <Image
@@ -141,12 +153,13 @@ export default function Blog() {
                       <IconArrowRight className="w-4 h-4" />
                     </span>
                   </div>
-                </Link>
+                  </Link>
+                </StaggerItem>
               ))}
-            </div>
+            </Stagger>
 
             {/* Rodapé · contagem + CTA */}
-            <div className="flex items-center justify-between flex-wrap gap-4 pt-6 border-t border-ve-text-dark/10">
+            <Reveal direction="up" className="flex items-center justify-between flex-wrap gap-4 pt-6 border-t border-ve-text-dark/10">
               <p className="text-xs text-ve-text-dark/55 eyebrow">
                 {POSTS_PUBLICADOS.length} publicados · {POSTS_DRAFT.length} na
                 fila editorial
@@ -158,7 +171,7 @@ export default function Blog() {
                 Ver todos os conteúdos do blog
                 <IconArrowRight className="w-4 h-4" />
               </Link>
-            </div>
+            </Reveal>
           </div>
         )}
       </div>

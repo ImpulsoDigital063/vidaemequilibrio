@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { IconMapa, IconClock, IconArrowRight, IconWhatsApp } from "./Icons";
+import Reveal from "./motion/Reveal";
 
 const WA_CLINICA = `https://wa.me/5563848436460?text=${encodeURIComponent(
   "Oi Leandro, quero agendar na clínica parceira (Setor Norte)."
@@ -13,7 +14,7 @@ export default function Espaco() {
     <section id="espaco" className="bg-ve-bg-soft text-ve-cream py-24 md:py-32">
       <div className="container-x">
         {/* Cabeçalho */}
-        <div className="grid md:grid-cols-12 gap-10 mb-14">
+        <Reveal direction="up" className="grid md:grid-cols-12 gap-10 mb-14">
           <div className="md:col-span-5">
             <p className="eyebrow text-ve-champagne mb-6">Onde acontece</p>
             <h2 className="display text-3xl md:text-5xl leading-[1.1]">
@@ -28,12 +29,12 @@ export default function Espaco() {
               e o WhatsApp já abre com a mensagem certa.
             </p>
           </div>
-        </div>
+        </Reveal>
 
-        {/* 2 cards · lado a lado */}
+        {/* 2 cards · lado a lado · cada um entra de um lado */}
         <div className="grid md:grid-cols-2 gap-px bg-[color:var(--ve-line)]">
-          {/* Card 1 · Clínica */}
-          <div className="bg-ve-bg-card p-8 md:p-10 flex flex-col">
+          {/* Card 1 · Clínica · entra da esquerda */}
+          <Reveal direction="right" className="bg-ve-bg-card p-8 md:p-10 flex flex-col" duration={1}>
             <div className="aspect-[16/10] relative overflow-hidden mb-6 -mx-8 md:-mx-10 -mt-8 md:-mt-10">
               <Image
                 src="/img/ambientLowLight.png"
@@ -85,10 +86,10 @@ export default function Espaco() {
               Agendar na clínica
               <IconArrowRight className="w-3.5 h-3.5" />
             </a>
-          </div>
+          </Reveal>
 
-          {/* Card 2 · Domicílio */}
-          <div className="bg-ve-bg-card p-8 md:p-10 flex flex-col">
+          {/* Card 2 · Domicílio · entra da direita */}
+          <Reveal direction="left" className="bg-ve-bg-card p-8 md:p-10 flex flex-col" duration={1} delay={0.1}>
             <div className="aspect-[16/10] relative overflow-hidden mb-6 -mx-8 md:-mx-10 -mt-8 md:-mt-10 bg-ve-bg">
               <Image
                 src="/img/textureLinen.png"
@@ -141,11 +142,11 @@ export default function Espaco() {
               Agendar em casa
               <IconArrowRight className="w-3.5 h-3.5" />
             </a>
-          </div>
+          </Reveal>
         </div>
 
         {/* Linha de apoio */}
-        <div className="mt-10 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-ve-muted text-xs eyebrow">
+        <Reveal direction="up" className="mt-10 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-ve-muted text-xs eyebrow">
           <span className="flex items-center gap-2">
             <IconClock className="w-4 h-4 text-ve-champagne" />
             Atendimento por hora marcada
@@ -154,7 +155,7 @@ export default function Espaco() {
           <span>Uma cliente por turno</span>
           <span className="text-ve-cream/40">·</span>
           <span>Agenda flexível sob consulta</span>
-        </div>
+        </Reveal>
       </div>
     </section>
   );

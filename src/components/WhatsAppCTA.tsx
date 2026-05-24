@@ -1,4 +1,5 @@
 import { IconWhatsApp, IconArrowRight, MarcaDagua } from "./Icons";
+import Reveal from "./motion/Reveal";
 
 export default function WhatsAppCTA() {
   return (
@@ -11,7 +12,7 @@ export default function WhatsAppCTA() {
         opacity={0.07}
         className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[520px] pointer-events-none"
       />
-      <div className="container-x relative text-center">
+      <Reveal direction="blur" duration={1.2} className="container-x relative text-center">
         <p className="eyebrow text-ve-champagne mb-6">Vamos conversar</p>
 
         <h2 className="display text-4xl md:text-6xl lg:text-7xl leading-[1.05] max-w-4xl mx-auto">
@@ -40,7 +41,7 @@ export default function WhatsAppCTA() {
         <p className="mt-8 text-ve-cream/60 text-sm">
           Atendimento por mensagem · respondido em até 12h em dias úteis
         </p>
-      </div>
+      </Reveal>
     </section>
   );
 }

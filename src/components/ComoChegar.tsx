@@ -1,4 +1,5 @@
 import { IconMapa, IconArrowRight } from "./Icons";
+import Reveal from "./motion/Reveal";
 
 // Endereço da clínica parceira CYOX
 const ENDERECO = "ACNO 01, Rua O1, LT 06, Sala 01";
@@ -21,7 +22,7 @@ export default function ComoChegar() {
     >
       <div className="container-x">
         {/* Cabeçalho */}
-        <div className="grid md:grid-cols-12 gap-10 mb-12">
+        <Reveal direction="up" className="grid md:grid-cols-12 gap-10 mb-12">
           <div className="md:col-span-5">
             <p className="eyebrow text-ve-champagne mb-6">Como chegar</p>
             <h2 className="display text-3xl md:text-5xl leading-[1.1]">
@@ -37,10 +38,10 @@ export default function ComoChegar() {
               também são reforçados na confirmação do WhatsApp.
             </p>
           </div>
-        </div>
+        </Reveal>
 
-        {/* Bloco mapa + endereço */}
-        <div className="grid md:grid-cols-12 gap-0 bg-ve-bg-card border border-[color:var(--ve-line)] overflow-hidden">
+        {/* Bloco mapa + endereço · scale-in (peso visual) */}
+        <Reveal direction="scale" className="grid md:grid-cols-12 gap-0 bg-ve-bg-card border border-[color:var(--ve-line)] overflow-hidden" duration={1}>
           {/* Mapa embed */}
           <div className="md:col-span-7 relative aspect-[16/10] md:aspect-auto md:min-h-[420px] bg-ve-bg-soft">
             <iframe
@@ -110,10 +111,10 @@ export default function ComoChegar() {
               Agendamento sempre pelo WhatsApp do Vida em Equilíbrio
             </p>
           </div>
-        </div>
+        </Reveal>
 
-        {/* Nota de domicílio */}
-        <div className="mt-12 grid md:grid-cols-12 gap-6 items-center">
+        {/* Nota de domicílio · slide up */}
+        <Reveal direction="up" className="mt-12 grid md:grid-cols-12 gap-6 items-center">
           <div className="md:col-span-2">
             <IconMapa className="w-8 h-8 text-ve-champagne" />
           </div>
@@ -127,7 +128,7 @@ export default function ComoChegar() {
               não precisa preparar nada.
             </p>
           </div>
-        </div>
+        </Reveal>
       </div>
     </section>
   );

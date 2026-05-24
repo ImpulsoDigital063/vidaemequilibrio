@@ -3,6 +3,8 @@
 import { useState } from "react";
 import { IconPlus } from "./Icons";
 import { SchemaFAQ } from "./SchemaOrgVidaEquilibrio";
+import Reveal from "./motion/Reveal";
+import Stagger, { StaggerItem } from "./motion/Stagger";
 
 const PERGUNTAS = [
   {
@@ -50,19 +52,23 @@ export default function FAQ() {
     <section className="bg-ve-bg text-ve-cream py-24 md:py-32 border-t border-[color:var(--ve-line)]">
       <SchemaFAQ perguntas={PERGUNTAS} />
       <div className="container-x grid md:grid-cols-12 gap-10">
-        <div className="md:col-span-4">
+        <Reveal direction="right" className="md:col-span-4">
           <p className="eyebrow text-ve-champagne mb-6">Perguntas</p>
           <h2 className="display text-3xl md:text-4xl leading-[1.1]">
             O que costuma{" "}
             <span className="display-italic text-ve-champagne">aparecer</span>.
           </h2>
-        </div>
+        </Reveal>
 
-        <ul className="md:col-span-8 divide-y divide-[color:var(--ve-line)]">
+        <Stagger
+          as="ul"
+          step={0.04}
+          className="md:col-span-8 divide-y divide-[color:var(--ve-line)]"
+        >
           {PERGUNTAS.map((p, i) => {
             const isOpen = open === i;
             return (
-              <li key={p.q}>
+              <StaggerItem key={p.q} as="li" direction="up" distance={16}>
                 <button
                   onClick={() => setOpen(isOpen ? null : i)}
                   className="w-full text-left py-6 flex items-start justify-between gap-6 group"
@@ -81,10 +87,10 @@ export default function FAQ() {
                     {p.a}
                   </p>
                 )}
-              </li>
+              </StaggerItem>
             );
           })}
-        </ul>
+        </Stagger>
       </div>
     </section>
   );

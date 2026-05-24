@@ -9,6 +9,8 @@ import {
   IconEsfoliante,
   IconBolinha,
 } from "./Icons";
+import Reveal from "./motion/Reveal";
+import Stagger, { StaggerItem } from "./motion/Stagger";
 
 // Estrutura por CATEGORIAS (estilo Alivièr) — adaptado pra língua do Leandro
 
@@ -98,17 +100,19 @@ export default function CardapioRituais() {
   return (
     <section id="massagens" className="bg-ve-bg-soft text-ve-cream py-24 md:py-32">
       <div className="container-x">
-        <p className="eyebrow text-ve-champagne mb-6">O catálogo</p>
-        <h2 className="display text-3xl md:text-5xl leading-[1.1] max-w-4xl">
-          Um programa completo,{" "}
-          <span className="display-italic text-ve-champagne">
-            cinco massagens dedicadas
-          </span>
-          .
-        </h2>
+        <Reveal direction="up">
+          <p className="eyebrow text-ve-champagne mb-6">O catálogo</p>
+          <h2 className="display text-3xl md:text-5xl leading-[1.1] max-w-4xl">
+            Um programa completo,{" "}
+            <span className="display-italic text-ve-champagne">
+              cinco massagens dedicadas
+            </span>
+            .
+          </h2>
+        </Reveal>
 
-        {/* DAY PREMIUM — destaque */}
-        <div className="mt-16 group">
+        {/* DAY PREMIUM — destaque · scale-in pra dar peso */}
+        <Reveal direction="scale" className="mt-16 group block" duration={1}>
           <Link href={DAY_PREMIUM.href} className="block">
             <div className="grid md:grid-cols-12 gap-0 items-stretch bg-ve-burgundy hover:bg-ve-burgundy/90 transition-colors overflow-hidden">
               <div className="md:col-span-5 aspect-[4/3] md:aspect-auto relative">
@@ -140,12 +144,12 @@ export default function CardapioRituais() {
               </div>
             </div>
           </Link>
-        </div>
+        </Reveal>
 
         {/* CATEGORIAS */}
         {CATEGORIAS.map((cat) => (
           <div key={cat.titulo} className="mt-20">
-            <div className="flex items-end justify-between flex-wrap gap-4 mb-8">
+            <Reveal direction="up" className="flex items-end justify-between flex-wrap gap-4 mb-8">
               <div>
                 <p className="eyebrow text-ve-champagne mb-2">Categoria</p>
                 <h3 className="display text-2xl md:text-4xl text-ve-cream">
@@ -155,15 +159,15 @@ export default function CardapioRituais() {
                   {cat.intro}
                 </p>
               </div>
-            </div>
+            </Reveal>
 
-            <div className="grid md:grid-cols-2 gap-px bg-[color:var(--ve-line)]">
-              {cat.massagens.map((m) => (
-                <Link
-                  key={m.nome}
-                  href={m.href}
-                  className="group bg-ve-bg-soft hover:bg-ve-bg-card transition-colors block"
-                >
+            <Stagger className="grid md:grid-cols-2 gap-px bg-[color:var(--ve-line)]" step={0.1}>
+              {cat.massagens.map((m, idx) => (
+                <StaggerItem key={m.nome} direction={idx % 2 === 0 ? "left" : "right"} distance={32}>
+                  <Link
+                    href={m.href}
+                    className="group bg-ve-bg-soft hover:bg-ve-bg-card transition-colors block h-full"
+                  >
                   <div className="aspect-[16/9] relative overflow-hidden bg-ve-bg-card">
                     <Image
                       src={m.img}
@@ -186,43 +190,45 @@ export default function CardapioRituais() {
                       <IconArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                     </span>
                   </div>
-                </Link>
+                  </Link>
+                </StaggerItem>
               ))}
-            </div>
+            </Stagger>
           </div>
         ))}
 
         {/* ENHANCEMENTS */}
         <div className="mt-24">
-          <p className="eyebrow text-ve-champagne mb-4">Adicionais</p>
-          <h3 className="display text-2xl md:text-3xl max-w-2xl">
-            Compose sua massagem com{" "}
-            <span className="display-italic">enhancements</span>.
-          </h3>
+          <Reveal direction="up">
+            <p className="eyebrow text-ve-champagne mb-4">Adicionais</p>
+            <h3 className="display text-2xl md:text-3xl max-w-2xl">
+              Compose sua massagem com{" "}
+              <span className="display-italic">enhancements</span>.
+            </h3>
+          </Reveal>
 
-          <div className="mt-10 grid grid-cols-2 md:grid-cols-3 gap-px bg-[color:var(--ve-line)]">
+          <Stagger className="mt-10 grid grid-cols-2 md:grid-cols-3 gap-px bg-[color:var(--ve-line)]" step={0.05}>
             {ENHANCEMENTS.map((e) => {
               const Icon = e.icon;
               return (
-                <div
-                  key={e.nome}
-                  className="bg-ve-bg-soft p-6 flex items-center gap-4"
-                >
-                  <Icon className="w-7 h-7 text-ve-champagne flex-shrink-0" />
-                  <div>
-                    <p className="text-ve-cream text-sm font-medium">{e.nome}</p>
-                    {e.nota && (
-                      <p className="eyebrow text-ve-burgundy mt-1">{e.nota}</p>
-                    )}
+                <StaggerItem key={e.nome} direction="up" distance={16}>
+                  <div className="bg-ve-bg-soft p-6 flex items-center gap-4 h-full">
+                    <Icon className="w-7 h-7 text-ve-champagne flex-shrink-0" />
+                    <div>
+                      <p className="text-ve-cream text-sm font-medium">{e.nome}</p>
+                      {e.nota && (
+                        <p className="eyebrow text-ve-burgundy mt-1">{e.nota}</p>
+                      )}
+                    </div>
                   </div>
-                </div>
+                </StaggerItem>
               );
             })}
-          </div>
+          </Stagger>
         </div>
 
         {/* CTA · sem preço */}
-        <div className="mt-20 text-center">
+        <Reveal direction="scale" className="mt-20 text-center">
           <p className="display-italic text-ve-cream/80 text-xl md:text-2xl max-w-xl mx-auto">
             "Os valores são compartilhados no contato — cada agenda é pensada
             individualmente."
@@ -236,7 +242,7 @@ export default function CardapioRituais() {
             Receber valores pelo WhatsApp
             <IconArrowRight className="w-4 h-4" />
           </a>
-        </div>
+        </Reveal>
       </div>
     </section>
   );

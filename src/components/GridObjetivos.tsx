@@ -8,6 +8,8 @@ import {
   IconLeaf,
   IconArrowRight,
 } from "./Icons";
+import Reveal from "./motion/Reveal";
+import Stagger, { StaggerItem } from "./motion/Stagger";
 
 const OBJETIVOS = [
   {
@@ -64,41 +66,47 @@ export default function GridObjetivos() {
   return (
     <section id="objetivos" className="bg-ve-cream text-ve-text-dark py-24 md:py-32">
       <div className="container-x">
-        <p className="eyebrow text-ve-terracota mb-6">A pergunta vem antes da técnica</p>
-        <h2 className="display text-3xl md:text-5xl leading-[1.1] max-w-3xl text-ve-text-dark">
-          Cada corpo chega de um jeito.{" "}
-          <span className="display-italic">Cada massagem responde diferente.</span>
-        </h2>
+        <Reveal direction="up">
+          <p className="eyebrow text-ve-terracota mb-6">A pergunta vem antes da técnica</p>
+          <h2 className="display text-3xl md:text-5xl leading-[1.1] max-w-3xl text-ve-text-dark">
+            Cada corpo chega de um jeito.{" "}
+            <span className="display-italic">Cada massagem responde diferente.</span>
+          </h2>
+        </Reveal>
 
         <div className="hairline my-12 bg-ve-text-dark/15" />
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-ve-text-dark/10">
+        <Stagger
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-ve-text-dark/10"
+          step={0.08}
+        >
           {OBJETIVOS.map((o) => {
             const Icon = o.icon;
             return (
-              <Link
-                key={o.massagem}
-                href={o.href}
-                className="group bg-ve-cream p-8 md:p-10 flex flex-col gap-6 hover:bg-ve-cream-soft transition-colors"
-              >
-                <Icon className="w-10 h-10 text-ve-burgundy" />
-                <div>
-                  <p className="eyebrow text-ve-terracota mb-2">{o.estado}</p>
-                  <h3 className="display text-2xl md:text-3xl text-ve-text-dark">
-                    {o.massagem}
-                  </h3>
-                </div>
-                <p className="text-ve-text-dark/70 text-sm leading-relaxed">
-                  {o.descricao}
-                </p>
-                <span className="mt-auto inline-flex items-center gap-2 text-sm font-medium text-ve-text-dark group-hover:text-ve-burgundy transition-colors">
-                  Conhecer
-                  <IconArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-                </span>
-              </Link>
+              <StaggerItem key={o.massagem} direction="up">
+                <Link
+                  href={o.href}
+                  className="group bg-ve-cream p-8 md:p-10 flex flex-col gap-6 hover:bg-ve-cream-soft transition-colors h-full"
+                >
+                  <Icon className="w-10 h-10 text-ve-burgundy" />
+                  <div>
+                    <p className="eyebrow text-ve-terracota mb-2">{o.estado}</p>
+                    <h3 className="display text-2xl md:text-3xl text-ve-text-dark">
+                      {o.massagem}
+                    </h3>
+                  </div>
+                  <p className="text-ve-text-dark/70 text-sm leading-relaxed">
+                    {o.descricao}
+                  </p>
+                  <span className="mt-auto inline-flex items-center gap-2 text-sm font-medium text-ve-text-dark group-hover:text-ve-burgundy transition-colors">
+                    Conhecer
+                    <IconArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                  </span>
+                </Link>
+              </StaggerItem>
             );
           })}
-        </div>
+        </Stagger>
       </div>
     </section>
   );
