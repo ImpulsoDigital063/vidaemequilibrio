@@ -413,32 +413,30 @@ export default function PlanoVidaEquilibrio() {
             <span style={{ width: 28, height: 1, background: "var(--p-text-muted)", opacity: 0.4 }} />
           </div>
 
-          {/* Logo com glow circular */}
-          <div style={{ position: "relative", marginTop: 50, padding: 26, borderRadius: "50%", background: "radial-gradient(circle, rgba(201, 183, 156, 0.22) 0%, rgba(201, 183, 156, 0) 70%)" }}>
-            <MarkArcoEquilibrio color="#6E2A4A" thickness={2} style={{ width: 110, height: 110 }} />
-          </div>
-
-          {/* Selo Impulso */}
-          <div style={{ fontSize: 10, fontWeight: 500, textTransform: "uppercase", letterSpacing: "0.32em", color: "var(--p-champagne-deep)", marginTop: 30, padding: "7px 18px", border: "1px solid var(--p-border-soft)", borderRadius: 999, background: "rgba(255, 255, 255, 0.5)" }}>
+          {/* Selo Impulso · sobe pra ficar ACIMA da logo */}
+          <div style={{ fontSize: 10, fontWeight: 500, textTransform: "uppercase", letterSpacing: "0.32em", color: "var(--p-champagne-deep)", marginTop: 70, padding: "7px 18px", border: "1px solid var(--p-border-soft)", borderRadius: 999, background: "rgba(255, 255, 255, 0.5)" }}>
             Impulso Digital · Plano Completo
           </div>
 
-          {/* Título principal · gradient warm */}
-          <h1 style={{ fontSize: 80, fontWeight: 300, lineHeight: 0.98, marginTop: 22, marginBottom: 8, letterSpacing: "-0.025em", background: "linear-gradient(135deg, #4A1B30 0%, #6E2A4A 50%, #9F8B6A 100%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>
-            Vida em<br />
-            <span style={{ fontStyle: "italic" }}>Equilíbrio</span>
-          </h1>
+          {/* LOGO OFICIAL · protagonista da capa · firma identidade */}
+          <div style={{ position: "relative", marginTop: 36, marginBottom: 8, padding: "26px 40px", borderRadius: 12 }}>
+            {/* Glow radial atrás da logo · sutil, só pra dar profundidade */}
+            <div style={{ position: "absolute", inset: 0, background: "radial-gradient(ellipse at center, rgba(201, 183, 156, 0.28) 0%, rgba(201, 183, 156, 0) 75%)", borderRadius: "50%", zIndex: 0 }} />
+            <div style={{ position: "relative", zIndex: 1 }}>
+              <LogoVariacaoA color="#4A1B30" showTagline={true} style={{ width: 380, height: "auto", maxWidth: "85vw" }} />
+            </div>
+          </div>
 
-          {/* Linha decorativa */}
-          <div style={{ width: 80, height: 3, background: "linear-gradient(90deg, #6E2A4A 0%, #C9B79C 100%)", borderRadius: 2, margin: "22px 0 18px" }} />
+          {/* Linha decorativa fina */}
+          <div style={{ width: 64, height: 2, background: "linear-gradient(90deg, #6E2A4A 0%, #C9B79C 100%)", borderRadius: 2, margin: "18px 0 22px" }} />
 
-          {/* Subtítulo */}
-          <h2 style={{ fontSize: 20, fontWeight: 400, color: "var(--p-text-soft)", maxWidth: 520, marginBottom: 8, lineHeight: 1.3, letterSpacing: "-0.005em" }}>
+          {/* Subtítulo · contextualiza o documento */}
+          <h2 style={{ fontSize: 18, fontWeight: 400, color: "var(--p-text-soft)", maxWidth: 520, marginBottom: 8, lineHeight: 1.3, letterSpacing: "-0.005em" }}>
             Plano Completo de Marca, Operação e Captação Digital
           </h2>
 
           {/* Tagline */}
-          <p style={{ fontSize: 14, fontStyle: "italic", color: "var(--p-text-muted)", marginBottom: 32 }}>
+          <p style={{ fontSize: 13, fontStyle: "italic", color: "var(--p-text-muted)", marginBottom: 32 }}>
             12 meses de estratégia · execução · resultado
           </p>
 
