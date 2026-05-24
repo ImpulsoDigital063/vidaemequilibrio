@@ -11,6 +11,7 @@ import FAQ from "@/components/FAQ";
 import WhatsAppCTA from "@/components/WhatsAppCTA";
 import Footer from "@/components/Footer";
 import SchemaOrgVidaEquilibrio from "@/components/SchemaOrgVidaEquilibrio";
+import StickyMobileCTA from "@/components/StickyMobileCTA";
 
 // Jornada AIDA (Atenção · Interesse · Desejo · Ação)
 //   1 Hero ............. Atenção · pergunta
@@ -42,6 +43,7 @@ export default function Home() {
         <WhatsAppCTA />
       </main>
       <Footer />
+      <StickyMobileCTA />
     </>
   );
 }

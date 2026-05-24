@@ -63,14 +63,14 @@ export default function ValePresente() {
           </div>
         </Reveal>
 
-        {/* Modalidades · stagger up · destaque (vale day premium) entra com peso */}
+        {/* Modalidades · destaque (Vale Day Premium) APARECE PRIMEIRO em mobile · ordem normal desktop */}
         <Stagger className="grid md:grid-cols-3 gap-px bg-[color:var(--ve-line)]" step={0.12}>
-          {MODALIDADES.map((m) => (
+          {MODALIDADES.map((m, idx) => (
             <StaggerItem
               key={m.nome}
               direction={m.destaque ? "scale" : "up"}
               distance={30}
-              className={`p-8 md:p-10 h-full ${m.destaque ? "bg-ve-burgundy" : "bg-ve-bg-soft"}`}
+              className={`p-8 md:p-10 h-full ${m.destaque ? "bg-ve-burgundy order-first md:order-none" : "bg-ve-bg-soft"} ${!m.destaque && idx === 0 ? "md:order-first" : ""}`}
             >
               <p className="eyebrow text-ve-champagne mb-3">Modalidade</p>
               <h3 className="display text-2xl md:text-3xl text-ve-cream">

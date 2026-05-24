@@ -71,7 +71,7 @@ export default function Espaco() {
             duration={1}
           >
             {/* Mapa embed · vira a "imagem" do card */}
-            <div className="relative aspect-[16/10] bg-ve-bg-soft overflow-hidden">
+            <div className="relative aspect-[4/3] md:aspect-[16/10] bg-ve-bg-soft overflow-hidden">
               <iframe
                 src={EMBED_URL}
                 loading="lazy"
@@ -147,7 +147,7 @@ export default function Espaco() {
             delay={0.1}
           >
             {/* Imagem textura linho · vira a "imagem" do card */}
-            <div className="relative aspect-[16/10] bg-ve-bg overflow-hidden">
+            <div className="relative aspect-[4/3] md:aspect-[16/10] bg-ve-bg overflow-hidden">
               <Image
                 src="/img/textureLinen.png"
                 alt=""

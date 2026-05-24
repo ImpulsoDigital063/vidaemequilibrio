@@ -279,11 +279,11 @@ export default function GridObjetivos() {
                         href={waLink(o.waMessage)}
                         target="_blank"
                         rel="noopener"
-                        className="inline-flex items-center justify-center w-9 h-9 rounded-full border border-ve-burgundy/30 text-ve-burgundy hover:bg-ve-burgundy hover:text-ve-cream transition-colors"
+                        className="inline-flex items-center justify-center w-11 h-11 rounded-full border border-ve-burgundy/30 text-ve-burgundy hover:bg-ve-burgundy hover:text-ve-cream transition-colors flex-shrink-0"
                         aria-label={`Agendar ${o.massagem} pelo WhatsApp`}
                         title="Agendar pelo WhatsApp"
                       >
-                        <IconWhatsApp className="w-4 h-4" />
+                        <IconWhatsApp className="w-[18px] h-[18px]" />
                       </a>
                     </div>
                   </div>

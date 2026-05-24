@@ -28,7 +28,7 @@ export default function Hero() {
           fill
           priority
           sizes="100vw"
-          className="object-cover"
+          className="object-cover object-[28%_30%] md:object-center"
           quality={88}
         />
         {/* Gradiente warm bottom · respira a foto em cima, escurece embaixo */}
@@ -65,7 +65,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.4, ease: EASE }}
-          className="eyebrow text-ve-champagne mb-6"
+          className="eyebrow text-ve-champagne mb-6 font-medium drop-shadow-[0_1px_8px_rgba(15,11,8,0.6)]"
         >
           Vida em Equilíbrio · Massagem terapêutica · Palmas-TO
         </motion.p>
