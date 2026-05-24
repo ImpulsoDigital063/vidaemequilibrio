@@ -128,6 +128,26 @@ const VE_PROMPTS = {
     note: "Hero corredora noturna · seção Massagem Desportiva (Restauração)",
   },
 
+  stillManifesto: {
+    prompt:
+      "Editorial still life photograph of female hands folded gently on lap, close-up, soft warm tungsten lighting, very dark amber and chocolate brown background, intimate cinematic atmosphere, single subject, hands only, no face visible, magazine quality photography, photorealistic, golden warm tones, evokes contemplation and presence, vertical 4:5 frame",
+    negativePrompt:
+      "bright daylight, white background, cold tones, blue, faces visible, multiple people, cartoon, illustration, text overlay, watermark, logo, sketch",
+    aspectRatio: "4:5",
+    suggestedModel: "pro",
+    note: "Substitui placeholder 'Foto profissional pendente' no Manifesto Leandro",
+  },
+
+  stillBraco: {
+    prompt:
+      "Editorial photography of professional female hands giving a back massage, close-up of fingers pressing softly into shoulder blade muscles, warm tungsten lighting, deep amber and bronze tones, very dark background, cinematic intimate atmosphere, single subject, no face visible, magazine photography, photorealistic, golden brown tones",
+    negativePrompt:
+      "bright lighting, white background, multiple people, face visible, cold tones, cartoon, illustration, text, watermark, logo, sketch",
+    aspectRatio: "16:9",
+    suggestedModel: "pro",
+    note: "Alternativa pro hero ou seção Espaço · close técnico de manobra",
+  },
+
   stillBolinha: {
     prompt:
       "Editorial still life of a small spiky rubber massage ball on a folded dark linen towel, dark warm tungsten background, intimate spa atmosphere, single subject, amber and chocolate tones, photorealistic, magazine quality, no text",

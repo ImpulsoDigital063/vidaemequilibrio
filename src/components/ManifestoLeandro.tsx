@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { MarcaDagua } from "./Icons";
 
 export default function ManifestoLeandro() {
@@ -10,20 +11,25 @@ export default function ManifestoLeandro() {
         className="absolute -right-32 top-1/2 -translate-y-1/2 w-[640px] pointer-events-none"
       />
       <div className="container-x relative grid md:grid-cols-12 gap-10 items-center">
-        {/* Coluna foto · placeholder editorial até foto real */}
+        {/* Coluna foto · still life mãos cinematográfico */}
         <div className="md:col-span-5 order-2 md:order-1">
-          <div className="aspect-[4/5] bg-ve-bg-card border border-[color:var(--ve-line)] flex items-center justify-center relative overflow-hidden">
+          <div className="aspect-[4/5] border border-[color:var(--ve-line)] relative overflow-hidden">
+            <Image
+              src="/img/stillManifesto.png"
+              alt=""
+              fill
+              sizes="(max-width: 768px) 100vw, 40vw"
+              className="object-cover"
+            />
             <div
-              className="absolute inset-0 opacity-30"
+              className="absolute inset-0"
               style={{
                 background:
-                  "radial-gradient(circle at 30% 40%, rgba(201, 183, 156, 0.25), transparent 60%)",
+                  "linear-gradient(180deg, rgba(15,11,8,0) 60%, rgba(15,11,8,0.65) 100%)",
               }}
             />
-            <p className="text-ve-muted text-xs eyebrow z-10 px-6 text-center">
-              Foto profissional
-              <br />
-              pendente
+            <p className="absolute bottom-5 left-5 eyebrow text-ve-champagne text-[10px]">
+              Foto ensaio em curso · Leandro Timóteo
             </p>
           </div>
         </div>

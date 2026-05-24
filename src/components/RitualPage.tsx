@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Header from "./Header";
 import Footer from "./Footer";
+import SchemaOrgVidaEquilibrio from "./SchemaOrgVidaEquilibrio";
 import { IconArrowRight, IconArrowDown } from "./Icons";
 
 export type MassagemData = {
@@ -18,10 +19,29 @@ export type MassagemData = {
   whatsappMsg: string;
 };
 
+// Faixa de preço por massagem · pra Schema.org Service
+const FAIXA_PRECO: Record<string, [number, number]> = {
+  "Day Premium Equilíbrio": [520, 680],
+  "Massagem Relaxante": [180, 240],
+  "Drenagem Linfática": [190, 250],
+  "Massagem Desportiva": [200, 280],
+  "Massagem Modeladora": [200, 280],
+  "Massagem Facial": [160, 220],
+};
+
 // (Mantemos o nome RitualPage do arquivo pra não quebrar imports, mas conceito é "MassagemPage")
 export default function RitualPage({ data }: { data: MassagemData }) {
+  const [priceMin, priceMax] = FAIXA_PRECO[data.nome] ?? [180, 280];
   return (
     <>
+      <SchemaOrgVidaEquilibrio
+        page="service"
+        serviceName={data.nome}
+        serviceDescription={data.intro}
+        serviceDuration={data.duracao}
+        servicePriceMin={priceMin}
+        servicePriceMax={priceMax}
+      />
       <Header />
       <main className="flex-1 bg-ve-bg">
         {/* HERO */}

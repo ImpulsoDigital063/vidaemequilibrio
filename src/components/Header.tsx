@@ -38,7 +38,7 @@ export default function Header() {
             rel="noopener"
             className="btn-ghost text-sm"
           >
-            Conversar
+            Falar com a equipe
           </a>
         </nav>
 

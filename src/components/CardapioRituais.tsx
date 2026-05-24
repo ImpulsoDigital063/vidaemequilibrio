@@ -26,12 +26,12 @@ const DAY_PREMIUM = {
 const CATEGORIAS = [
   {
     titulo: "Massagens Relaxantes",
-    intro: "Foco em bem-estar, redução de estresse e leveza no dia a dia.",
+    intro: "Para soltar o que o dia acumulou.",
     massagens: [
       {
         nome: "Massagem Relaxante",
         descricao:
-          "Sessão clássica com manobras de deslizamento e amassamento. Pode receber enhancements à parte.",
+          "Sessão de abertura. Manobras clássicas de deslizamento e amassamento, sem pressa. Pode somar enhancements.",
         duracao: "~60 min",
         href: "/massagem-relaxante",
         img: "/img/heroHands.png",
@@ -40,12 +40,12 @@ const CATEGORIAS = [
   },
   {
     titulo: "Massagens Terapêuticas",
-    intro: "Trabalho focal em dor, tensão profunda, drenagem e recovery.",
+    intro: "Para o que dói, retém ou pede recuperação técnica.",
     massagens: [
       {
         nome: "Drenagem Linfática",
         descricao:
-          "Manobras de bombeamento e deslizamento contínuo no caminho do retorno linfático. Indicada para inchaço, retenção e pós-cirúrgico.",
+          "Pressão firme e ritmo contínuo no caminho do retorno linfático. Indicada para inchaço, retenção e pós-cirúrgico.",
         duracao: "~60 min",
         href: "/drenagem-linfatica",
         img: "/img/stillBamboo.png",
@@ -53,7 +53,7 @@ const CATEGORIAS = [
       {
         nome: "Massagem Desportiva",
         descricao:
-          "Liberação miofascial, pressão em pontos-gatilho e deslizamento de drenagem ascendente. Para corredoras amadoras: preparação pré-prova e recovery pós-prova.",
+          "Liberação miofascial e trabalho em pontos-gatilho. Recovery focal para corredora amadora — pré-prova e pós.",
         duracao: "~60 min",
         href: "/massagem-desportiva",
         img: "/img/heroCorredora.jpg",
@@ -62,12 +62,12 @@ const CATEGORIAS = [
   },
   {
     titulo: "Massagens Estéticas",
-    intro: "Contorno corporal e cuidado facial com técnica.",
+    intro: "Para o corpo e o rosto, com método e frequência.",
     massagens: [
       {
         nome: "Massagem Modeladora",
         descricao:
-          "Amassamento profundo, pinçamento e rolamento. Trabalha contorno com pressão direcionada e frequência.",
+          "Amassamento profundo, pinçamento, rolamento. Trabalho de contorno em série consistente.",
         duracao: "~60 min",
         href: "/massagem-modeladora",
         img: "/img/stillHotStones.png",
@@ -75,7 +75,7 @@ const CATEGORIAS = [
       {
         nome: "Massagem Facial",
         descricao:
-          "Manobras de drenagem facial, liberação de ATM e pressão suave no contorno do olho. Alivia tensão e devolve viço.",
+          "Drenagem facial, liberação de ATM, contorno do olho. Devolve viço.",
         duracao: "~45 min",
         href: "/massagem-facial",
         img: "/img/stillEsfoliante.png",
