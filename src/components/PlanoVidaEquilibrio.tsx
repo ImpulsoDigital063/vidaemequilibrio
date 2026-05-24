@@ -290,30 +290,41 @@ export default function PlanoVidaEquilibrio() {
         .plano-cor-block { width: 60px; height: 60px; border-radius: 4px; flex-shrink: 0; border: 1px solid var(--p-border-soft); }
         @media print {
           .no-print { display: none !important; }
-          /* OVERRIDE pra impressão · texto mais escuro · fundo papel branco · economia */
+          /* OVERRIDE pra impressão · CINZA ESCURO NEUTRO no corpo (imprime com tinta preta · não depende de tinta colorida)
+             warm burgundy mantido só em headings/strong (identidade) */
           :root {
-            --p-text: #1F0E08 !important;
-            --p-text-soft: #3D2517 !important;
-            --p-text-muted: #6B4E37 !important;
-            --p-border: rgba(31, 14, 8, 0.32) !important;
-            --p-border-soft: rgba(31, 14, 8, 0.18) !important;
+            --p-text: #1A1A1A !important;
+            --p-text-soft: #2E2E2E !important;
+            --p-text-muted: #4A4A4A !important;
+            --p-border: rgba(26, 26, 26, 0.45) !important;
+            --p-border-soft: rgba(26, 26, 26, 0.25) !important;
           }
           body {
             background: white !important;
-            color: #1F0E08 !important;
+            color: #1A1A1A !important;
             font-size: 9.5pt;
             -webkit-font-smoothing: antialiased;
+            -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
           }
           .plano-doc {
             background: white !important;
-            color: #1F0E08 !important;
-            font-weight: 450;
+            color: #1A1A1A !important;
+            font-weight: 500;
             line-height: 1.55;
             max-width: none !important;
             padding: 0 !important;
           }
           /* main wrapper · sem padding extra em print */
           main.plano-doc { padding: 0 !important; }
+
+          /* FORÇA cor escura em TODOS os elementos de texto (override inline styles) */
+          .plano-doc p,
+          .plano-doc li,
+          .plano-doc span:not([style*="color"]),
+          .plano-doc div:not([style*="color"]) {
+            color: #1A1A1A !important;
+          }
 
           @page {
             size: A4;
@@ -351,15 +362,16 @@ export default function PlanoVidaEquilibrio() {
             }
           }
 
-          /* Tipografia compacta em print */
-          .plano-doc h2 { font-size: 15pt !important; page-break-after: avoid; margin: 0 0 6px !important; color: #4A1B30 !important; }
-          .plano-doc h3 { font-size: 11.5pt !important; page-break-after: avoid; margin: 18px 0 6px !important; color: #1F0E08 !important; font-weight: 600 !important; }
-          .plano-doc h4 { font-size: 10pt !important; margin: 14px 0 5px !important; color: #6B4E37 !important; }
-          .plano-doc p, .plano-doc li, .plano-doc td { font-size: 9.5pt !important; }
+          /* Tipografia compacta em print · cinza no corpo · burgundy só em h2/strong (identidade) */
+          .plano-doc h2 { font-size: 15pt !important; page-break-after: avoid; margin: 0 0 6px !important; color: #4A1B30 !important; font-weight: 700 !important; }
+          .plano-doc h3 { font-size: 11.5pt !important; page-break-after: avoid; margin: 18px 0 6px !important; color: #1A1A1A !important; font-weight: 700 !important; }
+          .plano-doc h4 { font-size: 10pt !important; margin: 14px 0 5px !important; color: #2E2E2E !important; font-weight: 600 !important; }
+          .plano-doc p, .plano-doc li, .plano-doc td { font-size: 9.5pt !important; color: #1A1A1A !important; }
           .plano-doc p { margin: 0 0 8px !important; }
           .plano-doc li { margin: 5px 0 !important; line-height: 1.5 !important; }
           .plano-doc ul, .plano-doc ol { margin: 8px 0 14px !important; }
-          .plano-doc strong { color: #4A1B30 !important; font-weight: 600 !important; }
+          .plano-doc strong { color: #4A1B30 !important; font-weight: 700 !important; }
+          .plano-doc em { color: #2E2E2E !important; }
 
           /* Seções · menos espaço entre */
           .plano-section { margin-bottom: 28px !important; page-break-inside: auto; }
@@ -373,16 +385,16 @@ export default function PlanoVidaEquilibrio() {
           .plano-callout.is-champagne { background: transparent !important; border-left-color: #9F8B6A !important; }
           .plano-callout.is-warm { background: transparent !important; border-left-color: #8B6342 !important; }
 
-          /* Quote · menor padding */
-          .plano-quote { padding: 8px 16px !important; margin: 10px 0 !important; font-size: 10pt !important; background: transparent !important; color: #3D2517 !important; }
+          /* Quote · menor padding · cinza médio italic */
+          .plano-quote { padding: 8px 16px !important; margin: 10px 0 !important; font-size: 10pt !important; background: transparent !important; color: #2E2E2E !important; font-weight: 500 !important; }
 
-          /* Tabelas · linhas mais finas + texto escuro */
+          /* Tabelas · linhas mais finas + texto escuro · header burgundy mantém identidade */
           .plano-doc table { margin: 12px 0 18px !important; font-size: 9pt !important; }
-          .plano-doc th { padding: 8px 10px !important; font-size: 8.5pt !important; background: rgba(74, 27, 48, 0.07) !important; color: #4A1B30 !important; border-bottom-width: 1.5px !important; }
-          .plano-doc td { padding: 7px 10px !important; line-height: 1.45 !important; color: #1F0E08 !important; }
+          .plano-doc th { padding: 8px 10px !important; font-size: 8.5pt !important; background: rgba(74, 27, 48, 0.10) !important; color: #4A1B30 !important; font-weight: 700 !important; border-bottom-width: 1.5px !important; border-bottom-color: #4A1B30 !important; }
+          .plano-doc td { padding: 7px 10px !important; line-height: 1.45 !important; color: #1A1A1A !important; }
 
-          /* Flow blocks · sem fundo */
-          .plano-flow { padding: 12px 16px !important; margin: 10px 0 !important; background: transparent !important; border: 1px solid rgba(31, 14, 8, 0.16) !important; font-size: 9.5pt !important; line-height: 1.7 !important; }
+          /* Flow blocks · sem fundo · borda forte */
+          .plano-flow { padding: 12px 16px !important; margin: 10px 0 !important; background: transparent !important; border: 1px solid rgba(26, 26, 26, 0.25) !important; font-size: 9.5pt !important; line-height: 1.7 !important; color: #1A1A1A !important; }
 
           /* Page break · só capa força */
           .plano-page { page-break-after: always; }
