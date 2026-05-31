@@ -112,9 +112,9 @@ const STATIC_ITEMS: SearchItem[] = [
   {
     titulo: "Escolha por estado · Cada corpo chega de um jeito",
     descricao: "Quero relaxar · estou inchada · vou correr · quero modelar · cuidar do rosto",
-    href: "/#objetivos",
+    href: "/#massagens",
     categoria: "Seção",
-    keywords: ["objetivos", "estado", "corpo", "escolher", "comecar"],
+    keywords: ["massagens", "objetivos", "estado", "corpo", "escolher", "comecar"],
   },
 ];
 

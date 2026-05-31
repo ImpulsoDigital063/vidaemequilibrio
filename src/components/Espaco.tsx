@@ -4,15 +4,18 @@ import {
   IconClock,
   IconArrowRight,
   IconWhatsApp,
+  IconPorta,
+  IconClima,
+  IconRecepcao,
+  MarkArcoEquilibrio,
 } from "./Icons";
 import Reveal from "./motion/Reveal";
 import GlowOrb from "./motion/GlowOrb";
 import Spotlight from "./motion/Spotlight";
 
-// ============== Clínica parceira ==============
-const CLINICA_NOME = "CYOX Centro de Estética Avançada";
-const CLINICA_ENDERECO = "ACNO 01, Rua O1, LT 06, Sala 01";
-const CLINICA_BAIRRO = "Setor Norte · Palmas-TO";
+// ============== Clínica (CYOX) ==============
+const CLINICA_NOME = "CYOX — Centro de Estética Avançada";
+const CLINICA_ENDERECO = "ACNO 01, Rua O1, LT 06, Sala 01 · Setor Norte · Palmas-TO";
 
 const QUERY_MAPS = encodeURIComponent(
   `CYOX Centro de Estética Avançada, ACNO 01 Rua O1 Setor Norte Palmas TO`
@@ -20,18 +23,25 @@ const QUERY_MAPS = encodeURIComponent(
 const EMBED_URL = `https://www.google.com/maps?q=${QUERY_MAPS}&hl=pt-BR&z=15&output=embed`;
 const MAPS_ROUTE = `https://www.google.com/maps/dir/?api=1&destination=${QUERY_MAPS}`;
 
+const FATOS = [
+  { icon: IconPorta, label: "Sala própria" },
+  { icon: IconClima, label: "Ambiente climatizado" },
+  { icon: IconRecepcao, label: "Recepção" },
+  { icon: IconClock, label: "Hora marcada" },
+];
+
 // ============== WhatsApp ==============
 const WA_CLINICA = `https://wa.me/5563848436460?text=${encodeURIComponent(
-  "Oi Leandro, quero agendar na clínica parceira (CYOX · Setor Norte)."
+  "Olá! Quero agendar na clínica (CYOX · Setor Norte)."
 )}`;
 const WA_DOMICILIO = `https://wa.me/5563848436460?text=${encodeURIComponent(
-  "Oi Leandro, prefiro atendimento em domicílio. Posso saber as condições?"
+  "Olá! Prefiro atendimento a domicílio. Quais as condições?"
 )}`;
 
 export default function Espaco() {
   return (
     <section
-      id="espaco"
+      id="clinica"
       className="relative bg-ve-bg-soft text-ve-cream py-24 md:py-32 overflow-hidden border-t border-[color:var(--ve-line)]"
     >
       <Spotlight color="rgba(201, 183, 156, 0.4)" size={520} intensity={0.35} />
@@ -46,171 +56,238 @@ export default function Espaco() {
         {/* Cabeçalho */}
         <Reveal direction="up" className="grid md:grid-cols-12 gap-10 mb-14">
           <div className="md:col-span-5">
-            <p className="eyebrow text-ve-champagne mb-6">Onde acontece</p>
+            <p className="eyebrow text-ve-champagne mb-6">A Clínica</p>
             <h2 className="display text-3xl md:text-5xl leading-[1.1]">
-              Escolha como{" "}
+              Um espaço pronto pra te{" "}
               <span className="display-italic text-ve-champagne">receber</span>.
             </h2>
           </div>
           <div className="md:col-span-7">
-            <p className="text-ve-cream/80 leading-relaxed text-base md:text-lg max-w-xl font-light">
-              Atendimento privativo em{" "}
-              <strong className="text-ve-cream">duas modalidades</strong>. Cada
-              uma com endereço, fluxo e WhatsApp próprios — você escolhe e o
-              link já abre com a mensagem certa.
+            <p className="text-ve-cream/85 leading-[1.7] text-lg md:text-2xl max-w-2xl font-light tracking-[0.01em]">
+              A Vida em Equilíbrio atende dentro da{" "}
+              <span className="display-italic text-ve-champagne">
+                CYOX — Centro de Estética Avançada
+              </span>
+              , no Plano Diretor Norte, em Palmas. Você escolhe como ser
+              atendida: na clínica ou no conforto da sua casa.
             </p>
           </div>
         </Reveal>
 
-        {/* 2 cards · Clínica (com mapa) × Domicílio (com cobertura) */}
-        <div className="grid md:grid-cols-2 gap-px bg-[color:var(--ve-line)]">
-          {/* CARD 1 · CLÍNICA · entra da esquerda */}
-          <Reveal
-            direction="right"
-            className="bg-ve-bg-card flex flex-col"
-            duration={1}
-          >
-            {/* Mapa embed · vira a "imagem" do card */}
-            <div className="relative aspect-[4/3] md:aspect-[16/10] bg-ve-bg-soft overflow-hidden">
-              <iframe
-                src={EMBED_URL}
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                className="absolute inset-0 w-full h-full"
-                style={{
-                  border: 0,
-                  filter:
-                    "grayscale(0.4) brightness(0.85) saturate(0.9)",
-                }}
-                title={`Mapa · ${CLINICA_NOME}`}
-                allowFullScreen
-              />
-              <p className="absolute top-4 left-4 eyebrow text-[10px] text-ve-cream bg-ve-bg/85 px-3 py-1.5 backdrop-blur-sm">
-                Opção 1 · Clínica
-              </p>
-            </div>
+        {/* CLÍNICA · destaque imagem + marca CYOX */}
+        <Reveal
+          direction="up"
+          duration={1}
+          className="grid md:grid-cols-2 bg-ve-bg-card overflow-hidden mb-px"
+        >
+          {/* Imagem do ambiente (placeholder até a foto real da CYOX) */}
+          <div className="relative h-80 sm:h-[26rem] md:h-auto md:min-h-[580px]">
+            <Image
+              src="/img/mulher-pos-massagem.jpg"
+              alt="Ambiente de atendimento · Vida em Equilíbrio na CYOX · Palmas-TO"
+              fill
+              sizes="(min-width: 768px) 50vw, 100vw"
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-l from-ve-bg-card via-ve-bg-card/15 to-transparent" />
+            <span className="absolute top-5 left-5 uppercase tracking-[0.18em] text-[10px] font-semibold text-ve-bg bg-ve-champagne px-3 py-1.5">
+              Onde você é cuidada
+            </span>
+          </div>
 
-            <div className="p-8 md:p-10 flex flex-col gap-5 flex-1">
-              <h3 className="display text-2xl md:text-3xl text-ve-cream">
-                Na clínica parceira
-              </h3>
-
-              <div className="flex items-start gap-3">
-                <IconMapa className="w-4 h-4 text-ve-champagne mt-1 flex-shrink-0" />
-                <div>
-                  <p className="text-ve-cream font-medium text-sm leading-snug">
-                    {CLINICA_NOME}
-                  </p>
-                  <p className="text-ve-muted text-xs mt-1">
-                    {CLINICA_ENDERECO}
-                  </p>
-                  <p className="text-ve-muted text-xs">
-                    {CLINICA_BAIRRO}
-                  </p>
-                </div>
-              </div>
-
-              <p className="text-ve-cream/75 text-xs leading-relaxed">
-                Ambiente preparado pra atendimento privativo · sala dedicada à
-                sua sessão · estacionamento e acesso fácil.
-              </p>
-
-              <div className="mt-auto pt-4 flex flex-col gap-2.5 border-t border-[color:var(--ve-line)]">
-                <a
-                  href={WA_CLINICA}
-                  target="_blank"
-                  rel="noopener"
-                  className="inline-flex items-center justify-center gap-2 bg-ve-cream text-ve-bg px-5 py-3 text-sm font-medium hover:bg-ve-champagne transition-colors"
-                >
-                  <IconWhatsApp className="w-4 h-4" />
-                  Agendar na clínica
-                  <IconArrowRight className="w-3.5 h-3.5" />
-                </a>
-                <a
-                  href={MAPS_ROUTE}
-                  target="_blank"
-                  rel="noopener"
-                  className="inline-flex items-center justify-center gap-2 text-ve-champagne hover:text-ve-cream text-xs eyebrow transition-colors py-1"
-                >
-                  Traçar rota no Google Maps
-                  <IconArrowRight className="w-3 h-3" />
-                </a>
-              </div>
-            </div>
-          </Reveal>
-
-          {/* CARD 2 · DOMICÍLIO · entra da direita */}
-          <Reveal
-            direction="left"
-            className="bg-ve-bg-card flex flex-col"
-            duration={1}
-            delay={0.1}
-          >
-            {/* Imagem textura linho · vira a "imagem" do card */}
-            <div className="relative aspect-[4/3] md:aspect-[16/10] bg-ve-bg overflow-hidden">
-              <Image
-                src="/img/textureLinen.png"
-                alt=""
-                fill
-                sizes="(max-width: 768px) 100vw, 50vw"
-                className="object-cover opacity-70"
-              />
+          {/* Conteúdo · marca CYOX elevada */}
+          <div className="p-8 md:p-12 flex flex-col gap-6 justify-center">
+            {/* Marca CYOX · logo reservado pra entrar */}
+            <div className="flex items-center gap-4">
               <div
-                className="absolute inset-0"
-                style={{
-                  background:
-                    "linear-gradient(180deg, rgba(15,11,8,0.15) 0%, rgba(15,11,8,0.75) 100%)",
-                }}
-              />
-              <p className="absolute top-4 left-4 eyebrow text-[10px] text-ve-cream bg-ve-bg/85 px-3 py-1.5 backdrop-blur-sm">
-                Opção 2 · Domicílio
-              </p>
-              <p className="absolute bottom-5 left-5 display text-2xl text-ve-cream">
-                Em casa
-              </p>
-            </div>
-
-            <div className="p-8 md:p-10 flex flex-col gap-5 flex-1">
-              <h3 className="display text-2xl md:text-3xl text-ve-cream">
-                Em domicílio
-              </h3>
-
-              <div className="flex items-start gap-3">
-                <IconMapa className="w-4 h-4 text-ve-champagne mt-1 flex-shrink-0" />
-                <div>
-                  <p className="text-ve-cream font-medium text-sm leading-snug">
-                    Cobertura · Palmas-TO
-                  </p>
-                  <p className="text-ve-muted text-xs mt-1">
-                    Plano Sul · Plano Norte · Aurenys
-                  </p>
-                </div>
+                className="w-16 h-16 flex items-center justify-center border border-dashed border-ve-champagne/40 text-ve-champagne/70 text-[8px] uppercase tracking-widest text-center leading-tight flex-shrink-0"
+                title="Espaço reservado para o logo da CYOX"
+              >
+                logo
+                <br />
+                CYOX
               </div>
-
-              <p className="text-ve-cream/75 text-xs leading-relaxed">
-                Eu levo maca portátil profissional, óleos, esfoliantes e todo o
-                material necessário · você não precisa preparar nada ·
-                privacidade máxima.
-              </p>
-
-              <div className="mt-auto pt-4 flex flex-col gap-2.5 border-t border-[color:var(--ve-line)]">
-                <a
-                  href={WA_DOMICILIO}
-                  target="_blank"
-                  rel="noopener"
-                  className="inline-flex items-center justify-center gap-2 bg-ve-burgundy text-ve-cream px-5 py-3 text-sm font-medium hover:bg-ve-burgundy/85 transition-colors"
-                >
-                  <IconWhatsApp className="w-4 h-4" />
-                  Agendar em casa
-                  <IconArrowRight className="w-3.5 h-3.5" />
-                </a>
-                <p className="text-center text-ve-muted text-xs eyebrow py-1">
-                  Bairros fora da cobertura · consultar pelo WhatsApp
+              <div>
+                <p className="display text-2xl md:text-3xl text-ve-cream leading-none">
+                  CYOX
+                </p>
+                <p className="uppercase tracking-[0.18em] text-[10px] font-medium text-ve-champagne mt-2">
+                  Centro de Estética Avançada
                 </p>
               </div>
             </div>
-          </Reveal>
-        </div>
+
+            <p className="text-ve-cream/80 text-sm md:text-base leading-relaxed">
+              Um centro de estética avançada já estabelecido em Palmas — onde a
+              massagem terapêutica e a estética dividem o mesmo endereço.
+              Cuidado completo num lugar só.
+            </p>
+
+            {/* Fatos · mini-cards com ícone */}
+            <div className="grid grid-cols-2 gap-2.5">
+              {FATOS.map((f) => {
+                const FIcon = f.icon;
+                return (
+                  <div
+                    key={f.label}
+                    className="flex items-center gap-3 border border-ve-champagne/20 bg-ve-bg/30 px-3.5 py-3 hover:border-ve-champagne/50 transition-colors"
+                  >
+                    <span className="flex items-center justify-center w-9 h-9 rounded-full bg-ve-champagne/10 text-ve-champagne flex-shrink-0">
+                      <FIcon className="w-[18px] h-[18px]" />
+                    </span>
+                    <span className="text-xs md:text-sm text-ve-cream/85 leading-tight">
+                      {f.label}
+                    </span>
+                  </div>
+                );
+              })}
+            </div>
+
+            {/* Endereço */}
+            <div className="flex items-start gap-3">
+              <IconMapa className="w-4 h-4 text-ve-champagne mt-0.5 flex-shrink-0" />
+              <p className="text-ve-muted text-xs leading-relaxed">
+                {CLINICA_ENDERECO}
+              </p>
+            </div>
+
+            {/* CTAs */}
+            <div className="flex flex-col sm:flex-row gap-3">
+              <a
+                href={WA_CLINICA}
+                target="_blank"
+                rel="noopener"
+                className="inline-flex items-center justify-center gap-2 bg-ve-cream text-ve-bg px-5 py-3 text-sm font-medium hover:bg-ve-champagne transition-colors"
+              >
+                <IconWhatsApp className="w-4 h-4" />
+                Agendar na clínica
+              </a>
+              <a
+                href={MAPS_ROUTE}
+                target="_blank"
+                rel="noopener"
+                className="inline-flex items-center justify-center gap-2 border border-ve-cream/30 text-ve-cream px-5 py-3 text-sm font-medium hover:bg-ve-cream hover:text-ve-bg transition-colors"
+              >
+                Ver rota
+                <IconArrowRight className="w-3.5 h-3.5" />
+              </a>
+            </div>
+          </div>
+        </Reveal>
+
+        {/* MAPA · tratamento de marca + pin custom + cartão flutuante */}
+        <Reveal
+          direction="up"
+          className="relative h-72 md:h-80 overflow-hidden mb-px border border-ve-champagne/15"
+        >
+          <iframe
+            src={EMBED_URL}
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            className="absolute inset-0 w-full h-full pointer-events-none"
+            style={{
+              border: 0,
+              filter: "grayscale(0.85) brightness(0.7) contrast(1.05) sepia(0.35)",
+            }}
+            title={`Mapa · ${CLINICA_NOME}`}
+          />
+          {/* Tint burgundy de marca */}
+          <div
+            className="absolute inset-0 pointer-events-none"
+            style={{
+              background:
+                "radial-gradient(ellipse at center, rgba(110,42,74,0.25) 0%, rgba(15,11,8,0.55) 100%)",
+              mixBlendMode: "multiply",
+            }}
+          />
+          {/* Vinheta · funde no escuro da seção */}
+          <div className="absolute inset-0 pointer-events-none shadow-[inset_0_0_90px_36px_rgba(15,11,8,0.75)]" />
+
+          {/* Pin custom · símbolo Arco+Ponto */}
+          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-[150%] pointer-events-none">
+            <div className="flex flex-col items-center">
+              <div className="w-12 h-12 rounded-full bg-ve-burgundy border-2 border-ve-champagne/70 flex items-center justify-center shadow-[0_8px_24px_rgba(0,0,0,0.55)]">
+                <MarkArcoEquilibrio color="#F2EBE0" thickness={2.4} className="w-6 h-6" />
+              </div>
+              <div className="w-3 h-3 bg-ve-burgundy border-r-2 border-b-2 border-ve-champagne/70 rotate-45 -mt-1.5" />
+            </div>
+          </div>
+
+          {/* Cartão flutuante · endereço + rota */}
+          <div className="absolute bottom-4 left-4 right-4 md:right-auto md:max-w-sm bg-ve-bg/85 backdrop-blur-md border border-ve-champagne/20 p-4 flex items-center justify-between gap-4">
+            <div>
+              <p className="uppercase tracking-[0.18em] text-[10px] font-semibold text-ve-champagne">
+                CYOX · Setor Norte
+              </p>
+              <p className="text-ve-cream/80 text-xs mt-1 leading-snug">
+                {CLINICA_ENDERECO}
+              </p>
+            </div>
+            <a
+              href={MAPS_ROUTE}
+              target="_blank"
+              rel="noopener"
+              className="inline-flex items-center gap-1.5 text-ve-cream hover:text-ve-champagne text-xs font-medium whitespace-nowrap transition-colors flex-shrink-0"
+            >
+              Traçar rota
+              <IconArrowRight className="w-3.5 h-3.5" />
+            </a>
+          </div>
+        </Reveal>
+
+        {/* DOMICÍLIO · bloco image-led */}
+        <Reveal
+          direction="up"
+          className="grid md:grid-cols-2 bg-ve-bg-card overflow-hidden"
+        >
+          {/* Imagem em ARCO · quebra o padrão retangular · ecoa o símbolo da marca */}
+          <div className="relative flex items-center justify-center p-8 md:p-12 md:order-2 overflow-hidden min-h-[400px]">
+            <GlowOrb
+              color="#6E2A4A"
+              size="420px"
+              opacity={0.35}
+              position={{ left: "50%", top: "45%" }}
+            />
+            <div className="relative w-full max-w-[280px] aspect-[3/4] rounded-t-[140px] overflow-hidden border border-ve-champagne/25 shadow-[0_24px_60px_rgba(0,0,0,0.5)]">
+              <Image
+                src="/img/domicilio-massagem.jpg"
+                alt="Atendimento de massagem a domicílio · Vida em Equilíbrio · Palmas-TO"
+                fill
+                sizes="(min-width: 768px) 30vw, 80vw"
+                className="object-cover transition-transform duration-[1.2s] hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-ve-bg/40 to-transparent" />
+            </div>
+            <span className="absolute top-6 left-6 md:left-10 uppercase tracking-[0.18em] text-[10px] font-semibold text-ve-cream bg-ve-burgundy px-3 py-1.5 z-10">
+              A domicílio
+            </span>
+          </div>
+
+          {/* Conteúdo */}
+          <div className="p-8 md:p-12 flex flex-col gap-5 justify-center md:order-1">
+            <p className="eyebrow text-ve-champagne">
+              Atendimento a domicílio · Palmas
+            </p>
+            <h3 className="display text-3xl md:text-4xl text-ve-cream leading-[1.05]">
+              A massagem vai{" "}
+              <span className="display-italic text-ve-champagne">até você</span>.
+            </h3>
+            <p className="text-ve-cream/80 text-sm md:text-base leading-relaxed">
+              Levamos a maca profissional, os óleos e as toalhas — e montamos
+              tudo no seu espaço. Você só relaxa. A mesma técnica da clínica,
+              com a privacidade de estar em casa.
+            </p>
+            <a
+              href={WA_DOMICILIO}
+              target="_blank"
+              rel="noopener"
+              className="inline-flex items-center justify-center sm:self-start gap-2 bg-ve-burgundy text-ve-cream px-6 py-3.5 text-sm font-medium hover:bg-ve-burgundy/85 transition-colors whitespace-nowrap"
+            >
+              <IconWhatsApp className="w-4 h-4" />
+              Agendar em casa
+            </a>
+          </div>
+        </Reveal>
 
         {/* Linha de apoio */}
         <Reveal
@@ -221,8 +298,6 @@ export default function Espaco() {
             <IconClock className="w-4 h-4 text-ve-champagne" />
             Atendimento por hora marcada
           </span>
-          <span className="text-ve-cream/40">·</span>
-          <span>Uma cliente por turno</span>
           <span className="text-ve-cream/40">·</span>
           <span>Agenda flexível sob consulta</span>
         </Reveal>

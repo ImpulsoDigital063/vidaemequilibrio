@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "motion/react";
 import { LogoMark, IconSearch } from "./Icons";
 import SearchOverlay from "./SearchOverlay";
@@ -20,6 +21,17 @@ const EASE = [0.16, 1, 0.3, 1] as const;
 export default function Header() {
   const [open, setOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
+  const pathname = usePathname();
+  const [scrolled, setScrolled] = useState(false);
+
+  // No topo da home o logo grande mora na Hero; no header ele só desliza ao rolar
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 150);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+  const logoShown = pathname !== "/" || scrolled;
 
   // Cmd/Ctrl+K abre a busca em qualquer lugar
   useEffect(() => {
@@ -47,7 +59,12 @@ export default function Header() {
         <div className="container-x flex items-center justify-between py-5 gap-6">
           <Link
             href="/"
-            className="text-ve-cream hover:text-ve-champagne transition-colors flex-shrink-0"
+            aria-hidden={!logoShown}
+            className={`text-ve-cream hover:text-ve-champagne transition-all duration-500 ease-out flex-shrink-0 ${
+              logoShown
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 -translate-y-2 pointer-events-none"
+            }`}
           >
             <LogoMark className="h-10 w-auto" />
           </Link>

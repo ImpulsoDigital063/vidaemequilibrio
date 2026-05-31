@@ -2,9 +2,12 @@
 
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "motion/react";
-import { IconArrowDown, MarcaDagua } from "./Icons";
+import { IconArrowDown, IconWhatsApp, LogoMark } from "./Icons";
 
 const EASE = [0.16, 1, 0.3, 1] as const;
+
+const WA_AGENDAR =
+  "https://wa.me/5563848436460?text=Ol%C3%A1!%20Quero%20agendar%20uma%20massagem.";
 
 export default function Hero() {
   // Parallax: foto se move mais devagar que conteúdo · sensação de profundidade
@@ -12,8 +15,13 @@ export default function Hero() {
   const fotoY = useTransform(scrollY, [0, 800], [0, 180]);
   const conteudoY = useTransform(scrollY, [0, 800], [0, -40]);
 
+  // Logo grande da Hero encolhe e sobe ao rolar (desliza pro header)
+  const logoOpacity = useTransform(scrollY, [0, 160], [1, 0]);
+  const logoScale = useTransform(scrollY, [0, 160], [1, 0.78]);
+  const logoSlideY = useTransform(scrollY, [0, 160], [0, -28]);
+
   return (
-    <section className="relative min-h-[92vh] flex items-end overflow-hidden bg-ve-bg">
+    <section className="relative min-h-[82vh] md:min-h-[92vh] overflow-hidden bg-ve-bg">
       {/* Foto · ken-burns sutil (zoom slow) + fade in + parallax y */}
       <motion.div
         className="absolute inset-0"
@@ -23,109 +31,109 @@ export default function Hero() {
         style={{ y: fotoY }}
       >
         <Image
-          src="/img/heroFeminino.jpg"
-          alt="Mulher recebendo massagem terapêutica · Vida em Equilíbrio · Palmas-TO"
+          src="/img/pedras-quentes.jpg"
+          alt="Massagem com pedras quentes · Vida em Equilíbrio · Palmas-TO"
           fill
           priority
           sizes="100vw"
-          className="object-cover object-[28%_30%] md:object-center"
-          quality={88}
+          className="object-cover object-center"
+          quality={86}
         />
-        {/* Gradiente warm bottom · respira a foto em cima, escurece embaixo */}
+        {/* Gradiente warm · respira a foto em cima, escurece embaixo pra leitura */}
         <div
           className="absolute inset-0"
           style={{
             background:
-              "linear-gradient(180deg, rgba(15,11,8,0.25) 0%, rgba(15,11,8,0.55) 50%, rgba(15,11,8,0.96) 100%)",
+              "linear-gradient(180deg, rgba(15,11,8,0.90) 0%, rgba(15,11,8,0.45) 38%, rgba(15,11,8,0.32) 62%, rgba(15,11,8,0.82) 100%)",
           }}
         />
-        {/* Glow burgundy lateral · dá warmth cinematográfico */}
+        {/* Glow burgundy lateral · warmth cinematográfico (suave) */}
         <div
           className="absolute inset-0 mix-blend-soft-light"
           style={{
             background:
-              "radial-gradient(ellipse at 80% 30%, rgba(110, 42, 74, 0.45) 0%, transparent 55%)",
+              "radial-gradient(ellipse at 80% 28%, rgba(110, 42, 74, 0.34) 0%, transparent 58%)",
           }}
         />
       </motion.div>
 
-      {/* Marca d'água · canto sup direito */}
+      {/* Conteúdo · ancorado no topo · parallax oposto (sobe enquanto rola) */}
       <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 0.08 }}
-        transition={{ duration: 2, delay: 0.8, ease: EASE }}
-        className="absolute top-32 right-6 md:right-16 w-40 md:w-64 pointer-events-none"
+        className="container-x relative z-10 min-h-[82vh] md:min-h-[92vh] flex flex-col justify-between pt-20 md:pt-24 pb-10"
+        style={{ y: conteudoY }}
       >
-        <MarcaDagua color="#F2EBE0" opacity={1} className="w-full" />
-      </motion.div>
-
-      {/* Conteúdo · stagger words · parallax oposto (sobe enquanto rola) */}
-      <motion.div className="container-x relative z-10 pb-20 md:pb-28 pt-32" style={{ y: conteudoY }}>
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, delay: 0.4, ease: EASE }}
-          className="eyebrow text-ve-champagne mb-6 font-medium drop-shadow-[0_1px_8px_rgba(15,11,8,0.6)]"
+        {/* Topo · logo grande (desliza pro header ao rolar) + título */}
+        <div>
+        <motion.div
+          style={{ opacity: logoOpacity, scale: logoScale, y: logoSlideY }}
+          className="origin-top mx-auto mb-10 w-[230px] md:w-[320px] drop-shadow-[0_2px_14px_rgba(15,11,8,0.55)]"
         >
-          Vida em Equilíbrio · Massagem terapêutica · Palmas-TO
-        </motion.p>
+          <motion.div
+            initial={{ opacity: 0, y: 18 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.3, ease: EASE }}
+          >
+            <LogoMark className="w-full h-auto text-ve-cream" />
+          </motion.div>
+        </motion.div>
 
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.1, delay: 0.55, ease: EASE }}
-          className="display text-ve-cream text-4xl md:text-6xl lg:text-7xl leading-[1.05] max-w-4xl"
+          className="display text-ve-cream text-4xl md:text-6xl lg:text-7xl leading-[1.04] max-w-4xl"
         >
-          Que parte de você está{" "}
-          <span className="display-italic text-ve-champagne">pedindo cuidado</span>{" "}
-          hoje?
+          Massagem terapêutica que alivia o corpo e{" "}
+          <span className="display-italic text-ve-champagne">acalma a rotina.</span>
         </motion.h1>
+        </div>
 
+        {/* Base · sub + ação (desce junto, longe do título) */}
+        <div>
         <motion.p
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.85, ease: EASE }}
-          className="mt-8 text-ve-cream/80 text-base md:text-lg max-w-xl leading-relaxed font-light"
+          className="text-ve-cream/70 text-sm md:text-[15px] max-w-xl leading-relaxed font-light"
         >
-          Atendimento privativo, em clínica parceira ou em domicílio. Massagens
-          desenhadas para o que seu corpo está pedindo agora.
+          Você cuida de tudo. Aqui, alguém cuida de você.
         </motion.p>
 
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.85, delay: 1.1, ease: EASE }}
-          className="mt-10 flex flex-col sm:flex-row gap-4"
+          className="mt-7 flex flex-col sm:flex-row sm:items-center gap-5 sm:gap-7"
         >
-          <a href="#objetivos" className="btn-primary">
-            Escolher minha massagem
-            <IconArrowDown className="w-4 h-4" />
-          </a>
           <a
-            href="https://wa.me/5563848436460"
+            href={WA_AGENDAR}
             target="_blank"
             rel="noopener"
-            className="btn-ghost"
+            className="inline-flex items-center justify-center gap-2.5 bg-ve-champagne text-ve-bg px-6 py-3.5 text-sm font-medium tracking-wide hover:bg-ve-cream transition-colors"
           >
-            Conversar agora
+            <IconWhatsApp className="w-4 h-4" />
+            Agendar pelo WhatsApp
+          </a>
+          <a
+            href="#massagens"
+            className="group inline-flex items-center gap-2 text-ve-cream/80 text-sm hover:text-ve-cream transition-colors"
+          >
+            Ver as massagens
+            <IconArrowDown className="w-4 h-4 transition-transform group-hover:translate-y-0.5" />
           </a>
         </motion.div>
 
-        <motion.div
+        {/* Linha fina de modalidade · diferencial no ponto de decisão */}
+        <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 1.6, ease: EASE }}
-          className="mt-16 hidden md:flex items-center gap-2 text-ve-cream/50 text-xs"
+          transition={{ duration: 0.9, delay: 1.4, ease: EASE }}
+          className="mt-5 text-ve-cream/55 text-xs md:text-sm tracking-wide"
         >
-          <IconArrowDown className="w-3 h-3 animate-pulse" />
-          <span className="eyebrow">Comece pela pergunta certa</span>
-        </motion.div>
+          Atendimento na clínica (CYOX) ou a domicílio — Palmas-TO
+        </motion.p>
+        </div>
       </motion.div>
-
-      {/* Crédito foto · canto inferior esquerdo · sutil */}
-      <p className="absolute bottom-3 left-4 md:left-8 text-[9px] eyebrow text-ve-cream/40 z-10">
-        Foto · Simon HUMLER / Unsplash
-      </p>
     </section>
   );
 }

@@ -197,6 +197,38 @@ export function IconClock(props: IconProps) {
   );
 }
 
+export function IconPorta(props: IconProps) {
+  return (
+    <svg {...baseProps} {...props}>
+      <path d="M5 21h14" />
+      <path d="M7 21V4a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v17" />
+      <path d="M14 12h.01" />
+    </svg>
+  );
+}
+
+export function IconClima(props: IconProps) {
+  return (
+    <svg {...baseProps} {...props}>
+      <path d="M12 3v18" />
+      <path d="M3 12h18" />
+      <path d="M5.6 5.6l12.8 12.8" />
+      <path d="M18.4 5.6 5.6 18.4" />
+    </svg>
+  );
+}
+
+export function IconRecepcao(props: IconProps) {
+  return (
+    <svg {...baseProps} {...props}>
+      <path d="M4 18h16" />
+      <path d="M5 18a7 7 0 0 1 14 0" />
+      <path d="M12 8V6" />
+      <path d="M10 6h4" />
+    </svg>
+  );
+}
+
 // ============ NAV / UI ============
 
 export function IconArrowRight(props: IconProps) {

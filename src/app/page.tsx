@@ -4,6 +4,7 @@ import GridObjetivos from "@/components/GridObjetivos";
 import Metricas from "@/components/Metricas";
 import ManifestoLeandro from "@/components/ManifestoLeandro";
 import Espaco from "@/components/Espaco";
+import AjudaCatalogo from "@/components/AjudaCatalogo";
 import ValePresente from "@/components/ValePresente";
 import CalendarioCorridas from "@/components/CalendarioCorridas";
 import Blog from "@/components/Blog";
@@ -33,9 +34,10 @@ export default function Home() {
       <main className="flex-1">
         <Hero />
         <GridObjetivos />
+        <Espaco />
+        <AjudaCatalogo />
         <Metricas />
         <ManifestoLeandro />
-        <Espaco />
         <ValePresente />
         <CalendarioCorridas />
         <Blog />
