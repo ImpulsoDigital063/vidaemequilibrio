@@ -14,11 +14,11 @@ import GlowOrb from "./motion/GlowOrb";
 import Spotlight from "./motion/Spotlight";
 
 // ============== Clínica (CYOX) ==============
-const CLINICA_NOME = "CYOX — Centro de Estética Avançada";
+const CLINICA_NOME = "CYOX — Instituto de Estética Avançada";
 const CLINICA_ENDERECO = "ACNO 01, Rua O1, LT 06, Sala 01 · Setor Norte · Palmas-TO";
 
 const QUERY_MAPS = encodeURIComponent(
-  `CYOX Centro de Estética Avançada, ACNO 01 Rua O1 Setor Norte Palmas TO`
+  `CYOX Instituto de Estética Avançada, ACNO 01 Rua O1 Setor Norte Palmas TO`
 );
 const EMBED_URL = `https://www.google.com/maps?q=${QUERY_MAPS}&hl=pt-BR&z=15&output=embed`;
 const MAPS_ROUTE = `https://www.google.com/maps/dir/?api=1&destination=${QUERY_MAPS}`;
@@ -42,11 +42,11 @@ export default function Espaco() {
   return (
     <section
       id="clinica"
-      className="relative bg-ve-bg-soft text-ve-cream py-24 md:py-32 overflow-hidden border-t border-[color:var(--ve-line)]"
+      className="relative text-ve-cream py-24 md:py-32 overflow-hidden"
     >
       <Spotlight color="rgba(201, 183, 156, 0.4)" size={520} intensity={0.35} />
       <GlowOrb
-        color="#6E2A4A"
+        color="#8B6342"
         size="700px"
         opacity={0.14}
         position={{ right: "-200px", top: "20%" }}
@@ -66,7 +66,7 @@ export default function Espaco() {
             <p className="text-ve-cream/85 leading-[1.7] text-lg md:text-2xl max-w-2xl font-light tracking-[0.01em]">
               A Vida em Equilíbrio atende dentro da{" "}
               <span className="display-italic text-ve-champagne">
-                CYOX — Centro de Estética Avançada
+                CYOX — Instituto de Estética Avançada
               </span>
               , no Plano Diretor Norte, em Palmas. Você escolhe como ser
               atendida: na clínica ou no conforto da sua casa.
@@ -78,18 +78,18 @@ export default function Espaco() {
         <Reveal
           direction="up"
           duration={1}
-          className="grid md:grid-cols-2 bg-ve-bg-card overflow-hidden mb-px"
+          className="grid md:grid-cols-2 overflow-hidden mb-12 md:mb-16"
         >
           {/* Imagem do ambiente (placeholder até a foto real da CYOX) */}
           <div className="relative h-80 sm:h-[26rem] md:h-auto md:min-h-[580px]">
             <Image
-              src="/img/mulher-pos-massagem.jpg"
-              alt="Ambiente de atendimento · Vida em Equilíbrio na CYOX · Palmas-TO"
+              src="/img/cyox-fachada.jpg"
+              alt="Fachada da CYOX · Instituto de Estética Avançada · Palmas-TO"
               fill
               sizes="(min-width: 768px) 50vw, 100vw"
               className="object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-l from-ve-bg-card via-ve-bg-card/15 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-l from-ve-bg via-ve-bg/15 to-transparent" />
             <span className="absolute top-5 left-5 uppercase tracking-[0.18em] text-[10px] font-semibold text-ve-bg bg-ve-champagne px-3 py-1.5">
               Onde você é cuidada
             </span>
@@ -97,28 +97,17 @@ export default function Espaco() {
 
           {/* Conteúdo · marca CYOX elevada */}
           <div className="p-8 md:p-12 flex flex-col gap-6 justify-center">
-            {/* Marca CYOX · logo reservado pra entrar */}
-            <div className="flex items-center gap-4">
-              <div
-                className="w-16 h-16 flex items-center justify-center border border-dashed border-ve-champagne/40 text-ve-champagne/70 text-[8px] uppercase tracking-widest text-center leading-tight flex-shrink-0"
-                title="Espaço reservado para o logo da CYOX"
-              >
-                logo
-                <br />
-                CYOX
-              </div>
-              <div>
-                <p className="display text-2xl md:text-3xl text-ve-cream leading-none">
-                  CYOX
-                </p>
-                <p className="uppercase tracking-[0.18em] text-[10px] font-medium text-ve-champagne mt-2">
-                  Centro de Estética Avançada
-                </p>
-              </div>
-            </div>
+            {/* Logo oficial da CYOX */}
+            <Image
+              src="/img/cyox-logo.png"
+              alt="CYOX · Instituto de Estética Avançada"
+              width={520}
+              height={431}
+              className="w-44 md:w-52 h-auto"
+            />
 
             <p className="text-ve-cream/80 text-sm md:text-base leading-relaxed">
-              Um centro de estética avançada já estabelecido em Palmas — onde a
+              Um instituto de estética avançada já estabelecido em Palmas — onde a
               massagem terapêutica e a estética dividem o mesmo endereço.
               Cuidado completo num lugar só.
             </p>
@@ -178,7 +167,7 @@ export default function Espaco() {
         {/* MAPA · tratamento de marca + pin custom + cartão flutuante */}
         <Reveal
           direction="up"
-          className="relative h-72 md:h-80 overflow-hidden mb-px border border-ve-champagne/15"
+          className="relative h-72 md:h-80 overflow-hidden mb-12 md:mb-16 border border-ve-champagne/15"
         >
           <iframe
             src={EMBED_URL}
@@ -196,7 +185,7 @@ export default function Espaco() {
             className="absolute inset-0 pointer-events-none"
             style={{
               background:
-                "radial-gradient(ellipse at center, rgba(110,42,74,0.25) 0%, rgba(15,11,8,0.55) 100%)",
+                "radial-gradient(ellipse at center, rgba(139,99,66,0.25) 0%, rgba(15,11,8,0.55) 100%)",
               mixBlendMode: "multiply",
             }}
           />
@@ -206,10 +195,10 @@ export default function Espaco() {
           {/* Pin custom · símbolo Arco+Ponto */}
           <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-[150%] pointer-events-none">
             <div className="flex flex-col items-center">
-              <div className="w-12 h-12 rounded-full bg-ve-burgundy border-2 border-ve-champagne/70 flex items-center justify-center shadow-[0_8px_24px_rgba(0,0,0,0.55)]">
+              <div className="w-12 h-12 rounded-full bg-ve-terracota border-2 border-ve-champagne/70 flex items-center justify-center shadow-[0_8px_24px_rgba(0,0,0,0.55)]">
                 <MarkArcoEquilibrio color="#F2EBE0" thickness={2.4} className="w-6 h-6" />
               </div>
-              <div className="w-3 h-3 bg-ve-burgundy border-r-2 border-b-2 border-ve-champagne/70 rotate-45 -mt-1.5" />
+              <div className="w-3 h-3 bg-ve-terracota border-r-2 border-b-2 border-ve-champagne/70 rotate-45 -mt-1.5" />
             </div>
           </div>
 
@@ -238,12 +227,12 @@ export default function Espaco() {
         {/* DOMICÍLIO · bloco image-led */}
         <Reveal
           direction="up"
-          className="grid md:grid-cols-2 bg-ve-bg-card overflow-hidden"
+          className="grid md:grid-cols-2 overflow-hidden"
         >
           {/* Imagem em ARCO · quebra o padrão retangular · ecoa o símbolo da marca */}
           <div className="relative flex items-center justify-center p-8 md:p-12 md:order-2 overflow-hidden min-h-[400px]">
             <GlowOrb
-              color="#6E2A4A"
+              color="#8B6342"
               size="420px"
               opacity={0.35}
               position={{ left: "50%", top: "45%" }}
@@ -258,30 +247,64 @@ export default function Espaco() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-ve-bg/40 to-transparent" />
             </div>
-            <span className="absolute top-6 left-6 md:left-10 uppercase tracking-[0.18em] text-[10px] font-semibold text-ve-cream bg-ve-burgundy px-3 py-1.5 z-10">
+            <span className="absolute top-6 left-6 md:left-10 uppercase tracking-[0.18em] text-[10px] font-semibold text-ve-cream bg-ve-terracota px-3 py-1.5 z-10">
               A domicílio
             </span>
           </div>
 
           {/* Conteúdo */}
           <div className="p-8 md:p-12 flex flex-col gap-5 justify-center md:order-1">
-            <p className="eyebrow text-ve-champagne">
-              Atendimento a domicílio · Palmas
-            </p>
-            <h3 className="display text-3xl md:text-4xl text-ve-cream leading-[1.05]">
-              A massagem vai{" "}
-              <span className="display-italic text-ve-champagne">até você</span>.
-            </h3>
+            <div>
+              <p className="eyebrow text-ve-champagne mb-3">
+                Atendimento a domicílio · Palmas
+              </p>
+              <h3 className="display text-3xl md:text-4xl text-ve-cream leading-[1.05]">
+                A massagem vai{" "}
+                <span className="display-italic text-ve-champagne">até você</span>.
+              </h3>
+            </div>
             <p className="text-ve-cream/80 text-sm md:text-base leading-relaxed">
-              Levamos a maca profissional, os óleos e as toalhas — e montamos
-              tudo no seu espaço. Você só relaxa. A mesma técnica da clínica,
-              com a privacidade de estar em casa.
+              A mesma técnica da clínica, com a privacidade de estar em casa.
+              Sem deslocamento, sem trânsito — você só relaxa.
             </p>
+
+            {/* Como funciona · 3 passos · quebra a objeção de "dá trabalho" */}
+            <div className="flex flex-col gap-4">
+              {[
+                {
+                  n: "01",
+                  t: "Você agenda",
+                  d: "Marca o horário e passa o endereço pelo WhatsApp.",
+                },
+                {
+                  n: "02",
+                  t: "Eu levo tudo",
+                  d: "Maca profissional e os cremes — chego pronto pra te atender.",
+                },
+                {
+                  n: "03",
+                  t: "Você só relaxa",
+                  d: "Monto tudo no seu espaço e cuido de você.",
+                },
+              ].map((passo) => (
+                <div key={passo.n} className="flex gap-4">
+                  <span className="display text-lg text-ve-champagne/80 leading-none pt-1">
+                    {passo.n}
+                  </span>
+                  <div>
+                    <p className="text-sm font-medium text-ve-cream">{passo.t}</p>
+                    <p className="text-sm leading-relaxed text-ve-cream/65">
+                      {passo.d}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
             <a
               href={WA_DOMICILIO}
               target="_blank"
               rel="noopener"
-              className="inline-flex items-center justify-center sm:self-start gap-2 bg-ve-burgundy text-ve-cream px-6 py-3.5 text-sm font-medium hover:bg-ve-burgundy/85 transition-colors whitespace-nowrap"
+              className="inline-flex items-center justify-center sm:self-start gap-2 bg-ve-champagne text-ve-bg px-6 py-3.5 text-sm font-medium hover:bg-ve-cream transition-colors whitespace-nowrap"
             >
               <IconWhatsApp className="w-4 h-4" />
               Agendar em casa

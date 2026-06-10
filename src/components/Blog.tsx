@@ -41,31 +41,31 @@ const EIXOS = [
 export default function Blog() {
   const destaques = POSTS_PUBLICADOS.slice(0, 2);
   return (
-    <section id="blog" className="bg-ve-cream text-ve-text-dark py-24 md:py-32">
+    <section id="blog" className="text-ve-cream py-24 md:py-32">
       <div className="container-x">
         {/* HERO da seção · promessa editorial */}
         <Reveal direction="up" className="grid md:grid-cols-12 gap-10 mb-16 md:mb-20">
           <div className="md:col-span-7">
-            <p className="eyebrow text-ve-terracota mb-5">
+            <p className="eyebrow text-ve-champagne mb-5">
               Blog · Vida em Equilíbrio
             </p>
-            <h2 className="display text-3xl md:text-5xl leading-[1.08] text-ve-text-dark">
+            <h2 className="display text-3xl md:text-5xl leading-[1.08] text-ve-cream">
               Você sai sabendo{" "}
-              <span className="display-italic text-ve-burgundy">
+              <span className="display-italic text-ve-champagne">
                 o que seu corpo está pedindo
               </span>
               .
             </h2>
           </div>
           <div className="md:col-span-5">
-            <p className="text-ve-text-dark/75 leading-relaxed text-base md:text-lg font-light">
+            <p className="text-ve-cream/75 leading-relaxed text-base md:text-lg font-light">
               Aqui não tem promessa milagrosa, frase de auto-ajuda nem
               técnica vendida como exclusiva. Tem o que a literatura
               mostra sobre cada manobra, quando indica, quando não, e
               como traduzir isso pra um corpo específico — o seu.
             </p>
-            <p className="mt-4 text-ve-text-dark/65 text-sm">
-              Conteúdo escrito por <strong className="text-ve-burgundy">Leandro Timóteo</strong> · publicado mensalmente.
+            <p className="mt-4 text-ve-cream/65 text-sm">
+              Conteúdo escrito por <strong className="text-ve-champagne">Leandro Timóteo</strong> · publicado mensalmente.
             </p>
           </div>
         </Reveal>
@@ -73,22 +73,22 @@ export default function Blog() {
         {/* 4 eixos editoriais · stagger horizontal */}
         <div className="mb-16 md:mb-20">
           <Reveal direction="up">
-            <p className="eyebrow text-ve-terracota mb-8">O que você vai aprender</p>
+            <p className="eyebrow text-ve-champagne mb-8">O que você vai aprender</p>
           </Reveal>
-          <Stagger className="grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-ve-text-dark/10" step={0.08}>
+          <Stagger className="grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-ve-cream/10" step={0.08}>
             {EIXOS.map((eixo) => {
               const { Icon } = eixo;
               return (
                 <StaggerItem
                   key={eixo.titulo}
                   direction="up"
-                  className="bg-ve-cream p-7 md:p-8 flex flex-col h-full"
+                  className="bg-ve-bg-card p-7 md:p-8 flex flex-col h-full"
                 >
-                  <Icon className="w-7 h-7 text-ve-burgundy mb-5" />
-                  <h3 className="display text-lg md:text-xl text-ve-text-dark leading-tight mb-3">
+                  <Icon className="w-7 h-7 text-ve-champagne mb-5" />
+                  <h3 className="display text-lg md:text-xl text-ve-cream leading-tight mb-3">
                     {eixo.titulo}
                   </h3>
-                  <p className="text-ve-text-dark/70 text-sm leading-relaxed">
+                  <p className="text-ve-cream/70 text-sm leading-relaxed">
                     {eixo.descricao}
                   </p>
                 </StaggerItem>
@@ -101,11 +101,11 @@ export default function Blog() {
         {destaques.length > 0 && (
           <div>
             <Reveal direction="up">
-              <p className="eyebrow text-ve-terracota mb-8">
+              <p className="eyebrow text-ve-champagne mb-8">
                 Leitura disponível agora
               </p>
             </Reveal>
-            <Stagger className="grid md:grid-cols-2 gap-px bg-ve-text-dark/10 mb-10" step={0.12}>
+            <Stagger className="grid md:grid-cols-2 gap-px bg-ve-cream/10 mb-10" step={0.12}>
               {destaques.map((p, idx) => (
                 <StaggerItem
                   key={p.slug}
@@ -115,7 +115,7 @@ export default function Blog() {
                 >
                   <Link
                     href={`/blog/${p.slug}`}
-                    className="group bg-ve-cream p-6 md:p-8 flex flex-col hover:bg-ve-cream-soft transition-colors h-full"
+                    className="group bg-ve-bg-card p-6 md:p-8 flex flex-col hover:bg-ve-bg-soft transition-colors h-full"
                   >
                   {p.hero && (
                     <div className="aspect-[16/10] relative overflow-hidden mb-5 -mx-6 md:-mx-8 -mt-6 md:-mt-8">
@@ -138,17 +138,17 @@ export default function Blog() {
                       </p>
                     </div>
                   )}
-                  <h3 className="display text-xl md:text-2xl text-ve-text-dark leading-tight">
+                  <h3 className="display text-xl md:text-2xl text-ve-cream leading-tight">
                     {p.titulo}
                   </h3>
-                  <p className="mt-3 text-ve-text-dark/65 text-sm leading-relaxed line-clamp-2">
+                  <p className="mt-3 text-ve-cream/65 text-sm leading-relaxed line-clamp-2">
                     {p.intro}
                   </p>
                   <div className="mt-5 flex items-center justify-between">
-                    <span className="text-xs text-ve-text-dark/50 eyebrow">
+                    <span className="text-xs text-ve-cream/50 eyebrow">
                       {p.leitura}
                     </span>
-                    <span className="inline-flex items-center gap-2 text-sm font-medium text-ve-burgundy group-hover:gap-3 transition-all">
+                    <span className="inline-flex items-center gap-2 text-sm font-medium text-ve-champagne group-hover:gap-3 transition-all">
                       Ler
                       <IconArrowRight className="w-4 h-4" />
                     </span>
@@ -159,14 +159,14 @@ export default function Blog() {
             </Stagger>
 
             {/* Rodapé · contagem + CTA */}
-            <Reveal direction="up" className="flex items-center justify-between flex-wrap gap-4 pt-6 border-t border-ve-text-dark/10">
-              <p className="text-xs text-ve-text-dark/55 eyebrow">
+            <Reveal direction="up" className="flex items-center justify-between flex-wrap gap-4 pt-6 border-t border-ve-cream/10">
+              <p className="text-xs text-ve-cream/55 eyebrow">
                 {POSTS_PUBLICADOS.length} publicados · {POSTS_DRAFT.length} na
                 fila editorial
               </p>
               <Link
                 href="/blog"
-                className="inline-flex items-center gap-2 text-sm font-medium text-ve-burgundy hover:gap-3 transition-all"
+                className="inline-flex items-center gap-2 text-sm font-medium text-ve-champagne hover:gap-3 transition-all"
               >
                 Ver todos os conteúdos do blog
                 <IconArrowRight className="w-4 h-4" />

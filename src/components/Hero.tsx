@@ -10,9 +10,9 @@ const WA_AGENDAR =
   "https://wa.me/5563848436460?text=Ol%C3%A1!%20Quero%20agendar%20uma%20massagem.";
 
 export default function Hero() {
-  // Parallax: foto se move mais devagar que conteúdo · sensação de profundidade
+  // Sticky-cover: a foto fica PARADA (sem parallax) enquanto a próxima seção cobre.
+  // O conteúdo sobe de leve pra dar vida aos textos antes de serem cobertos.
   const { scrollY } = useScroll();
-  const fotoY = useTransform(scrollY, [0, 800], [0, 180]);
   const conteudoY = useTransform(scrollY, [0, 800], [0, -40]);
 
   // Logo grande da Hero encolhe e sobe ao rolar (desliza pro header)
@@ -28,7 +28,6 @@ export default function Hero() {
         initial={{ scale: 1.08, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 1.6, ease: EASE }}
-        style={{ y: fotoY }}
       >
         <Image
           src="/img/pedras-quentes.jpg"
@@ -52,7 +51,7 @@ export default function Hero() {
           className="absolute inset-0 mix-blend-soft-light"
           style={{
             background:
-              "radial-gradient(ellipse at 80% 28%, rgba(110, 42, 74, 0.34) 0%, transparent 58%)",
+              "radial-gradient(ellipse at 80% 28%, rgba(139, 99, 66, 0.34) 0%, transparent 58%)",
           }}
         />
       </motion.div>

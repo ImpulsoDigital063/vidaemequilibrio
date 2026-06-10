@@ -41,7 +41,7 @@ export default function StickyMobileCTA() {
             href="https://wa.me/5563848436460?text=Oi%20Leandro%2C%20quero%20conhecer%20o%20Vida%20em%20Equil%C3%ADbrio"
             target="_blank"
             rel="noopener"
-            className="flex items-center justify-center gap-3 w-full bg-ve-burgundy text-ve-cream py-3.5 text-sm font-medium hover:bg-ve-burgundy/90 transition-colors"
+            className="flex items-center justify-center gap-3 w-full bg-ve-champagne text-ve-bg py-3.5 text-sm font-medium hover:bg-ve-cream transition-colors"
             aria-label="Conversar com Leandro pelo WhatsApp"
           >
             <IconWhatsApp className="w-5 h-5" />

@@ -7,7 +7,7 @@ export default function WhatsAppCTA() {
   return (
     <section
       id="contato"
-      className="relative bg-ve-burgundy text-ve-cream py-24 md:py-36 overflow-hidden"
+      className="relative text-ve-cream py-24 md:py-36 overflow-hidden"
     >
       {/* Spotlight do mouse · efeito cream sobre burgundy */}
       <Spotlight color="rgba(242, 235, 224, 0.35)" size={520} intensity={0.5} />
@@ -49,7 +49,7 @@ export default function WhatsAppCTA() {
             href="https://wa.me/5563848436460?text=Oi%20Leandro%2C%20quero%20saber%20mais%20sobre%20os%20rituais%20do%20Vida%20em%20Equil%C3%ADbrio"
             target="_blank"
             rel="noopener"
-            className="inline-flex items-center gap-3 bg-ve-cream text-ve-burgundy px-8 py-4 text-base font-medium hover:bg-ve-champagne transition-colors"
+            className="inline-flex items-center gap-3 bg-ve-champagne text-ve-bg px-8 py-4 text-base font-medium hover:bg-ve-cream transition-colors"
           >
             <IconWhatsApp className="w-5 h-5" />
             Conversar pelo WhatsApp

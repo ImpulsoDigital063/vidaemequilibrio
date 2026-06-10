@@ -8,7 +8,7 @@ import Spotlight from "./motion/Spotlight";
 
 export default function ManifestoLeandro() {
   return (
-    <section id="manifesto" className="relative bg-ve-bg text-ve-cream py-24 md:py-32 overflow-hidden">
+    <section id="manifesto" className="relative text-ve-cream py-24 md:py-32 overflow-hidden">
       {/* Spotlight do mouse · sutil · só desktop */}
       <Spotlight color="rgba(110, 42, 74, 0.55)" size={520} intensity={0.45} />
 

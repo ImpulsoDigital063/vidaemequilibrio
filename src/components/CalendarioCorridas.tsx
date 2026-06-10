@@ -6,7 +6,7 @@ export default function CalendarioCorridas() {
   return (
     <section
       id="corridas"
-      className="relative bg-ve-bg text-ve-cream overflow-hidden border-t border-[color:var(--ve-line)]"
+      className="relative text-ve-cream overflow-hidden"
     >
       <div className="grid md:grid-cols-12 min-h-[80vh]">
         {/* Imagem cinemática lado esquerdo */}

@@ -31,7 +31,8 @@ export default function Home() {
     <>
       <SchemaOrgVidaEquilibrio page="home" />
       <Header />
-      <main className="flex-1">
+      {/* main acima da constelação (StarField z-0); seções transparentes a revelam */}
+      <main className="relative z-10 flex-1">
         <Hero />
         <GridObjetivos />
         <Espaco />

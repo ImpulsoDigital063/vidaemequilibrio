@@ -44,3 +44,8 @@ next-env.d.ts
 .env*.local
 
 .vercel
+
+# Ferramentas de agente (local, fora do produto)
+.agents/
+.claude/
+skills-lock.json

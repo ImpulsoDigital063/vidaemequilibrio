@@ -36,7 +36,7 @@ export default function ValePresente() {
   return (
     <section
       id="vale-presente"
-      className="relative bg-ve-bg-soft text-ve-cream py-24 md:py-32 overflow-hidden border-t border-[color:var(--ve-line)]"
+      className="relative text-ve-cream py-24 md:py-32 overflow-hidden"
     >
       <MarcaDagua
         color="#C9B79C"
@@ -70,7 +70,7 @@ export default function ValePresente() {
               key={m.nome}
               direction={m.destaque ? "scale" : "up"}
               distance={30}
-              className={`p-8 md:p-10 h-full ${m.destaque ? "bg-ve-burgundy order-first md:order-none" : "bg-ve-bg-soft"} ${!m.destaque && idx === 0 ? "md:order-first" : ""}`}
+              className={`p-8 md:p-10 h-full ${m.destaque ? "bg-ve-bg-card border border-ve-champagne/25 order-first md:order-none" : "bg-ve-bg-soft"} ${!m.destaque && idx === 0 ? "md:order-first" : ""}`}
             >
               <p className="eyebrow text-ve-champagne mb-3">Modalidade</p>
               <h3 className="display text-2xl md:text-3xl text-ve-cream">
@@ -94,7 +94,7 @@ export default function ValePresente() {
             { n: "04", t: "Ela agenda", d: "Beneficiária fala direto comigo pelo WhatsApp · sem fricção" },
           ].map((p) => (
             <StaggerItem key={p.n} direction="right" distance={22} className="bg-ve-bg-soft p-6 md:p-8 h-full">
-              <p className="display text-3xl text-ve-burgundy">{p.n}</p>
+              <p className="display text-3xl text-ve-champagne">{p.n}</p>
               <p className="display text-lg text-ve-cream mt-3">{p.t}</p>
               <p className="text-ve-cream/70 text-sm mt-2 leading-relaxed">{p.d}</p>
             </StaggerItem>

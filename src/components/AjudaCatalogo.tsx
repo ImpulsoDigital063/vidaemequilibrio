@@ -28,7 +28,7 @@ function ChatMockup() {
     <div className="relative mx-auto w-full max-w-sm">
       <div className="overflow-hidden rounded-[28px] border border-ve-text-dark/10 bg-ve-bg shadow-[0_30px_70px_-20px_rgba(44,24,16,0.45)]">
         {/* Header · marca */}
-        <div className="flex items-center gap-3 bg-ve-burgundy px-4 py-3 text-ve-cream">
+        <div className="flex items-center gap-3 bg-ve-bg-card px-4 py-3 text-ve-cream">
           <div className="flex h-9 w-9 items-center justify-center rounded-full bg-ve-cream/15">
             <MarkArcoEquilibrio color="#F2EBE0" thickness={2.4} className="h-5 w-5" />
           </div>
@@ -78,19 +78,19 @@ function ChatMockup() {
 
 export default function AjudaCatalogo() {
   return (
-    <section className="bg-ve-cream text-ve-text-dark py-16 md:py-24">
+    <section className="text-ve-cream py-16 md:py-24">
       <div className="container-x">
         {/* Em dúvida · texto + chat mockup */}
         <div className="grid items-center gap-10 md:grid-cols-2 md:gap-16">
           <Reveal direction="right">
-            <p className="eyebrow text-ve-terracota mb-4">Em dúvida?</p>
-            <h2 className="display text-3xl md:text-4xl leading-[1.1] text-ve-text-dark">
+            <p className="eyebrow text-ve-champagne mb-4">Em dúvida?</p>
+            <h2 className="display text-3xl md:text-4xl leading-[1.1] text-ve-cream">
               Conta o que está sentindo.{" "}
-              <span className="display-italic text-ve-burgundy">
+              <span className="display-italic text-ve-champagne">
                 A gente indica.
               </span>
             </h2>
-            <p className="mt-5 text-ve-text-dark/65 text-sm md:text-base leading-relaxed max-w-md">
+            <p className="mt-5 text-ve-cream/65 text-sm md:text-base leading-relaxed max-w-md">
               Sem fórmula pronta. Você descreve como está, a gente responde com a
               massagem certa pro seu caso — e já vê um horário, na clínica ou na
               sua casa.
@@ -101,7 +101,7 @@ export default function AjudaCatalogo() {
               )}
               target="_blank"
               rel="noopener"
-              className="mt-7 inline-flex items-center gap-2.5 bg-green-600 text-white px-6 py-3.5 text-sm font-medium hover:bg-green-700 transition-colors"
+              className="mt-7 inline-flex items-center gap-2.5 bg-ve-champagne text-ve-bg px-6 py-3.5 text-sm font-medium hover:bg-ve-cream transition-colors"
             >
               <IconWhatsApp className="h-[18px] w-[18px]" />
               Conversar no WhatsApp
@@ -116,21 +116,21 @@ export default function AjudaCatalogo() {
         {/* Catálogo · faixa secundária */}
         <Reveal
           direction="up"
-          className="mt-16 md:mt-24 flex flex-col md:flex-row md:items-center justify-between gap-5 border-t border-ve-text-dark/15 pt-10"
+          className="mt-16 md:mt-24 flex flex-col md:flex-row md:items-center justify-between gap-5 border-t border-ve-cream/15 pt-10"
         >
           <div className="max-w-xl">
-            <p className="eyebrow text-ve-terracota mb-2">Quer ver tudo organizado?</p>
-            <p className="display text-xl md:text-2xl text-ve-text-dark leading-tight">
+            <p className="eyebrow text-ve-champagne mb-2">Quer ver tudo organizado?</p>
+            <p className="display text-xl md:text-2xl text-ve-cream leading-tight">
               Catálogo completo com adicionais.
             </p>
-            <p className="mt-2 text-ve-text-dark/65 text-sm leading-relaxed">
+            <p className="mt-2 text-ve-cream/65 text-sm leading-relaxed">
               Massagens, adicionais (pedras · vela · bambu · ventosa) e PDF pra
               baixar.
             </p>
           </div>
           <Link
             href="/catalogo"
-            className="inline-flex items-center gap-2 text-sm font-medium text-ve-burgundy hover:gap-3 transition-all whitespace-nowrap"
+            className="inline-flex items-center gap-2 text-sm font-medium text-ve-champagne hover:gap-3 transition-all whitespace-nowrap"
           >
             Abrir o catálogo
             <IconArrowRight className="h-4 w-4" />

@@ -49,7 +49,7 @@ export default function FAQ() {
   const [open, setOpen] = useState<number | null>(null);
 
   return (
-    <section className="bg-ve-bg text-ve-cream py-24 md:py-32 border-t border-[color:var(--ve-line)]">
+    <section className="text-ve-cream py-24 md:py-32">
       <SchemaFAQ perguntas={PERGUNTAS} />
       <div className="container-x grid md:grid-cols-12 gap-10">
         <Reveal direction="right" className="md:col-span-4">
