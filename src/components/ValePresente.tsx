@@ -2,10 +2,9 @@ import { IconArrowRight, IconWhatsApp, MarcaDagua } from "./Icons";
 import Reveal from "./motion/Reveal";
 import Stagger, { StaggerItem } from "./motion/Stagger";
 
-const WA_MSG = encodeURIComponent(
-  "Oii! Quero presentear alguém com um vale do Vida em Equilíbrio. Como funciona?"
-);
-const WA_LINK = `https://wa.me/5563984843646?text=${WA_MSG}`;
+const WA_GERAL = `https://wa.me/5563984843646?text=${encodeURIComponent(
+  "Oii! Quero garantir um vale-presente do Vida em Equilíbrio e fechar pelo PIX. Pode me ajudar?"
+)}`;
 
 const MODALIDADES = [
   {
@@ -13,14 +12,14 @@ const MODALIDADES = [
     preco: "a partir de R$119",
     descricao:
       "Você escolhe uma massagem do catálogo e presenteia. A pessoa agenda quando quiser, na clínica ou em casa.",
-    wa: "Oii! Quero garantir um Vale Massagem do Vida em Equilíbrio pra presentear alguém. Como faço?",
+    wa: "Oii! Quero garantir um Vale Massagem do Vida em Equilíbrio. Já quero fechar pelo PIX — pode me passar os próximos passos?",
   },
   {
     nome: "Vale Crédito",
     preco: "R$200 · R$400 · R$600",
     descricao:
       "Prefere deixar a escolha com ela? Presenteia um valor — ela usa na massagem que quiser, ou completa pra uma mais longa.",
-    wa: "Oii! Quero garantir um Vale Crédito do Vida em Equilíbrio pra presentear alguém. Como faço?",
+    wa: "Oii! Quero garantir um Vale Crédito do Vida em Equilíbrio. Já quero fechar pelo PIX — pode me passar os próximos passos?",
   },
 ];
 
@@ -47,6 +46,53 @@ const PASSOS = [
   },
 ];
 
+// Pré-visualização do cartão-presente · espelha o PDF que o cliente recebe
+function CartaoPreview() {
+  return (
+    <div className="relative mx-auto flex aspect-[148/210] w-full max-w-[300px] flex-col items-center bg-ve-bg px-7 py-8 text-center shadow-[0_30px_70px_-20px_rgba(0,0,0,0.7)]">
+      <div className="pointer-events-none absolute inset-0 border border-ve-champagne/30" />
+      <div className="pointer-events-none absolute inset-2.5 border border-ve-champagne/12" />
+
+      <svg width="56" height="24" viewBox="0 0 78 34" fill="none" className="relative">
+        <path
+          d="M8 28 Q39 4 70 28"
+          stroke="#C9B79C"
+          strokeWidth="1.6"
+          fill="none"
+          strokeLinecap="round"
+        />
+        <circle cx="39" cy="17" r="2.4" fill="#C9B79C" />
+      </svg>
+      <p className="display-italic relative mt-2 text-sm text-ve-cream">
+        vida em equilíbrio
+      </p>
+
+      <p className="eyebrow relative mt-5 text-[9px] text-ve-champagne">
+        Vale-Presente
+      </p>
+
+      <p className="eyebrow relative mt-6 text-[8px] text-ve-cream/50">Para</p>
+      <p className="display relative mt-0.5 text-2xl text-ve-cream">
+        alguém especial
+      </p>
+
+      <div className="relative my-5 w-full border-y border-ve-champagne/20 py-3">
+        <p className="eyebrow text-[8px] text-ve-cream/50">O presente</p>
+        <p className="mt-1 text-base text-ve-champagne">Massagem · 80 min</p>
+      </div>
+
+      <p className="display-italic relative text-xs leading-relaxed text-ve-cream/80">
+        &ldquo;um tempo só seu&rdquo;
+      </p>
+
+      <div className="flex-1" />
+      <p className="eyebrow relative text-[7px] text-ve-cream/45">
+        Válido por 6 meses · Palmas-TO
+      </p>
+    </div>
+  );
+}
+
 export default function ValePresente() {
   return (
     <section
@@ -60,21 +106,34 @@ export default function ValePresente() {
       />
 
       <div className="container-x relative">
-        {/* Cabeçalho */}
-        <Reveal direction="up" className="grid md:grid-cols-12 gap-10 mb-14">
-          <div className="md:col-span-5">
+        {/* Cabeçalho · texto + cartão-presente */}
+        <Reveal
+          direction="up"
+          className="grid items-center gap-10 md:grid-cols-12 md:gap-14 mb-16"
+        >
+          <div className="md:col-span-7">
             <p className="eyebrow text-ve-champagne mb-6">Pra presentear</p>
             <h2 className="display text-3xl md:text-5xl leading-[1.1]">
               Um cuidado{" "}
               <span className="display-italic text-ve-champagne">de presente</span>.
             </h2>
-          </div>
-          <div className="md:col-span-7">
-            <p className="text-ve-cream/80 leading-relaxed text-base md:text-lg font-light max-w-xl">
+            <p className="mt-6 text-ve-cream/80 leading-relaxed text-base md:text-lg font-light max-w-xl">
               Aniversário, Dia das Mães ou só porque ela merece — dê de presente
               um tempo de cuidado. Você escolhe a massagem (ou um valor); o resto
               a gente cuida.
             </p>
+            <a
+              href={WA_GERAL}
+              target="_blank"
+              rel="noopener"
+              className="mt-8 inline-flex items-center gap-2.5 bg-ve-champagne text-ve-bg px-6 py-3.5 text-sm font-medium hover:bg-ve-cream transition-colors"
+            >
+              <IconWhatsApp className="w-4 h-4" />
+              Garantir um vale agora
+            </a>
+          </div>
+          <div className="md:col-span-5">
+            <CartaoPreview />
           </div>
         </Reveal>
 
@@ -134,12 +193,12 @@ export default function ValePresente() {
             obrigada.&rdquo;
           </p>
           <a
-            href={WA_LINK}
+            href={WA_GERAL}
             target="_blank"
             rel="noopener"
             className="btn-primary mt-8"
           >
-            Quero presentear alguém
+            Garantir um vale agora
             <IconArrowRight className="w-4 h-4" />
           </a>
         </Reveal>
