@@ -98,7 +98,7 @@ export default function Header() {
             </button>
 
             <a
-              href="https://wa.me/5563848436460"
+              href="https://wa.me/5563984843646"
               target="_blank"
               rel="noopener"
               className="btn-ghost text-sm whitespace-nowrap"
@@ -204,7 +204,7 @@ export default function Header() {
               {/* Rodapé · CTA WhatsApp */}
               <div className="px-6 pb-8 pt-4 border-t border-[color:var(--ve-line)]">
                 <a
-                  href="https://wa.me/5563848436460"
+                  href="https://wa.me/5563984843646"
                   target="_blank"
                   rel="noopener"
                   className="btn-primary w-full justify-center"

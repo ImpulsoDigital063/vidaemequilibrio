@@ -249,7 +249,7 @@ export default function CardapioRituais() {
             individualmente."
           </p>
           <a
-            href="https://wa.me/5563848436460"
+            href="https://wa.me/5563984843646"
             target="_blank"
             rel="noopener"
             className="btn-primary mt-8"

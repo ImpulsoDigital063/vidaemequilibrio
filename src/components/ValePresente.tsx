@@ -5,7 +5,7 @@ import Stagger, { StaggerItem } from "./motion/Stagger";
 const WA_MSG = encodeURIComponent(
   "Oi Leandro, quero presentear alguém com um vale do Vida em Equilíbrio."
 );
-const WA_LINK = `https://wa.me/5563848436460?text=${WA_MSG}`;
+const WA_LINK = `https://wa.me/5563984843646?text=${WA_MSG}`;
 
 const MODALIDADES = [
   {

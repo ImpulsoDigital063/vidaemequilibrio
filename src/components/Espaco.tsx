@@ -31,10 +31,10 @@ const FATOS = [
 ];
 
 // ============== WhatsApp ==============
-const WA_CLINICA = `https://wa.me/5563848436460?text=${encodeURIComponent(
+const WA_CLINICA = `https://wa.me/5563984843646?text=${encodeURIComponent(
   "Olá! Quero agendar na clínica (CYOX · Setor Norte)."
 )}`;
-const WA_DOMICILIO = `https://wa.me/5563848436460?text=${encodeURIComponent(
+const WA_DOMICILIO = `https://wa.me/5563984843646?text=${encodeURIComponent(
   "Olá! Prefiro atendimento a domicílio. Quais as condições?"
 )}`;
 
@@ -90,9 +90,6 @@ export default function Espaco() {
               className="object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-l from-ve-bg via-ve-bg/15 to-transparent" />
-            <span className="absolute top-5 left-5 uppercase tracking-[0.18em] text-[10px] font-semibold text-ve-bg bg-ve-champagne px-3 py-1.5">
-              Onde você é cuidada
-            </span>
           </div>
 
           {/* Conteúdo · marca CYOX elevada */}
@@ -151,15 +148,6 @@ export default function Espaco() {
                 <IconWhatsApp className="w-4 h-4" />
                 Agendar na clínica
               </a>
-              <a
-                href={MAPS_ROUTE}
-                target="_blank"
-                rel="noopener"
-                className="inline-flex items-center justify-center gap-2 border border-ve-cream/30 text-ve-cream px-5 py-3 text-sm font-medium hover:bg-ve-cream hover:text-ve-bg transition-colors"
-              >
-                Ver rota
-                <IconArrowRight className="w-3.5 h-3.5" />
-              </a>
             </div>
           </div>
         </Reveal>
@@ -202,25 +190,14 @@ export default function Espaco() {
             </div>
           </div>
 
-          {/* Cartão flutuante · endereço + rota */}
-          <div className="absolute bottom-4 left-4 right-4 md:right-auto md:max-w-sm bg-ve-bg/85 backdrop-blur-md border border-ve-champagne/20 p-4 flex items-center justify-between gap-4">
-            <div>
-              <p className="uppercase tracking-[0.18em] text-[10px] font-semibold text-ve-champagne">
-                CYOX · Setor Norte
-              </p>
-              <p className="text-ve-cream/80 text-xs mt-1 leading-snug">
-                {CLINICA_ENDERECO}
-              </p>
-            </div>
-            <a
-              href={MAPS_ROUTE}
-              target="_blank"
-              rel="noopener"
-              className="inline-flex items-center gap-1.5 text-ve-cream hover:text-ve-champagne text-xs font-medium whitespace-nowrap transition-colors flex-shrink-0"
-            >
-              Traçar rota
-              <IconArrowRight className="w-3.5 h-3.5" />
-            </a>
+          {/* Cartão flutuante · endereço */}
+          <div className="absolute bottom-4 left-4 right-4 md:right-auto md:max-w-sm bg-ve-bg/85 backdrop-blur-md border border-ve-champagne/20 p-4">
+            <p className="uppercase tracking-[0.18em] text-[10px] font-semibold text-ve-champagne">
+              CYOX · Setor Norte
+            </p>
+            <p className="text-ve-cream/80 text-xs mt-1 leading-snug">
+              {CLINICA_ENDERECO}
+            </p>
           </div>
         </Reveal>
 

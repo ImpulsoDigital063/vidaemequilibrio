@@ -374,7 +374,7 @@ export default async function PostPage({ params }: Params) {
                 pessoalmente.
               </p>
               <a
-                href="https://wa.me/5563848436460"
+                href="https://wa.me/5563984843646"
                 target="_blank"
                 rel="noopener"
                 className="mt-6 inline-flex items-center gap-2 bg-ve-burgundy text-ve-cream px-6 py-3 text-sm font-medium hover:bg-ve-burgundy/85 transition-colors"

@@ -413,7 +413,7 @@ export default function CatalogoVidaEquilibrio() {
 
             <div style={{ marginBottom: 32 }}>
               <p className="cat-eyebrow" style={{ color: "var(--p-burgundy)", marginBottom: 6 }}>WhatsApp</p>
-              <p style={{ fontSize: 24, fontWeight: 600, color: "var(--p-text)", margin: 0 }}>(63) 8484-3646</p>
+              <p style={{ fontSize: 24, fontWeight: 600, color: "var(--p-text)", margin: 0 }}>(63) 98484-3646</p>
               <p style={{ fontSize: 12, color: "var(--p-text-muted)", marginTop: 4 }}>Atendimento por mensagem · respondido em até 12h em dias úteis.</p>
             </div>
 

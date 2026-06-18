@@ -3,7 +3,7 @@ import { IconArrowRight, IconWhatsApp, MarkArcoEquilibrio } from "./Icons";
 import Reveal from "./motion/Reveal";
 
 function waLink(msg: string) {
-  return `https://wa.me/5563848436460?text=${encodeURIComponent(msg)}`;
+  return `https://wa.me/5563984843646?text=${encodeURIComponent(msg)}`;
 }
 
 // Conversa de exemplo · voz da marca · zero emoji

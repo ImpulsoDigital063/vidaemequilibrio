@@ -117,7 +117,7 @@ const SERVICOS: Servico[] = [
 ];
 
 function waLink(msg: string) {
-  return `https://wa.me/5563848436460?text=${encodeURIComponent(msg)}`;
+  return `https://wa.me/5563984843646?text=${encodeURIComponent(msg)}`;
 }
 
 function ServicoCard({ s }: { s: Servico }) {

@@ -31,13 +31,13 @@ export default function Footer() {
             <ul className="space-y-3 text-sm">
               <li>
                 <a
-                  href="https://wa.me/5563848436460"
+                  href="https://wa.me/5563984843646"
                   target="_blank"
                   rel="noopener"
                   className="inline-flex items-center gap-2 hover:text-ve-cream transition-colors"
                 >
                   <IconWhatsApp className="w-4 h-4" />
-                  WhatsApp · (63) 8484-3646
+                  WhatsApp · (63) 98484-3646
                 </a>
               </li>
               <li>

@@ -24,7 +24,7 @@ const baseProvider = {
   url: SITE_URL,
   logo: `${SITE_URL}/favicon.svg`,
   image: `${SITE_URL}/img/heroHands.png`,
-  telephone: "+5563848436460",
+  telephone: "+5563984843646",
   priceRange: "R$180 - R$680",
   paymentAccepted: "PIX, Cartão de crédito",
   currenciesAccepted: "BRL",
@@ -62,7 +62,7 @@ const baseProvider = {
   },
   sameAs: [
     "https://instagram.com/timoteoofficial.__",
-    "https://wa.me/5563848436460",
+    "https://wa.me/5563984843646",
   ],
   audience: {
     "@type": "PeopleAudience",

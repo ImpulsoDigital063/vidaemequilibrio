@@ -186,7 +186,7 @@ export default function RitualPage({ data }: { data: MassagemData }) {
               <span className="display-italic">essa massagem</span>?
             </h2>
             <a
-              href={`https://wa.me/5563848436460?text=${encodeURIComponent(data.whatsappMsg)}`}
+              href={`https://wa.me/5563984843646?text=${encodeURIComponent(data.whatsappMsg)}`}
               target="_blank"
               rel="noopener"
               className="mt-10 inline-flex items-center gap-3 bg-ve-cream text-ve-burgundy px-8 py-4 text-base font-medium hover:bg-ve-champagne transition-colors"
