@@ -35,7 +35,7 @@ const WA_CLINICA = `https://wa.me/5563984843646?text=${encodeURIComponent(
   "Olá! Quero agendar na clínica (CYOX · Setor Norte)."
 )}`;
 const WA_DOMICILIO = `https://wa.me/5563984843646?text=${encodeURIComponent(
-  "Olá! Prefiro atendimento a domicílio. Quais as condições?"
+  "Oi! Quero marcar uma massagem a domicílio aqui em Palmas. Quais os horários disponíveis?"
 )}`;
 
 export default function Espaco() {
