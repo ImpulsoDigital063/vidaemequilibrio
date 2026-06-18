@@ -119,13 +119,13 @@ export default function AjudaCatalogo() {
           className="mt-16 md:mt-24 flex flex-col md:flex-row md:items-center justify-between gap-5 border-t border-ve-cream/15 pt-10"
         >
           <div className="max-w-xl">
-            <p className="eyebrow text-ve-champagne mb-2">Quer ver tudo organizado?</p>
+            <p className="eyebrow text-ve-champagne mb-2">Prefere decidir com calma?</p>
             <p className="display text-xl md:text-2xl text-ve-cream leading-tight">
-              Catálogo completo com adicionais.
+              Todas as massagens e os preços, num lugar só.
             </p>
             <p className="mt-2 text-ve-cream/65 text-sm leading-relaxed">
-              Massagens, adicionais (pedras · vela · bambu · ventosa) e PDF pra
-              baixar.
+              Compare as opções, veja os adicionais (pedras, vela, bambu, ventosa)
+              e baixe o PDF pra olhar quando quiser.
             </p>
           </div>
           <Link
