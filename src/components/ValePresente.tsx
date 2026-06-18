@@ -1,4 +1,4 @@
-import { IconArrowRight, MarcaDagua } from "./Icons";
+import { IconArrowRight, IconWhatsApp, MarcaDagua } from "./Icons";
 import Reveal from "./motion/Reveal";
 import Stagger, { StaggerItem } from "./motion/Stagger";
 
@@ -13,12 +13,14 @@ const MODALIDADES = [
     preco: "a partir de R$119",
     descricao:
       "Você escolhe uma massagem do catálogo e presenteia. A pessoa agenda quando quiser, na clínica ou em casa.",
+    wa: "Oii! Quero garantir um Vale Massagem do Vida em Equilíbrio pra presentear alguém. Como faço?",
   },
   {
     nome: "Vale Crédito",
     preco: "R$200 · R$400 · R$600",
     descricao:
       "Prefere deixar a escolha com ela? Presenteia um valor — ela usa na massagem que quiser, ou completa pra uma mais longa.",
+    wa: "Oii! Quero garantir um Vale Crédito do Vida em Equilíbrio pra presentear alguém. Como faço?",
   },
 ];
 
@@ -94,6 +96,15 @@ export default function ValePresente() {
                 {m.descricao}
               </p>
               <p className="eyebrow text-ve-cream/55 mt-6">Validade de 6 meses</p>
+              <a
+                href={`https://wa.me/5563984843646?text=${encodeURIComponent(m.wa)}`}
+                target="_blank"
+                rel="noopener"
+                className="mt-6 inline-flex items-center justify-center gap-2.5 self-start bg-ve-champagne px-5 py-3 text-sm font-medium text-ve-bg transition-colors hover:bg-ve-cream"
+              >
+                <IconWhatsApp className="w-4 h-4" />
+                Garantir esse vale
+              </a>
             </StaggerItem>
           ))}
         </Stagger>
