@@ -5,7 +5,7 @@ import Reveal from "./motion/Reveal";
 // Nicho atleta — card destacado, separado da grade de serviços.
 // PREÇO/DURAÇÃO provisórios (Timóteo não mandou a Desportiva nos prints) — confirmar.
 const WA = `https://wa.me/5563984843646?text=${encodeURIComponent(
-  "Olá! Quero agendar a Massagem Desportiva."
+  "Olá! Quero agendar a Massagem Desportiva. Qual duração fica melhor: 60 ou 90 min?"
 )}`;
 
 export default function MassagemDesportiva() {
@@ -42,10 +42,15 @@ export default function MassagemDesportiva() {
                 pós-treino. Pra quem leva o corpo a sério e quer voltar mais rápido.
               </p>
 
-              <div className="flex items-center gap-3 border-y border-ve-cream/15 py-3 max-w-xs">
-                <span className="text-sm text-ve-cream/75">60 min</span>
-                <span className="text-ve-cream/30">·</span>
-                <span className="text-sm font-semibold text-ve-champagne">R$199</span>
+              <div className="mt-1 flex max-w-xs flex-col divide-y divide-ve-cream/15 border-y border-ve-cream/15">
+                <div className="flex items-center justify-between py-2">
+                  <span className="text-sm text-ve-cream/75">60 min</span>
+                  <span className="text-sm font-semibold text-ve-champagne">R$149</span>
+                </div>
+                <div className="flex items-center justify-between py-2">
+                  <span className="text-sm text-ve-cream/75">90 min</span>
+                  <span className="text-sm font-semibold text-ve-champagne">R$199</span>
+                </div>
               </div>
 
               <a
