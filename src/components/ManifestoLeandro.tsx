@@ -32,12 +32,12 @@ export default function ManifestoLeandro() {
           <div className="aspect-[4/5] border border-[color:var(--ve-line)] relative overflow-hidden">
             <Parallax speed={-0.2} className="absolute inset-0">
               <Image
-                src="/img/leandro-manifesto.jpg"
+                src="/img/timoteo-sobre.jpg"
                 alt="Leandro Timóteo · massoterapeuta · Vida em Equilíbrio · Palmas-TO"
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1280px) 40vw, 480px"
-                className="object-cover scale-110"
-                style={{ objectPosition: "50% 30%" }}
+                className="object-cover scale-105"
+                style={{ objectPosition: "50% 25%" }}
                 priority
               />
             </Parallax>
