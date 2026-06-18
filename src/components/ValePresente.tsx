@@ -10,25 +10,38 @@ const WA_LINK = `https://wa.me/5563984843646?text=${WA_MSG}`;
 const MODALIDADES = [
   {
     nome: "Vale Massagem",
-    preco: "R$ 180 — 280",
+    preco: "a partir de R$119",
     descricao:
-      "Escolhe uma das massagens (Relaxante, Drenagem, Modeladora ou Facial) e presenteia. Beneficiária agenda direto pelo WhatsApp.",
-    detalhe: "Validade 6 meses",
+      "Você escolhe uma massagem do catálogo e presenteia. A pessoa agenda quando quiser, na clínica ou em casa.",
   },
   {
     nome: "Vale Crédito",
-    preco: "R$ 200 / 400 / 600",
+    preco: "R$200 · R$400 · R$600",
     descricao:
-      "Valor flexível em crédito · ela escolhe a massagem ou combina com enhancements no atendimento.",
-    detalhe: "Validade 6 meses",
+      "Prefere deixar a escolha com ela? Presenteia um valor — ela usa na massagem que quiser, ou completa pra uma mais longa.",
+  },
+];
+
+const PASSOS = [
+  {
+    n: "01",
+    t: "Você escolhe",
+    d: "A massagem ou o valor do crédito — a gente combina pelo WhatsApp.",
   },
   {
-    nome: "Vale Day Premium",
-    preco: "R$ 520 — 680",
-    descricao:
-      "O presente completo. 120 minutos com seis técnicas integradas. Pra quem você quer cuidar de verdade.",
-    detalhe: "Validade 6 meses · brinde no 1º atendimento",
-    destaque: true,
+    n: "02",
+    t: "Paga no PIX",
+    d: "À vista. Você recebe o vale em até 2h, em horário comercial.",
+  },
+  {
+    n: "03",
+    t: "Recebe o vale",
+    d: "Em PDF, com a sua mensagem — pra enviar digital ou imprimir e entregar na mão.",
+  },
+  {
+    n: "04",
+    t: "Ela agenda",
+    d: "A pessoa presenteada fala direto pelo WhatsApp e marca quando quiser.",
   },
 ];
 
@@ -45,6 +58,7 @@ export default function ValePresente() {
       />
 
       <div className="container-x relative">
+        {/* Cabeçalho */}
         <Reveal direction="up" className="grid md:grid-cols-12 gap-10 mb-14">
           <div className="md:col-span-5">
             <p className="eyebrow text-ve-champagne mb-6">Pra presentear</p>
@@ -55,56 +69,58 @@ export default function ValePresente() {
           </div>
           <div className="md:col-span-7">
             <p className="text-ve-cream/80 leading-relaxed text-base md:text-lg font-light max-w-xl">
-              Aniversário, Dia das Mães, agradecimento, ou só porque ela
-              merece. Você escolhe a sessão, paga pelo PIX, e a gente envia
-              um vale em PDF editorial (com a sua mensagem incluída) pra
-              entregar digital ou impresso. Ela agenda quando quiser.
+              Aniversário, Dia das Mães, um obrigada ou só porque ela merece. Você
+              presenteia uma massagem (ou um valor), a gente envia um vale em PDF
+              com a sua mensagem, e ela agenda quando quiser.
             </p>
           </div>
         </Reveal>
 
-        {/* Modalidades · destaque (Vale Day Premium) APARECE PRIMEIRO em mobile · ordem normal desktop */}
-        <Stagger className="grid md:grid-cols-3 gap-px bg-[color:var(--ve-line)]" step={0.12}>
-          {MODALIDADES.map((m, idx) => (
+        {/* 2 modalidades · cards transparentes com borda (fundo coeso) */}
+        <Stagger className="grid gap-5 md:grid-cols-2" step={0.12}>
+          {MODALIDADES.map((m) => (
             <StaggerItem
               key={m.nome}
-              direction={m.destaque ? "scale" : "up"}
-              distance={30}
-              className={`p-8 md:p-10 h-full ${m.destaque ? "bg-ve-bg-card border border-ve-champagne/25 order-first md:order-none" : "bg-ve-bg-soft"} ${!m.destaque && idx === 0 ? "md:order-first" : ""}`}
+              direction="up"
+              distance={28}
+              className="flex flex-col border border-ve-champagne/15 p-8 md:p-10 hover:border-ve-champagne/35 transition-colors"
             >
               <p className="eyebrow text-ve-champagne mb-3">Modalidade</p>
               <h3 className="display text-2xl md:text-3xl text-ve-cream">
                 {m.nome}
               </h3>
               <p className="display text-xl text-ve-champagne mt-2">{m.preco}</p>
-              <p className="mt-4 text-ve-cream/85 text-sm leading-relaxed">
+              <p className="mt-4 text-ve-cream/80 text-sm leading-relaxed">
                 {m.descricao}
               </p>
-              <p className="eyebrow text-ve-cream/60 mt-5">{m.detalhe}</p>
+              <p className="eyebrow text-ve-cream/55 mt-6">Validade de 6 meses</p>
             </StaggerItem>
           ))}
         </Stagger>
 
-        {/* Como funciona · stagger left-to-right pra dar sensação de fluxo */}
-        <Stagger className="mt-16 grid md:grid-cols-4 gap-px bg-[color:var(--ve-line)]" step={0.1}>
-          {[
-            { n: "01", t: "Você escolhe", d: "A massagem ou o valor do crédito · combinamos pelo WhatsApp" },
-            { n: "02", t: "Paga pelo PIX", d: "À vista · você recebe o vale em até 2h em horário comercial" },
-            { n: "03", t: "Entrega", d: "PDF editorial digital · ou imprime e entrega na mão (envelope cravado da marca)" },
-            { n: "04", t: "Ela agenda", d: "Beneficiária fala direto comigo pelo WhatsApp · sem fricção" },
-          ].map((p) => (
-            <StaggerItem key={p.n} direction="right" distance={22} className="bg-ve-bg-soft p-6 md:p-8 h-full">
-              <p className="display text-3xl text-ve-champagne">{p.n}</p>
-              <p className="display text-lg text-ve-cream mt-3">{p.t}</p>
-              <p className="text-ve-cream/70 text-sm mt-2 leading-relaxed">{p.d}</p>
-            </StaggerItem>
-          ))}
-        </Stagger>
+        {/* Como funciona · 4 passos limpos */}
+        <div className="mt-20">
+          <p className="eyebrow text-ve-champagne border-b border-ve-cream/15 pb-4 mb-8">
+            Como funciona
+          </p>
+          <Stagger className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4" step={0.1}>
+            {PASSOS.map((p) => (
+              <StaggerItem key={p.n} direction="up" distance={22}>
+                <p className="display text-3xl text-ve-champagne/80">{p.n}</p>
+                <p className="display text-lg text-ve-cream mt-2">{p.t}</p>
+                <p className="text-ve-cream/65 text-sm mt-2 leading-relaxed">
+                  {p.d}
+                </p>
+              </StaggerItem>
+            ))}
+          </Stagger>
+        </div>
 
-        {/* CTA · scale */}
-        <Reveal direction="scale" className="mt-16 text-center">
+        {/* CTA */}
+        <Reveal direction="scale" className="mt-20 text-center">
           <p className="display-italic text-ve-cream/85 text-xl md:text-2xl max-w-2xl mx-auto">
-            "Presentear cuidado é uma das formas mais bonitas de dizer obrigada."
+            &ldquo;Presentear cuidado é uma das formas mais bonitas de dizer
+            obrigada.&rdquo;
           </p>
           <a
             href={WA_LINK}
