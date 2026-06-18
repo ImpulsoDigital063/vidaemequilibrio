@@ -13,21 +13,24 @@ export default function MassagemDesportiva() {
     <section id="desportiva" className="relative text-ve-cream pb-16 md:pb-24">
       <div className="container-x">
         <Reveal direction="up">
-          <div className="relative flex min-h-[420px] overflow-hidden border border-ve-champagne/10">
-            {/* Foto · mulher correndo ao pôr do sol (tom quente casa com o marrom) */}
-            <Image
-              src="/img/corredora-orla.jpg"
-              alt="Mulher correndo ao pôr do sol · Massagem Desportiva · Vida em Equilíbrio · Palmas-TO"
-              fill
-              sizes="100vw"
-              className="object-cover object-center"
-            />
-            {/* Overlay · base uniforme (mobile) + gradiente lateral escurecendo à direita (desktop) */}
-            <div className="absolute inset-0 bg-ve-bg/45" />
-            <div className="absolute inset-0 md:bg-gradient-to-l md:from-ve-bg md:via-ve-bg/75 md:to-transparent" />
+          <div className="grid overflow-hidden border border-ve-champagne/10 md:grid-cols-2">
+            {/* Foto · corredora nítida (vertical) */}
+            <div className="relative min-h-[380px] md:min-h-[500px]">
+              <Image
+                src="/img/desportiva-corredora.jpg"
+                alt="Mulher correndo · Massagem Desportiva · Vida em Equilíbrio · Palmas-TO"
+                fill
+                sizes="(min-width: 768px) 50vw, 100vw"
+                className="object-cover object-[center_35%]"
+              />
+              {/* Tint marrom · harmoniza o fundo claro da foto com a paleta */}
+              <div className="absolute inset-0 bg-ve-bg-card/40 mix-blend-multiply" />
+              {/* Funde na coluna de texto */}
+              <div className="absolute inset-0 bg-gradient-to-t from-ve-bg/70 to-transparent md:bg-gradient-to-r md:from-transparent md:to-ve-bg-card" />
+            </div>
 
-            {/* Conteúdo · à direita no desktop, ela corre em direção ao texto */}
-            <div className="relative z-10 flex w-full flex-col gap-5 justify-center p-8 md:ml-auto md:max-w-xl md:items-end md:p-14 md:text-right">
+            {/* Conteúdo */}
+            <div className="flex flex-col gap-5 justify-center bg-ve-bg-card p-8 md:p-14">
               <p className="eyebrow text-ve-champagne">Para quem treina</p>
 
               <h2 className="display text-3xl md:text-4xl leading-tight text-ve-cream">
@@ -39,7 +42,7 @@ export default function MassagemDesportiva() {
                 pós-treino. Pra quem leva o corpo a sério e quer voltar mais rápido.
               </p>
 
-              <div className="flex items-center gap-3 border-y border-ve-cream/15 py-3">
+              <div className="flex items-center gap-3 border-y border-ve-cream/15 py-3 max-w-xs">
                 <span className="text-sm text-ve-cream/75">60 min</span>
                 <span className="text-ve-cream/30">·</span>
                 <span className="text-sm font-semibold text-ve-champagne">R$199</span>
@@ -49,7 +52,7 @@ export default function MassagemDesportiva() {
                 href={WA}
                 target="_blank"
                 rel="noopener"
-                className="inline-flex items-center justify-center gap-2.5 bg-ve-champagne px-6 py-3.5 text-sm font-medium text-ve-bg transition-colors hover:bg-ve-cream"
+                className="inline-flex items-center justify-center sm:self-start gap-2.5 bg-ve-champagne px-6 py-3.5 text-sm font-medium text-ve-bg transition-colors hover:bg-ve-cream"
               >
                 <IconWhatsApp className="h-4 w-4" />
                 Agendar pelo WhatsApp
