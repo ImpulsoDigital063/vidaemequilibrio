@@ -46,7 +46,7 @@ const data: MassagemData = {
   preparar:
     "Hidrate-se bem antes. Pode haver sensibilidade no dia seguinte — é normal. Considere série de sessões (semanal ou quinzenal) pra ver resultado consistente.",
   whatsappMsg:
-    "Oi Leandro, quero saber sobre a Massagem Modeladora — valores e como funciona o pacote.",
+    "Oii! Quero saber sobre a Massagem Modeladora — valores e como funciona o pacote.",
 };
 
 export default function Page() {

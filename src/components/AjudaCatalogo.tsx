@@ -97,7 +97,7 @@ export default function AjudaCatalogo() {
             </p>
             <a
               href={waLink(
-                "Olá! Estou em dúvida sobre qual massagem é a certa pra mim. Podem me ajudar a decidir?"
+                "Oii! Tô em dúvida sobre qual massagem é a melhor pra mim. Pode me ajudar a escolher?"
               )}
               target="_blank"
               rel="noopener"

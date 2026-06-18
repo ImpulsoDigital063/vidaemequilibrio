@@ -42,7 +42,7 @@ const SERVICOS: Servico[] = [
     img: "/img/pedras-quentes.jpg",
     badge: "Mais pedida",
     waMessage:
-      "Olá! Quero agendar a Massagem com Pedras Quentes. Qual duração fica melhor: 50, 80 ou 110 min?",
+      "Oii! Quero agendar a Massagem com Pedras Quentes. Qual duração fica melhor: 50, 80 ou 110 min?",
   },
   {
     icon: IconInchada,
@@ -58,7 +58,7 @@ const SERVICOS: Servico[] = [
     img: "/img/drenagem.jpg",
     badge: "Mais procurada",
     waMessage:
-      "Olá! Quero agendar a Drenagem Linfática. Qual duração fica melhor: 50, 80 ou 110 min?",
+      "Oii! Quero agendar a Drenagem Linfática. Qual duração fica melhor: 50, 80 ou 110 min?",
   },
   {
     icon: IconModelar,
@@ -72,7 +72,7 @@ const SERVICOS: Servico[] = [
     ],
     img: "/img/massagem-modeladora.jpg",
     waMessage:
-      "Olá! Quero agendar a Massagem Modeladora. Qual duração fica melhor: 50 ou 80 min?",
+      "Oii! Quero agendar a Massagem Modeladora. Qual duração fica melhor: 50 ou 80 min?",
   },
   {
     icon: IconTensa,
@@ -87,7 +87,7 @@ const SERVICOS: Servico[] = [
     ],
     img: "/img/stillCupping.png",
     waMessage:
-      "Olá! Quero agendar a Massagem com Ventosas. Qual duração fica melhor: 50, 80 ou 110 min?",
+      "Oii! Quero agendar a Massagem com Ventosas. Qual duração fica melhor: 50, 80 ou 110 min?",
   },
   {
     icon: IconLeaf,
@@ -98,7 +98,7 @@ const SERVICOS: Servico[] = [
     variacoes: [{ duracao: "30 min", preco: "R$119" }],
     img: "/img/stillCupping.png",
     waMessage:
-      "Olá! Quero agendar a Aplicação de Ventosas (30 min · R$119).",
+      "Oii! Quero agendar a Aplicação de Ventosas (30 min · R$119).",
   },
   {
     icon: IconFlorescer,
@@ -112,7 +112,7 @@ const SERVICOS: Servico[] = [
     ],
     img: "/img/massagem-facial.jpg",
     waMessage:
-      "Olá! Quero agendar a Massagem Facial. Qual duração fica melhor: 30 ou 50 min?",
+      "Oii! Quero agendar a Massagem Facial. Qual duração fica melhor: 30 ou 50 min?",
   },
 ];
 

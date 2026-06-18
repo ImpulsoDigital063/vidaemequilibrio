@@ -32,7 +32,7 @@ const FATOS = [
 
 // ============== WhatsApp ==============
 const WA_CLINICA = `https://wa.me/5563984843646?text=${encodeURIComponent(
-  "Olá! Quero agendar na clínica (CYOX · Setor Norte)."
+  "Oii! Quero agendar uma massagem na clínica (CYOX, Setor Norte). Quais os horários?"
 )}`;
 const WA_DOMICILIO = `https://wa.me/5563984843646?text=${encodeURIComponent(
   "Oii! Quero marcar uma massagem a domicílio aqui em Palmas. Quais os horários disponíveis?"

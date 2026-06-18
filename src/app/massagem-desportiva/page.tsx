@@ -46,7 +46,7 @@ const data: MassagemData = {
   preparar:
     "Pré-prova: agende 48h antes pra dar tempo do tecido se reorganizar sem fadiga. Pós-prova: nas primeiras 48h o ganho de recovery é maior. Use roupa de treino confortável. Atendimento sob contratação particular.",
   whatsappMsg:
-    "Oi Leandro, sou corredora e quero saber sobre a Massagem Desportiva.",
+    "Oii! Sou corredora e quero saber sobre a Massagem Desportiva.",
 };
 
 export default function Page() {

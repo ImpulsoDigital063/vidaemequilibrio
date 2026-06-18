@@ -3,7 +3,7 @@ import Reveal from "./motion/Reveal";
 import Stagger, { StaggerItem } from "./motion/Stagger";
 
 const WA_MSG = encodeURIComponent(
-  "Oi Leandro, quero presentear alguém com um vale do Vida em Equilíbrio."
+  "Oii! Quero presentear alguém com um vale do Vida em Equilíbrio. Como funciona?"
 );
 const WA_LINK = `https://wa.me/5563984843646?text=${WA_MSG}`;
 

@@ -56,7 +56,7 @@ const data: MassagemData = {
   preparar:
     "Chegue 10 minutos antes pra desacelerar. Evite refeições pesadas até 1h antes. Roupa confortável pra ir embora — você vai querer permanecer no estado em que sair daqui.",
   whatsappMsg:
-    "Oi Leandro, quero saber sobre o Day Premium Equilíbrio — valores e horários.",
+    "Oii! Quero saber sobre o Day Premium Equilíbrio — valores e horários.",
 };
 
 export default function Page() {

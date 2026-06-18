@@ -46,7 +46,7 @@ const data: MassagemData = {
   preparar:
     "Chegue com o rosto limpo (sem maquiagem se possível — eu retiro com cuidado). Cabelo preso. Roupa leve.",
   whatsappMsg:
-    "Oi Leandro, quero saber sobre a Massagem Facial — valores e horários.",
+    "Oii! Quero saber sobre a Massagem Facial — valores e horários.",
 };
 
 export default function Page() {

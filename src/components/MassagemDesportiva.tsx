@@ -5,7 +5,7 @@ import Reveal from "./motion/Reveal";
 // Nicho atleta — card destacado, separado da grade de serviços.
 // PREÇO/DURAÇÃO provisórios (Timóteo não mandou a Desportiva nos prints) — confirmar.
 const WA = `https://wa.me/5563984843646?text=${encodeURIComponent(
-  "Olá! Quero agendar a Massagem Desportiva. Qual duração fica melhor: 60 ou 90 min?"
+  "Oii! Quero agendar a Massagem Desportiva. Qual duração fica melhor: 60 ou 90 min?"
 )}`;
 
 export default function MassagemDesportiva() {

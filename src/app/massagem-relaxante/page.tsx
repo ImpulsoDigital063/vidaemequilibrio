@@ -45,7 +45,7 @@ const data: MassagemData = {
   preparar:
     "Chegue tranquila, sem pressa pra sair depois. Roupa confortável. Se quiser, posso adicionar enhancements na hora — combinamos no início.",
   whatsappMsg:
-    "Oi Leandro, quero saber sobre a Massagem Relaxante — valores e horários.",
+    "Oii! Quero saber sobre a Massagem Relaxante — valores e horários.",
 };
 
 export default function Page() {

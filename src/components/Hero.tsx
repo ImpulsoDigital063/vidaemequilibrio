@@ -6,8 +6,9 @@ import { IconArrowDown, IconWhatsApp, LogoMark } from "./Icons";
 
 const EASE = [0.16, 1, 0.3, 1] as const;
 
-const WA_AGENDAR =
-  "https://wa.me/5563984843646?text=Ol%C3%A1!%20Quero%20agendar%20uma%20massagem.";
+const WA_AGENDAR = `https://wa.me/5563984843646?text=${encodeURIComponent(
+  "Oii! Vim pelo site e quero agendar uma massagem. Pode me ajudar com os horários?"
+)}`;
 
 export default function Hero() {
   // Sticky-cover: a foto fica PARADA (sem parallax) enquanto a próxima seção cobre.

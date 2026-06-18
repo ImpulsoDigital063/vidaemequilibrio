@@ -38,7 +38,7 @@ export default function StickyMobileCTA() {
           className="md:hidden fixed bottom-0 left-0 right-0 z-30 bg-ve-bg/95 backdrop-blur-md border-t border-[color:var(--ve-line)] px-4 py-3 pb-[max(12px,env(safe-area-inset-bottom))]"
         >
           <a
-            href="https://wa.me/5563984843646?text=Oi%20Leandro%2C%20quero%20conhecer%20o%20Vida%20em%20Equil%C3%ADbrio"
+            href={`https://wa.me/5563984843646?text=${encodeURIComponent("Oii! Vim pelo site e quero conhecer a Vida em Equilíbrio. Pode me ajudar?")}`}
             target="_blank"
             rel="noopener"
             className="flex items-center justify-center gap-3 w-full bg-ve-champagne text-ve-bg py-3.5 text-sm font-medium hover:bg-ve-cream transition-colors"

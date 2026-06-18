@@ -46,7 +46,7 @@ const data: MassagemData = {
   preparar:
     "Hidrate-se bem antes e nas 24h seguintes — a sessão mobiliza líquido e o corpo precisa eliminar. Roupa leve e confortável.",
   whatsappMsg:
-    "Oi Leandro, quero saber sobre a Drenagem Linfática — valores e horários.",
+    "Oii! Quero saber sobre a Drenagem Linfática — valores e horários.",
 };
 
 export default function Page() {
