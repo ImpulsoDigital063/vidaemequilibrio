@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import GridObjetivos from "@/components/GridObjetivos";
+import MassagemDesportiva from "@/components/MassagemDesportiva";
 import Metricas from "@/components/Metricas";
 import ManifestoLeandro from "@/components/ManifestoLeandro";
 import Espaco from "@/components/Espaco";
@@ -35,6 +36,7 @@ export default function Home() {
       <main className="relative z-10 flex-1">
         <Hero />
         <GridObjetivos />
+        <MassagemDesportiva />
         <Espaco />
         <AjudaCatalogo />
         <Metricas />
