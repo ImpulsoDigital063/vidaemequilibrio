@@ -71,9 +71,9 @@ export default function ValePresente() {
           </div>
           <div className="md:col-span-7">
             <p className="text-ve-cream/80 leading-relaxed text-base md:text-lg font-light max-w-xl">
-              Aniversário, Dia das Mães, um obrigada ou só porque ela merece. Você
-              presenteia uma massagem (ou um valor), a gente envia um vale em PDF
-              com a sua mensagem, e ela agenda quando quiser.
+              Aniversário, Dia das Mães ou só porque ela merece — dê de presente
+              um tempo de cuidado. Você escolhe a massagem (ou um valor); o resto
+              a gente cuida.
             </p>
           </div>
         </Reveal>
