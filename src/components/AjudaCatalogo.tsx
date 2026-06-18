@@ -83,17 +83,17 @@ export default function AjudaCatalogo() {
         {/* Em dúvida · texto + chat mockup */}
         <div className="grid items-center gap-10 md:grid-cols-2 md:gap-16">
           <Reveal direction="right">
-            <p className="eyebrow text-ve-champagne mb-4">Em dúvida?</p>
+            <p className="eyebrow text-ve-champagne mb-4">Não sabe qual escolher?</p>
             <h2 className="display text-3xl md:text-4xl leading-[1.1] text-ve-cream">
-              Conta o que está sentindo.{" "}
+              Me conta o que você está sentindo —{" "}
               <span className="display-italic text-ve-champagne">
-                A gente indica.
+                a gente indica a certa.
               </span>
             </h2>
             <p className="mt-5 text-ve-cream/65 text-sm md:text-base leading-relaxed max-w-md">
-              Sem fórmula pronta. Você descreve como está, a gente responde com a
-              massagem certa pro seu caso — e já vê um horário, na clínica ou na
-              sua casa.
+              Não precisa saber o nome da técnica. Você descreve a dor, a tensão ou
+              o cansaço pelo WhatsApp — a gente entende o seu caso e indica a
+              massagem que resolve, com horário na clínica ou em casa.
             </p>
             <a
               href={waLink(
