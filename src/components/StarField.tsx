@@ -11,6 +11,8 @@ type Star = {
   vy: number;
   r: number;
   opacity: number;
+  phase: number;
+  breath: number;
 };
 
 export default function StarField() {
@@ -48,10 +50,12 @@ export default function StarField() {
         vy: (Math.random() - 0.5) * SPEED,
         r: Math.random() * 1.2 + 0.3,
         opacity: Math.random() * 0.5 + 0.3,
+        phase: Math.random() * Math.PI * 2,
+        breath: 0.0006 + Math.random() * 0.0006,
       }));
     }
 
-    function draw() {
+    function draw(now = 0) {
       if (!canvas || !ctx) return;
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
@@ -73,10 +77,15 @@ export default function StarField() {
         }
       }
 
-      // Estrelas (brilho champagne + ponto creme)
+      // Estrelas · brilho champagne + ponto creme · respiração (pulso lento de opacidade)
       for (const s of stars) {
+        const breath = reduceMotion
+          ? 1
+          : 0.45 + 0.55 * (0.5 + 0.5 * Math.sin(now * s.breath + s.phase));
+        const op = s.opacity * breath;
+
         const grd = ctx.createRadialGradient(s.x, s.y, 0, s.x, s.y, s.r * 3);
-        grd.addColorStop(0, `rgba(201, 183, 156, ${s.opacity})`);
+        grd.addColorStop(0, `rgba(201, 183, 156, ${op})`);
         grd.addColorStop(1, `rgba(201, 183, 156, 0)`);
         ctx.beginPath();
         ctx.arc(s.x, s.y, s.r * 3, 0, Math.PI * 2);
@@ -85,7 +94,7 @@ export default function StarField() {
 
         ctx.beginPath();
         ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(242, 235, 224, ${s.opacity + 0.2})`;
+        ctx.fillStyle = `rgba(242, 235, 224, ${op + 0.2})`;
         ctx.fill();
       }
 
