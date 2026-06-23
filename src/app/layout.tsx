@@ -3,6 +3,7 @@ import { Fraunces, Inter } from "next/font/google";
 import "./globals.css";
 import NoiseOverlay from "@/components/motion/NoiseOverlay";
 import StarField from "@/components/StarField";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 
 const fraunces = Fraunces({
   variable: "--font-fraunces",
@@ -65,6 +66,7 @@ export default function RootLayout({
         <NoiseOverlay />
         <StarField />
         {children}
+        <GoogleAnalytics />
       </body>
     </html>
   );
