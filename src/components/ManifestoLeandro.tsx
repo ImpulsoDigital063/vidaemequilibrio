@@ -10,13 +10,13 @@ export default function ManifestoLeandro() {
   return (
     <section id="manifesto" className="relative text-ve-cream py-24 md:py-32 overflow-hidden">
       {/* Spotlight do mouse · sutil · só desktop */}
-      <Spotlight color="rgba(110, 42, 74, 0.55)" size={520} intensity={0.45} />
+      <Spotlight color="rgba(201, 183, 156, 0.4)" size={520} intensity={0.4} />
 
-      {/* GlowOrb burgundy · profundidade espacial */}
+      {/* GlowOrb terracota · profundidade espacial */}
       <GlowOrb
-        color="#6E2A4A"
+        color="#8B6342"
         size="700px"
-        opacity={0.18}
+        opacity={0.16}
         position={{ left: "-200px", top: "40%" }}
       />
 
@@ -71,7 +71,7 @@ export default function ManifestoLeandro() {
             </p>
             <p>
               Hoje a clínica está pronta, o método está pronto, e o tempo agora
-              é seu. Atendo uma cliente por turno, em clínica parceira ou em
+              é seu. Atendo uma cliente por turno, dentro da CYOX ou em
               domicílio, sempre com a mesma escuta antes da manobra.
             </p>
             <p>
