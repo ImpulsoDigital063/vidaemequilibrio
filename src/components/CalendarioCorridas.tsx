@@ -1,6 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
-import { IconArrowRight } from "./Icons";
+import { IconArrowRight, IconWhatsApp } from "./Icons";
+
+const WA_RECOVERY = `https://wa.me/5563984843646?text=${encodeURIComponent(
+  "Oii! Sou corredora e quero saber sobre o recovery pré e pós-prova. Pode me contar?"
+)}`;
 
 export default function CalendarioCorridas() {
   return (
@@ -12,8 +16,8 @@ export default function CalendarioCorridas() {
         {/* Imagem cinemática lado esquerdo */}
         <div className="md:col-span-6 relative aspect-[4/3] md:aspect-auto">
           <Image
-            src="/img/heroCorredora.jpg"
-            alt=""
+            src="/img/corredora-orla.jpg"
+            alt="Corredora ao pôr do sol · recovery do atleta · Vida em Equilíbrio · Palmas-TO"
             fill
             sizes="(max-width: 768px) 100vw, 50vw"
             className="object-cover"
@@ -59,19 +63,24 @@ export default function CalendarioCorridas() {
               </p>
             </div>
 
-            <div className="mt-10 flex flex-col sm:flex-row gap-4">
+            <div className="mt-10 flex flex-col sm:flex-row sm:items-center gap-5">
+              <a
+                href={WA_RECOVERY}
+                target="_blank"
+                rel="noopener"
+                className="inline-flex items-center justify-center gap-2.5 bg-ve-champagne text-ve-bg px-6 py-3.5 text-sm font-medium hover:bg-ve-cream transition-colors"
+              >
+                <IconWhatsApp className="w-4 h-4" />
+                Falar sobre recovery
+              </a>
               <Link
                 href="/massagem-desportiva"
                 className="inline-flex items-center gap-2 text-ve-champagne hover:text-ve-cream transition-colors text-sm font-medium"
               >
-                Conhecer Massagem Desportiva
+                Ver a Massagem Desportiva
                 <IconArrowRight className="w-4 h-4" />
               </Link>
             </div>
-
-            <p className="mt-10 text-ve-muted text-xs eyebrow">
-              Atendimento em massa em eventos de corrida · em planejamento para 2027
-            </p>
           </div>
         </div>
       </div>
