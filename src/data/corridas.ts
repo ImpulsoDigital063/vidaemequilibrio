@@ -8,7 +8,7 @@
 // que monta o diff e manda pro Eduardo aprovar ANTES do push (modelo A · λ.prova-na-fonte).
 // Evite editar à mão — a próxima raspagem sobrescreve.
 //
-// Última atualização: 2026-06-22 (seed manual · validação da Fase 1).
+// Última atualização: 2026-06-23 (automático · scripts/scrape-corridas.mjs).
 
 export interface Corrida {
   nome: string;
@@ -21,7 +21,7 @@ export interface Corrida {
 
 export const CORRIDAS: Corrida[] = [
   {
-    nome: "Corrida Solidária da Câmara Municipal de Palmas",
+    nome: "I Corrida Solidária da Câmara Municipal de Palmas",
     data: "2026-06-27",
     distancias: ["4k", "10k"],
     cidade: "Palmas-TO",
@@ -41,9 +41,10 @@ export const CORRIDAS: Corrida[] = [
   {
     nome: "Cats RUN TO",
     data: "2026-07-19",
-    distancias: ["250m", "3k", "5k"],
+    distancias: ["3k", "5k", "250m"],
     cidade: "Palmas-TO",
-    linkInscricao: "https://todascorridas.com.br/corrida/cats-run-to-2026/",
+    linkInscricao:
+      "https://todascorridas.com.br/corrida/cats-run-to-2026/",
     fonte: "todascorridas.com.br",
   },
   {
