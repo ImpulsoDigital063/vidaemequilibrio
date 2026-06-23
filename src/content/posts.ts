@@ -987,6 +987,219 @@ Se você treina pra uma prova específica, dá pra desenhar o cuidado em volta d
     ],
   },
   {
+    slug: "beach-tennis-lesoes-recovery-palmas",
+    titulo:
+      "Beach tennis: as lesões mais comuns (e o que fazer pelo seu corpo entre os jogos)",
+    categoria: "Beach Tennis",
+    leitura: "11 min de leitura",
+    intro:
+      "Beach tennis não machuca a perna — machuca o cotovelo e o ombro. Revisão honesta do que a epidemiologia mostra (estudo brasileiro com 698 jogadores), por que a areia é faca de dois gumes, e onde a massagem realmente ajuda — e onde ela é só adjuvante. Pra quem joga 2-3x na semana em Palmas.",
+    publishedAt: "2026-06-23",
+    updatedAt: "2026-06-23",
+    keywords: [
+      "lesões beach tennis",
+      "cotovelo de beach tennis",
+      "epicondilite beach tennis",
+      "ombro beach tennis",
+      "massagem beach tennis",
+      "recovery beach tennis",
+      "beach tennis Palmas",
+      "areia carga muscular",
+      "tendinite cotovelo raquete",
+      "Vida em Equilíbrio",
+    ],
+    about: [
+      "Beach tennis",
+      "Epicondilite lateral",
+      "Tendinopatia do manguito rotador",
+      "Lesões esportivas",
+      "Recuperação muscular",
+    ],
+    resumoExecutivo:
+      "No maior estudo de lesões em beach tennis (Rodrigues et al, 2024, 698 jogadores brasileiros), as queixas mais comuns são de COTOVELO (23,4%) e OMBRO (14%) — não de perna. O padrão é claro: membro superior sofre lesão crônica (tendinopatia), membro inferior sofre lesão aguda (entorse). A areia é faca de dois gumes: reduz o impacto nas articulações, mas aumenta a carga muscular e o gasto de energia em até 2-2,7x, cobrando caro da panturrilha. A verdade sobre a massagem: pra TENDINITE (cotovelo/ombro), o tratamento principal é exercício de carga — a massagem ajuda na dor como adjuvante, não substitui o fortalecimento. Pra FADIGA e dor muscular depois de jogar, a massagem tem evidência sólida. Maior fator de risco: jogar muito (frequência alta, sessões longas) sem preparo de força.",
+    conteudo: `
+O beach tennis virou febre em Palmas — e com ele chegou uma fila de gente com o cotovelo doendo, o ombro travado e a panturrilha gritando no dia seguinte. A boa notícia: a literatura sobre as lesões do esporte, embora nova, já é clara o bastante pra você jogar mais e se machucar menos. A má notícia pra quem vende solução mágica: massagem não cura tudo, e a areia não é tão inofensiva quanto parece.
+
+Este texto reúne o que os dois principais estudos de lesão em beach tennis mostram (um brasileiro de 2024, um francês de 2019), apoiados na literatura de esportes de raquete e de exercício na areia. Sem hype.
+
+## 1. Onde o beach tennis realmente machuca
+
+Esqueça a ideia de que esporte de areia "é de perna". O padrão que aparece nos dois estudos sérios é o oposto.
+
+No maior deles — **Rodrigues e colegas (2024)**, na *Acta Ortopédica Brasileira*, com 698 praticantes — as áreas mais lesionadas foram:
+
+| Região | Frequência | Tipo predominante |
+|---|---|---|
+| **Cotovelo** | 23,4% | Crônica (tendinite — 80% dos casos) |
+| **Ombro** | 14% | Crônica (tendinopatia) |
+| **Joelho** | 11,7% | Aguda (entorse/contusão) |
+| **Tornozelo** | 8,9% | Aguda (entorse) |
+| **Pé** | 8,9% | Variado |
+
+O estudo francês de **Berardi e colegas (2019)**, com 206 jogadores, encontrou o mesmo desenho: o **ombro** foi a área mais lesionada, e a regra geral ficou nítida — **membro superior adoece de forma crônica (tendinopatia de cotovelo e ombro); membro inferior se machuca de forma aguda (entorses).**
+
+Tradução: o que tira você da quadra a longo prazo nasce em cima, no gesto repetido do saque e do smash — não embaixo.
+
+## 2. O cotovelo: a lesão número 1
+
+A famosa "epicondilite" (o cotovelo de tenista, na face lateral; ou o cotovelo de golfista, na medial) é a campeã. No estudo brasileiro, 80% das queixas de cotovelo eram tendinite.
+
+O mecanismo é sobrecarga repetitiva: os tendões dos músculos do antebraço (que estendem e estabilizam o punho) são puxados milhares de vezes por treino. Empunhadura tensa demais e backhand mal executado são os gatilhos clássicos.
+
+E aqui vem a parte que diferencia conversa séria de propaganda: **o tratamento principal da epicondilite NÃO é repouso passivo nem massagem.** É **exercício de carga**, especialmente excêntrico. A revisão de **Karanasios e colegas (2021)** aponta o exercício excêntrico como tratamento de primeira linha pra tendinopatia lateral do cotovelo.
+
+A massagem entra como **adjuvante** — ajuda a aliviar a dor e a soltar a musculatura do antebraço em volta, o que melhora o conforto pra você conseguir fazer o fortalecimento. Mas ela não substitui a carga. Quem te promete "curar a tendinite só na massagem" está vendendo o que a evidência não sustenta.
+
+## 3. O ombro: o preço do smash
+
+O movimento overhead repetido — saque, smash — gera microtrauma no manguito rotador. Por isso o ombro aparece no topo dos dois estudos.
+
+A lógica de tratamento é a mesma do cotovelo: a base é **exercício terapêutico** (fortalecer manguito e escápula, recuperar amplitude de rotação). A terapia manual é adjuvante. A meta-análise de **Desjardins-Charbonneau e colegas (2015)**, no *JOSPT*, foi honesta sobre isso: somar terapia manual ao exercício **reduz a dor** na tendinopatia do manguito, mas não está claro que melhore a função, e a qualidade da evidência é de baixa a moderada.
+
+Ou seja: a massagem alivia e acompanha o tratamento. O fortalecimento resolve.
+
+## 4. A areia: a faca de dois gumes
+
+Todo mundo diz que jogar na areia "é mais saudável porque não tem impacto". É meia verdade — e a outra metade explica a sua panturrilha destruída.
+
+**O que a areia poupa:** a superfície fofa reduz a taxa de carga sobre as articulações. Menos impacto repetitivo no joelho e no tornozelo do que numa quadra dura (Jafarnezhadgero, 2021).
+
+**O que a areia cobra:** ela aumenta brutalmente o trabalho muscular. Andar na areia custa de **2 a 2,7 vezes mais energia** que em piso firme; correr, cerca de 1,15 vez mais trabalho mecânico (Lejeune e colegas, 1998). E esse custo extra recai sobre os músculos — sobretudo **panturrilha e gastrocnêmio**, que precisam empurrar contra uma base que cede a cada passo (Jafarnezhadgero, 2021; Grant e colegas, 2022).
+
+Resultado prático: **menos lesão de impacto, mais fadiga e sobrecarga muscular** — e o tornozelo ainda corre risco de entorse pela instabilidade da superfície (8,9% das lesões no estudo brasileiro). A areia não é inofensiva; ela só troca o tipo de cobrança.
+
+## 5. Onde a massagem REALMENTE ajuda (e onde não)
+
+Esta é a seção mais honesta do texto, e a que mais importa pra você decidir o que faz sentido.
+
+**Pra tendinite (cotovelo, ombro):** a massagem é **adjuvante**. Alivia a dor e relaxa a musculatura em volta, o que ajuda — mas o tratamento que resolve é o exercício de carga (Karanasios, 2021; Desjardins-Charbonneau, 2015). Não troque o fortalecimento pela maca.
+
+**Pra fadiga e dor muscular (a panturrilha e o corpo moído depois de jogar):** aqui a massagem **brilha**. A meta-análise de **Guo e colegas (2017)** mostra que a massagem alivia a dor muscular tardia (DOMS), com efeito máximo por volta de **48h** pós-esforço, e ajuda a recuperar força. É exatamente o tipo de queixa que o beach tennis na areia gera.
+
+Resumo sem rodeio: **massagem é ótima pra recuperar músculo cansado; pra tendinite, ela ajuda mas não é o tratamento principal.** Saber a diferença evita você gastar dinheiro esperando da massagem o que ela não faz — e aproveitar de verdade o que ela faz bem.
+
+## 6. Como jogar 2-3x na semana sem se quebrar
+
+O fator de risco número um, no estudo brasileiro, foi **carga**: jogar muitas vezes por semana, sessões acima de 3h, e voltar cedo demais de uma lesão anterior (quem já se lesionou tem alta chance de reincidir).
+
+Pro amador, o que a evidência sugere:
+
+- **Fortaleça antes de aumentar o volume, não depois de lesionar.** Excêntrico de punho/antebraço pro cotovelo, fortalecimento de manguito e escápula pro ombro. É chato, mas é o que previne (Karanasios, 2021).
+- **Respeite um teto.** 2-3x por semana com sessões controladas é mais seguro que jogar todo dia 3h+. Frequência alta sem preparo = receita de tendinite.
+- **Trate a panturrilha como o motor que a areia exige.** Aqueça e fortaleça; espere fadiga maior do que sentiria numa quadra dura.
+- **Cuide do tornozelo.** Trabalho de equilíbrio e propriocepção é prevenção lógica de entorse em superfície instável.
+- **Técnica antes de volume.** Os recreativos se lesionam MAIS que os profissionais por hora jogada — empunhadura tensa e gesto ruim de saque/backhand sobrecarregam cotovelo e ombro.
+- **Use a massagem na recuperação muscular**, na janela em que ela rende: depois dos jogos mais puxados, pra soltar pernas e corpo.
+
+## 7. Quando parar e procurar avaliação
+
+Nem toda dor é "do treino". Bandeiras vermelhas:
+
+- Dor no cotovelo ou ombro que **persiste e piora** ao longo das semanas — tendinopatia instalada pede avaliação e um plano de carga, não só gelo e torcida.
+- Dor **aguda e localizada** num gesto específico (estalo no tornozelo, fisgada na panturrilha) — pode ser entorse ou estiramento; nas primeiras 48-72h, nada de massagem profunda na área.
+- Perda de força ou amplitude que não volta.
+
+A regra: **músculo cansado e dolorido difuso combina com recovery; dor articular/tendínea que não passa combina com avaliação.**
+
+## 8. Beach tennis em Palmas
+
+A cena cresce rápido aqui — orla, arenas, torneios quase todo fim de semana. E o calor de Palmas adiciona um fator: jogar no sol forte acelera a fadiga e a desidratação, o que pesa na recuperação. Hidratar e dar ao corpo o descanso entre as sessões deixa de ser detalhe.
+
+Se você joga com regularidade, dá pra montar um cuidado em volta da sua rotina: recovery muscular nas semanas mais puxadas, atenção ao cotovelo e ao ombro antes que virem crônicos. Cada jogador chega com uma queixa diferente — a conversa antes da sessão decide o que faz sentido pro seu caso. Chama no WhatsApp que a gente desenha isso junto.
+`.trim(),
+    faq: [
+      {
+        pergunta: "Qual a lesão mais comum no beach tennis?",
+        resposta:
+          "O cotovelo. No maior estudo brasileiro (Rodrigues et al, 2024, com 698 jogadores), 23,4% das lesões foram de cotovelo — a maioria tendinite (epicondilite). Logo depois vêm ombro (14%), joelho e tornozelo. O padrão é claro: membro superior sofre lesão crônica por sobrecarga (cotovelo e ombro), e membro inferior sofre lesão aguda (entorse).",
+      },
+      {
+        pergunta: "Massagem cura a tendinite do cotovelo (epicondilite)?",
+        resposta:
+          "Não sozinha. O tratamento principal da epicondilite é exercício de carga, especialmente excêntrico (Karanasios et al, 2021). A massagem ajuda como adjuvante — alivia a dor e relaxa a musculatura do antebraço em volta, o que melhora o conforto pra você conseguir fazer o fortalecimento. Mas ela não substitui o exercício de carga. Quem promete curar tendinite só com massagem está vendendo o que a evidência não sustenta.",
+      },
+      {
+        pergunta: "Jogar na areia é mais seguro porque não tem impacto?",
+        resposta:
+          "É meia verdade. A areia reduz a taxa de carga sobre as articulações (menos impacto que quadra dura), mas aumenta muito o trabalho muscular: andar na areia custa de 2 a 2,7 vezes mais energia (Lejeune et al, 1998), recaindo sobretudo na panturrilha. Ou seja, a areia troca lesão de impacto por fadiga e sobrecarga muscular — e o tornozelo ainda corre risco de entorse pela instabilidade.",
+      },
+      {
+        pergunta: "Por que minha panturrilha fica tão cansada depois de jogar?",
+        resposta:
+          "Porque a areia cede a cada passo e o músculo precisa empurrar contra uma base instável, recrutando muito mais a panturrilha e o gastrocnêmio (Jafarnezhadgero, 2021; Grant et al, 2022). É carga muscular alta, não impacto. Aquecer e fortalecer a panturrilha ajuda a tolerar melhor, e a massagem de recuperação rende bem nesse tipo de fadiga muscular.",
+      },
+      {
+        pergunta: "Quantas vezes por semana posso jogar sem me lesionar?",
+        resposta:
+          "O estudo brasileiro identificou que jogar com frequência muito alta, sessões acima de 3 horas e voltar cedo de uma lesão prévia são os maiores fatores de risco. Para o amador, 2-3 vezes por semana com sessões controladas é mais seguro — combinado com fortalecimento de cotovelo, ombro e panturrilha. Técnica também conta: os recreativos se lesionam mais que os profissionais por hora jogada.",
+      },
+    ],
+    referencias: [
+      {
+        autor: "Rodrigues FL, Barone PS, Penha RS, Franco IP",
+        titulo: "Injury Epidemiology in Beach Tennis: Incidence and Risk Factors",
+        ano: 2024,
+        fonte: "Acta Ortopédica Brasileira",
+        url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC10962065/",
+      },
+      {
+        autor: "Berardi M, Lenabat P, Fabre T, Ballas R",
+        titulo:
+          "Beach tennis injuries: a cross-sectional survey of 206 elite and recreational players",
+        ano: 2019,
+        fonte: "The Physician and Sportsmedicine",
+        url: "https://pubmed.ncbi.nlm.nih.gov/31356120/",
+      },
+      {
+        autor: "Karanasios S, et al",
+        titulo:
+          "The Beneficial Effects of Eccentric Exercise in the Management of Lateral Elbow Tendinopathy: A Systematic Review and Meta-Analysis",
+        ano: 2021,
+        fonte: "Journal of Clinical Medicine, 10(17):3866",
+        url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC8432114/",
+      },
+      {
+        autor: "Desjardins-Charbonneau A, et al",
+        titulo:
+          "The Efficacy of Manual Therapy for Rotator Cuff Tendinopathy: A Systematic Review and Meta-analysis",
+        ano: 2015,
+        fonte: "Journal of Orthopaedic & Sports Physical Therapy, 45(5):330-50",
+        url: "https://www.jospt.org/doi/10.2519/jospt.2015.5455",
+      },
+      {
+        autor: "Guo J, Li L, Gong Y, et al",
+        titulo:
+          "Massage Alleviates Delayed Onset Muscle Soreness after Strenuous Exercise: A Systematic Review and Meta-Analysis",
+        ano: 2017,
+        fonte: "Frontiers in Physiology, 8:747",
+        url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC5623674/",
+      },
+      {
+        autor: "Jafarnezhadgero A, et al",
+        titulo:
+          "Long-term training on sand changes lower limb muscle activities during running in runners with over-pronated feet",
+        ano: 2021,
+        fonte: "BioMedical Engineering OnLine, 20:23",
+        url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC8627070/",
+      },
+      {
+        autor: "Lejeune TM, Willems PA, Heglund NC",
+        titulo: "Mechanics and energetics of human locomotion on sand",
+        ano: 1998,
+        fonte: "Journal of Experimental Biology, 201(13):2071-80",
+        url: "https://pubmed.ncbi.nlm.nih.gov/9622579/",
+      },
+      {
+        autor: "Grant B, et al",
+        titulo:
+          "Why does the metabolic cost of walking increase on compliant substrates?",
+        ano: 2022,
+        fonte: "Journal of the Royal Society Interface, 19(196)",
+        url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC9709563/",
+      },
+    ],
+  },
+  {
     slug: "recovery-pos-prova-48h",
     titulo: "Recovery muscular: o que acontece nas 48h pós-prova",
     categoria: "Desportiva",
