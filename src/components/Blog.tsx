@@ -34,7 +34,7 @@ const EIXOS = [
     Icon: IconFlorescer,
     titulo: "Auto-cuidado & escolha",
     descricao:
-      "Por que cuidado feminino é nicho · prática regular vs presente esporádico · critérios pra escolher massagista.",
+      "Quando a prática regular supera o presente esporádico · critérios reais pra escolher quem cuida de você.",
   },
 ];
 
@@ -65,7 +65,7 @@ export default function Blog() {
               como traduzir isso pra um corpo específico — o seu.
             </p>
             <p className="mt-4 text-ve-cream/65 text-sm">
-              Conteúdo escrito por <strong className="text-ve-champagne">Leandro Timóteo</strong> · publicado mensalmente.
+              Escrito por <strong className="text-ve-champagne">quem atende na clínica</strong> · revisão clínica · publicado mensalmente.
             </p>
           </div>
         </Reveal>
