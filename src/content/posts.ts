@@ -1588,6 +1588,196 @@ Se você quer entender o que faz sentido pro seu caso — uma sessão pra soltar
     ],
   },
   {
+    slug: "lesoes-mais-comuns-corrida-palmas",
+    titulo: "As 5 lesões mais comuns de quem corre (e onde a massagem ajuda de verdade)",
+    categoria: "Desportiva",
+    leitura: "11 min de leitura",
+    intro:
+      "Quase metade dos corredores se machuca em algum momento — e quase tudo acontece do joelho pra baixo. As 5 lesões mais comuns, o que de fato trata cada uma (spoiler: é carga e fortalecimento, não massagem), o mito da 'regra dos 10%', e onde a massagem ajuda de verdade. Com fontes.",
+    hero: "/img/corredora-1.jpg",
+    publishedAt: "2026-06-23",
+    updatedAt: "2026-06-23",
+    keywords: [
+      "lesões corrida",
+      "joelho de corredor",
+      "canelite corrida",
+      "fascite plantar corredor",
+      "síndrome banda iliotibial",
+      "tendinite de aquiles corrida",
+      "massagem desportiva corredor",
+      "regra dos 10% corrida mito",
+      "fratura por estresse corredor",
+      "corrida Palmas",
+    ],
+    about: [
+      "Lesões relacionadas à corrida",
+      "Síndrome da dor patelofemoral",
+      "Síndrome do estresse tibial medial",
+      "Fasciopatia plantar",
+      "Tendinopatia de Aquiles",
+    ],
+    resumoExecutivo:
+      "Cerca de 4 em cada 10 corredores se lesionam (incidência ~40%), e ~79% das lesões são do joelho pra baixo (Kakouris, 2021). As 5 mais comuns: joelho de corredor (dor patelofemoral), canelite (MTSS), fascite plantar, síndrome da banda iliotibial e tendinopatia de Aquiles. O ponto honesto: o tratamento de base de TODAS é carga progressiva e fortalecimento (sobretudo de quadril) — não massagem. A 'regra dos 10%' não tem suporte científico (Damsted, 2018); o que importa é não dar saltos bruscos de volume. A massagem tem evidência boa para DOMS e recuperação muscular (Guo, 2017) — é adjuvante de conforto e recovery, não trata a lesão por sobrecarga em si. Bandeira vermelha: dor óssea FOCAL que piora no impacto pode ser fratura por estresse — aí é médico, não maca.",
+    conteudo: `
+Correr é um dos melhores hábitos que existem — e um dos que mais machuca quem ama. Não é pessimismo: é estatística. Cerca de **4 em cada 10 corredores** se lesionam em algum período, e a prevalência chega a ~45% (Kakouris e colegas, 2021). A boa notícia é que as lesões se concentram num punhado de problemas conhecidos, e quase todos têm o mesmo caminho de tratamento. Saber qual é esse caminho — e onde a massagem realmente entra — evita você perder semanas de treino (ou dinheiro com promessa errada).
+
+Um dado que orienta tudo: **cerca de 79% das lesões de corrida acontecem do joelho pra baixo.** Vamos às cinco mais comuns.
+
+## 1. Joelho de corredor (dor patelofemoral)
+
+A queixa mais comum de joelho no corredor. Uma dor difusa em volta ou atrás da patela, que piora ao descer escada, agachar ou correr ladeira.
+
+A causa raramente é "no joelho" em si. Há, de forma consistente, **déficit de força e ativação tardia do glúteo médio** — o quadril fraco deixa o joelho desalinhar sob carga. Por isso o tratamento de base é claro: a meta-análise de Nascimento e colegas (2018) mostrou que **fortalecer quadril + joelho reduz mais a dor e melhora mais a função do que fortalecer só o joelho.** Trabalhar glúteos e abdutores, não só a coxa.
+
+## 2. Canelite (síndrome do estresse tibial medial, MTSS)
+
+A famosa dor na borda interna da canela, que aparece no começo da corrida e some, até que um dia não some mais. É um estresse repetitivo na tíbia — a tração do músculo sóleo sobre o periósteo (a "capa" do osso).
+
+Fatores de risco documentados (Deshmukh e Phansopkar, 2022): **aumento súbito de volume ou intensidade**, pronação excessiva do pé, piso muito duro, tênis inadequado, IMC mais alto. O manejo é descarga relativa na fase aguda e retorno gradual, com fortalecimento de quadril e core e atenção à biomecânica. Insistir na dor só prolonga o problema.
+
+## 3. Fascite (fasciopatia) plantar
+
+Aquela dor na sola do pé, perto do calcanhar, clássica nos primeiros passos da manhã. É uma sobrecarga da fáscia plantar.
+
+O que a evidência mostra de mais útil: o treino de **força de alta carga** (elevação de calcanhar com uma toalha sob os dedos, dia sim, dia não) foi superior ao alongamento específico aos 3 meses, com alívio mais rápido (Rathleff e colegas, 2015). Honestidade: aos 6-12 meses, a vantagem some — ou seja, carregar acelera a recuperação, mas não é um milagre de longo prazo. Consistência é o que resolve.
+
+## 4. Síndrome da banda iliotibial (dor no joelho lateral)
+
+A segunda dor de joelho mais comum no corredor. Uma dor na parte de fora do joelho, por atrito/compressão da banda iliotibial sobre o côndilo femoral lateral — costuma aparecer sempre na mesma distância de corrida.
+
+A base do manejo, de novo, mora no quadril: **fortalecimento dos abdutores** é a intervenção central (Sanchez-Alvarado e colegas, 2024). Terapia manual e ondas de choque entram como adjuvantes que somam ao fortalecimento — não no lugar dele.
+
+## 5. Tendinopatia de Aquiles
+
+Dor e rigidez no tendão de Aquiles, pior pela manhã e no início da atividade. Comum em quem aumenta volume ou inclui muita ladeira/velocidade.
+
+Aqui vale uma honestidade que pouca gente tem: o **exercício de carga** (o famoso protocolo excêntrico) é a recomendação padrão — mas a meta-análise mais recente (Maetz e colegas, 2023) **não provou que ele seja superior** a tratamentos passivos; ele é escolhido por ter baixo custo, boa adesão e fazer sentido fisiológico. De qualquer forma, a base é carga progressiva e paciência — semanas, não dias. Não é a massagem que reconstrói o tendão.
+
+## O fator de risco nº 1 — e o mito da "regra dos 10%"
+
+Você provavelmente já ouviu que "não pode aumentar mais de 10% do volume por semana". Soa científico. **Não é.**
+
+A revisão de Damsted e colegas (2018) comparou aumento de 10% contra 24% por semana e **não achou diferença no risco de lesão**. O perigo parece estar em saltos bem maiores (acima de ~30%), não no número mágico de 10%. E a revisão de erros de treino (Nielsen e colegas, 2012) foi honesta: a evidência é fraca e conflitante demais pra cravar qual erro específico causa lesão.
+
+A mensagem real, sem promessa falsa: **progredir a carga gradualmente e com bom senso importa — evitar saltos bruscos de uma semana pra outra.** Mas ninguém pode te garantir prevenção com uma regrinha de porcentagem.
+
+## Onde a massagem entra (e onde não)
+
+Sendo direto, porque é o que diferencia conversa honesta de venda: **a massagem não trata a lesão por sobrecarga.** Joelho de corredor, canelite, fascite, banda iliotibial, Aquiles — todos têm a mesma base de tratamento: carga progressiva e fortalecimento, território do trabalho de força e da fisioterapia.
+
+O que a massagem faz, e faz bem: **recuperação muscular.** A meta-análise de Guo e colegas (2017) mostra que ela reduz a dor muscular tardia (DOMS), melhora a recuperação de força e baixa marcadores de dano — com efeito maior entre 48 e 72h pós-esforço. Esse é o lugar dela: aliviar a tensão e o cansaço entre treinos, nos dias de carga alta, dar conforto pro corpo aguentar a rotina.
+
+Resumo honesto: **a massagem é uma aliada do recovery, não o tratamento da lesão.** Quem te oferece "massagem que cura a canelite" está vendendo o que a literatura não sustenta. Usada do jeito certo — junto do fortalecimento, não no lugar dele — ela é ótima.
+
+## Bandeira vermelha: a fratura por estresse
+
+Tem um tipo de dor que sai completamente do campo da massagem e pede médico, rápido: a **fratura por estresse**.
+
+O sinal é específico: uma dor **óssea focal** — um ponto exato no osso (canela, pé, quadril), não a dor difusa do músculo — que **piora com o impacto** e não melhora mesmo quando você reduz a corrida. Dor em repouso ou que aumenta progressivamente apesar do cuidado também acende o alerta. O exame padrão é a ressonância.
+
+Nesses casos, massagem não é solução — pode até atrapalhar. O caminho é avaliação médica ou de fisioterapia esportiva.
+
+## Correr na orla de Palmas
+
+A orla é um presente pra quem corre aqui — mas tem suas particularidades. O **calor** acelera a fadiga e a desidratação, o que muda a percepção de esforço. Se o seu trajeto tem trechos de piso duro ou ladeira, a carga sobre canela, joelho e Aquiles sobe. E o erro mais comum é o de sempre: aumentar volume rápido demais animada com o clima bom no fim de tarde.
+
+A receita não tem mistério: progredir com calma, fortalecer o quadril, respeitar a dor que não passa. E usar a massagem onde ela rende — no recovery dos dias puxados, pra manter as pernas leves e a rotina de pé.
+
+Se você corre com regularidade e quer encaixar o cuidado do corpo na sua semana — recovery na medida certa, sem promessa de cura milagrosa — chama no WhatsApp que a gente conversa.
+`.trim(),
+    faq: [
+      {
+        pergunta: "Qual a lesão mais comum de quem corre?",
+        resposta:
+          "As do joelho lideram — cerca de 79% das lesões de corrida acontecem do joelho pra baixo (Kakouris et al, 2021). As cinco mais comuns são: joelho de corredor (dor patelofemoral), canelite (síndrome do estresse tibial medial), fascite plantar, síndrome da banda iliotibial e tendinopatia de Aquiles. No geral, cerca de 4 em cada 10 corredores se lesionam em algum momento.",
+      },
+      {
+        pergunta: "É verdade que não posso aumentar mais de 10% do meu treino por semana?",
+        resposta:
+          "Esse é um mito popular sem base científica sólida. A revisão de Damsted et al (2018) comparou aumento de 10% com 24% por semana e não encontrou diferença no risco de lesão. O perigo parece estar em saltos bem maiores (acima de ~30%), não no número mágico de 10%. A mensagem real é progredir a carga gradualmente e evitar saltos bruscos — sem garantia mágica de uma regrinha.",
+      },
+      {
+        pergunta: "A massagem trata o joelho de corredor ou a canelite?",
+        resposta:
+          "Não. O tratamento de base dessas lesões por sobrecarga é carga progressiva e fortalecimento, especialmente do quadril — território do trabalho de força e da fisioterapia. A massagem ajuda de verdade na recuperação muscular: reduz a dor muscular tardia (DOMS) e o cansaço entre treinos (Guo et al, 2017). Ela é uma aliada do recovery, usada junto do fortalecimento — não no lugar dele, e não como cura da lesão.",
+      },
+      {
+        pergunta: "Como sei se minha dor é só muscular ou se é algo mais sério?",
+        resposta:
+          "A dor muscular do treino é difusa e melhora com o descanso. Acenda o alerta para fratura por estresse se a dor for óssea e FOCAL (um ponto exato no osso da canela, pé ou quadril), piorar com o impacto e não melhorar mesmo reduzindo a corrida — ou se houver dor em repouso ou que aumenta progressivamente. Nesses casos, procure avaliação médica ou de fisioterapia; massagem não é a solução.",
+      },
+      {
+        pergunta: "Qual o melhor exercício para prevenir lesão de corrida?",
+        resposta:
+          "Não existe um único exercício mágico, mas o fortalecimento do quadril (glúteos e abdutores) aparece como base no manejo do joelho de corredor e da banda iliotibial (Nascimento et al, 2018; Sanchez-Alvarado et al, 2024). Combinado com progressão gradual de volume e atenção à dor que não passa, é o que a evidência mais sustenta. A massagem entra como recovery, complementando — não substituindo — esse trabalho.",
+      },
+    ],
+    referencias: [
+      {
+        autor: "Kakouris N, Yener N, Fong DTP",
+        titulo: "A systematic review of running-related musculoskeletal injuries in runners",
+        ano: 2021,
+        fonte: "Journal of Sport and Health Science, 10(5):513-522",
+        url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC8500811/",
+      },
+      {
+        autor: "Nascimento LR, Teixeira-Salmela LF, Souza RB, Resende RA",
+        titulo:
+          "Hip and Knee Strengthening Is More Effective Than Knee Strengthening Alone for Reducing Pain and Improving Activity in Individuals With Patellofemoral Pain",
+        ano: 2018,
+        fonte: "Journal of Orthopaedic & Sports Physical Therapy, 48(1):19-31",
+        url: "https://www.jospt.org/doi/10.2519/jospt.2018.7365",
+      },
+      {
+        autor: "Deshmukh NS, Phansopkar P",
+        titulo: "Medial Tibial Stress Syndrome: A Review Article",
+        ano: 2022,
+        fonte: "Cureus, 14(7):e26641",
+        url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC9356648/",
+      },
+      {
+        autor: "Rathleff MS, Mølgaard CM, Fredberg U, et al",
+        titulo:
+          "High-load strength training improves outcome in patients with plantar fasciitis: A RCT with 12-month follow-up",
+        ano: 2015,
+        fonte: "Scandinavian Journal of Medicine & Science in Sports, 25(3):e292-300",
+        url: "https://pubmed.ncbi.nlm.nih.gov/25145882/",
+      },
+      {
+        autor: "Sanchez-Alvarado A, Bokil C, Cassel M, Engel T",
+        titulo:
+          "Effects of conservative treatment strategies for iliotibial band syndrome on pain and function in runners: a systematic review",
+        ano: 2024,
+        fonte: "Frontiers in Sports and Active Living, 6",
+        url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC11377285/",
+      },
+      {
+        autor: "Maetz R, et al",
+        titulo:
+          "Systematic Review and Meta-analyses of RCTs Comparing Exercise Loading Protocols With Passive Treatment for Midportion Achilles Tendinopathy",
+        ano: 2023,
+        fonte: "Orthopaedic Journal of Sports Medicine, 11(6)",
+        url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC10240875/",
+      },
+      {
+        autor: "Damsted C, Glad S, Nielsen RO, Sørensen H, Malisoux L",
+        titulo:
+          "Is There Evidence for an Association Between Changes in Training Load and Running-Related Injuries? A Systematic Review",
+        ano: 2018,
+        fonte: "International Journal of Sports Physical Therapy, 13(6):931-942",
+        url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC6253751/",
+      },
+      {
+        autor: "Guo J, Li L, Gong Y, et al",
+        titulo:
+          "Massage Alleviates Delayed Onset Muscle Soreness after Strenuous Exercise: A Systematic Review and Meta-Analysis",
+        ano: 2017,
+        fonte: "Frontiers in Physiology, 8:747",
+        url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC5623674/",
+      },
+    ],
+  },
+  {
     slug: "recovery-pos-prova-48h",
     titulo: "Recovery muscular: o que acontece nas 48h pós-prova",
     categoria: "Desportiva",
