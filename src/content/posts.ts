@@ -749,12 +749,242 @@ A conversa antes da sessão decide o que faz sentido pra você naquele dia. Cada
   // === DRAFTS · ainda não publicados ===
   {
     slug: "massagem-desportiva-corredora",
-    titulo: "O que faz uma massagem ser 'desportiva' · e por que importa pra corredora",
+    titulo:
+      "Massagem desportiva pra corredora: o que a ciência mostra (e o que é mito)",
     categoria: "Desportiva",
-    leitura: "5 min de leitura",
-    intro: "A diferença entre massagem relaxante e desportiva está na função — não no nome.",
-    publishedAt: null,
-    conteudo: "",
+    leitura: "12 min de leitura",
+    intro:
+      "Massagem desportiva não é massagem relaxante com pressão mais forte — e não 'elimina ácido lático' nem 'conserta' o músculo. Revisão clínica honesta do que a evidência sustenta pra corredora: o que a massagem faz de verdade, pré-prova vs pós-prova, a janela das 48h, e onde foam roller e pistola encaixam. Com fontes — Dupuy, Davis, Wiltshire, Mine.",
+    hero: "/img/corredora-orla.jpg",
+    publishedAt: "2026-06-23",
+    updatedAt: "2026-06-23",
+    keywords: [
+      "massagem desportiva",
+      "massagem para corredora",
+      "recovery corrida",
+      "DOMS dor muscular tardia",
+      "massagem pós-prova",
+      "recuperação muscular corrida",
+      "ácido lático mito",
+      "foam roller",
+      "pistola de massagem",
+      "massagem desportiva Palmas",
+      "corrida Palmas TO",
+      "Vida em Equilíbrio",
+    ],
+    about: [
+      "Massagem desportiva",
+      "Dor muscular tardia (DOMS)",
+      "Recuperação muscular pós-exercício",
+      "Corrida de rua",
+      "Medicina esportiva",
+    ],
+    resumoExecutivo:
+      "Massagem desportiva trabalha o músculo com pressão e técnica, mas o efeito comprovado é majoritariamente neural e perceptual: reduz a DOR muscular tardia (DOMS) e a sensação de fadiga — não 'conserta' o músculo nem aumenta o fluxo sanguíneo. É a técnica com a meta-análise mais favorável pra DOMS (Dupuy, 2018), com pico de alívio por volta de 48h pós-esforço. Antes de competir, massagem profunda e longa pode REDUZIR a força (Mine, 2018) — deixe pra depois. O 'ácido lático' é mito: a massagem não o remove (Wiltshire, 2010); quem limpa lactato é o desaquecimento ativo. Foam roller é a manutenção em casa; a massagem manual é a intervenção mais completa e personalizada, não um milagre superior.",
+    conteudo: `
+Se você corre — 5k no fim de tarde na orla, uma prova de 10k no fim de semana, ou está montando base pra uma meia — provavelmente já ouviu que massagem "elimina o ácido lático", "limpa as toxinas" e "acelera a recuperação". A maior parte disso não se sustenta na literatura. E a boa notícia é que a verdade é mais útil: a massagem desportiva tem um efeito real, modesto e bem localizado — e saber qual é ele muda completamente *quando* e *como* você deveria usá-la.
+
+Este texto reúne o que está consolidado em meta-análises e revisões sistemáticas (Frontiers in Physiology, BMJ Open Sport & Exercise Medicine, Journal of Athletic Training), traduzido pra linguagem de quem corre.
+
+## 1. O que torna uma massagem "desportiva"
+
+A diferença entre relaxante e desportiva não está na força — está na **função**.
+
+- A **relaxante** trabalha superficial e mira o sistema nervoso autônomo: reduz cortisol, ativa o parassimpático, baixa o nível de alerta. O objetivo é o estado, não o músculo.
+- A **desportiva** aplica mais pressão e técnicas específicas (deslizamento profundo, petrissage, fricção) sobre a musculatura que trabalhou. O objetivo é a recuperação e a percepção de prontidão.
+
+Mas aqui vem o ponto que quase ninguém explica: o mecanismo comprovado da massagem desportiva **não é "limpar toxina" nem "aumentar circulação"**. A evidência aponta um efeito majoritariamente **neural e perceptual** — modulação da dor e da sensação de fadiga (Davis, 2020; Dupuy, 2018). Isso não a torna menos valiosa. Torna ela honesta.
+
+## 2. O que a ciência realmente mostra sobre massagem e recuperação
+
+O achado mais consistente da literatura: **massagem reduz a dor muscular tardia (DOMS), de forma modesta a moderada.**
+
+- A meta-análise de **Dupuy e colegas (2018)**, que reuniu 99 estudos, apontou a massagem como a técnica **mais eficaz** entre todas as estratégias de recuperação para reduzir DOMS e fadiga percebida — com redução também de marcadores de dano muscular (creatina quinase) e inflamação (IL-6).
+- **Guo e colegas (2017)** confirmaram o alívio da DOMS, com efeito mais pronunciado por volta de **48h** pós-exercício.
+- A revisão mais rigorosa metodologicamente, de **Davis e colegas (2020)** no *BMJ Open Sport & Exercise Medicine* (29 estudos, 1.012 participantes), quantificou: melhora pequena mas real em flexibilidade (cerca de +7%) e em DOMS (cerca de +13%).
+
+O contraponto honesto: nem toda a literatura é otimista. A revisão de **Connolly e colegas (2003)** classifica tratamentos convencionais de DOMS — massagem incluída — como "menos promissores". A síntese justa é essa: **a massagem ajuda na dor percebida; ela não "cura" o dano muscular.** O músculo se recupera no seu tempo; a massagem torna esse tempo mais confortável.
+
+## 3. O mito do ácido lático
+
+Esse merece seção própria, porque é o erro mais repetido do mundo da corrida.
+
+**A massagem não elimina ácido lático.** Pior: ela pode até atrapalhar esse processo.
+
+- **Wiltshire e colegas (2010)**, em estudo controlado publicado no *Medicine & Science in Sports & Exercise*, mediram diretamente: a massagem **reduziu** o fluxo sanguíneo no membro (de 766 para 540 mL/min) e **prejudicou** a remoção de lactato e de íons H+ do músculo. A pressão mecânica comprime os vasos — ela impede o fluxo durante a aplicação, não o aumenta.
+- **Martin e colegas (1998)**, no *Journal of Athletic Training*, compararam massagem, recuperação ativa e repouso após exercício máximo: a **recuperação ativa** (trote/pedalada leve) limpou o lactato significativamente melhor. A massagem **não foi melhor que simplesmente descansar**.
+
+E tem o detalhe que derruba a premissa inteira: **o lactato nem é a causa da DOMS.** Ele já foi metabolizado horas antes de a dor aparecer. A dor de 24-72h vem de microlesão (sobretudo de contração excêntrica) e da inflamação que se segue — não de lactato acumulado.
+
+Tradução pra prática: se você quer baixar o "ardido" das pernas no fim da corrida, faça **desaquecimento ativo** — trote leve de 10-15 minutos. A massagem entra depois, com outro objetivo.
+
+## 4. Pré-prova ou pós-prova? O timing muda tudo
+
+Aqui está a informação mais acionável do texto inteiro.
+
+**Pós-prova é onde a massagem entrega.** É quando ela reduz a DOMS e a sensação de fadiga — exatamente o que você quer depois de exigir o corpo.
+
+**Pré-prova, ela não ajuda — e pode atrapalhar.** A revisão de **Mine e colegas (2018)** mostrou que massagem **não melhora** força máxima, sprint ou salto antes do esforço. E mais: massagens **longas (acima de ~9 minutos) tenderam a REDUZIR** a força máxima de membros inferiores, o sprint e a altura de salto. Davis (2020) reforça: zero ganho de performance.
+
+A regra prática pra corredora:
+
+| Momento | O que fazer |
+|---|---|
+| **Antes de competir** | Nada de massagem profunda e longa. No máximo um estímulo curto e leve de ativação, + aquecimento ativo. |
+| **Logo após a prova** | Desaquecimento ativo (trote leve). Massagem profunda, não. |
+| **24 a 72h depois** | A janela ideal pra sessão de recovery — é quando a DOMS pica e o alívio é maior. |
+
+## 5. A janela das 48 horas
+
+A DOMS não é imediata. Ela começa **12 a 24h** depois do esforço, **pica entre 24 e 72h**, e some em 5 a 7 dias. É por isso que você acorda mais dolorida no segundo dia depois da prova, não no primeiro.
+
+As estratégias de recuperação acompanham essa curva. A meta-análise de **Zhou e colegas (2024)** sobre foam rolling mostrou isso com clareza: o efeito sobre a dor é mínimo logo após o exercício, **cresce em 24h, atinge o pico em 48h** e ainda é significativo em 72h.
+
+Por isso a "sessão de recovery pós-prova" faz sentido marcada pra **um a três dias depois** — não no mesmo dia. É quando o corpo mais sente, e quando o alívio percebido tem mais valor.
+
+## 6. Foam roller e pistola de massagem: o que fazer em casa
+
+A pergunta honesta: se eu tenho um rolo e uma pistola, preciso de massagem manual?
+
+- **Foam roller:** efeito **pequeno mas bem documentado** em DOMS e amplitude de movimento (Wiewelhove, 2019; Zhou, 2024). É barato, sem risco e ótimo como **manutenção entre sessões**.
+- **Pistola de percussão:** melhora a amplitude no curto prazo e reduz dor, **mas a base científica é fraca** — a revisão de Sams e colegas (2023) reuniu 13 estudos de baixa qualidade metodológica, sem vantagem clara sobre um simples alongamento. Funciona, mas não é a maravilha que o marketing vende.
+
+Onde a **massagem manual** encaixa: ela tem a meta-análise mais favorável pra DOMS e fadiga (Dupuy, 2018), entrega pressão graduada e *leitura do tecido* — a terapeuta sente onde está tenso, ajusta, encontra o ponto — coisa que o rolo e a pistola não fazem. E tem o componente humano, que não é "placebo" no sentido pejorativo: a percepção de recuperação é parte real do benefício.
+
+A posição honesta: **foam roller é o seu kit de manutenção em casa; a massagem manual é a intervenção mais completa e personalizada.** Não são concorrentes — são camadas.
+
+## 7. Quando NÃO massagear
+
+Massagem desportiva tem hora de não acontecer:
+
+- **Lesão muscular aguda (primeiras 48-72h)** — um estiramento ou ruptura recente ainda pode estar sangrando internamente. Pressão na área aumenta a hemorragia, o edema e o tempo de recuperação. Nessa fase: gelo, repouso relativo e avaliação — não massagem.
+- **Dor aguda, localizada e "diferente"** — não é a dor difusa do treino puxado; é um ponto específico que dói. Isso é bandeira vermelha pra investigar, não pra massagear.
+- Contusão/hematoma recente, suspeita de trombose, inflamação ativa, ferida ou infecção de pele.
+
+A regra de ouro: **DOMS difusa (corpo "moído") combina com massagem; dor aguda localizada combina com avaliação.**
+
+## 8. Pra quem corre em Palmas
+
+Duas coisas do nosso contexto valem nota.
+
+A primeira: o **calor**. Correr no fim de tarde na orla com o calor de Palmas aumenta a sensação de fadiga e a desidratação — o que pesa mais na *percepção* de recuperação. Hidratação e desaquecimento ativo viram ainda mais importantes aqui.
+
+A segunda: a **descida**. Contração excêntrica (frear o corpo na descida, ou no fim de uma prova longa) é o maior gerador de DOMS. Se o seu percurso tem ladeira, ou se você acabou de fazer uma prova mais longa que o costume, é quase certo que o segundo dia vem com as pernas pesadas — e é exatamente aí, na janela de 24-72h, que uma sessão de recovery rende mais.
+
+Se você treina pra uma prova específica, dá pra desenhar o cuidado em volta dela: preparação na semana que antecede e recovery na janela certa depois. Cada corpo e cada calendário pede uma coisa — a conversa antes da sessão decide o que faz sentido pra você. Chama no WhatsApp que a gente monta isso junto.
+`.trim(),
+    faq: [
+      {
+        pergunta: "Massagem elimina o ácido lático depois da corrida?",
+        resposta:
+          "Não. Estudo controlado (Wiltshire et al, 2010) mostrou que a massagem reduz o fluxo sanguíneo no músculo durante a aplicação e prejudica a remoção de lactato — ela não acelera esse processo. Quem limpa lactato de forma eficaz é o desaquecimento ativo (trote leve), não a massagem (Martin et al, 1998). E o lactato nem é a causa da dor muscular tardia: ele é metabolizado horas antes de a dor aparecer.",
+      },
+      {
+        pergunta: "Posso fazer massagem antes de uma prova pra render mais?",
+        resposta:
+          "Não é recomendado massagem profunda e longa antes de competir. A revisão de Mine et al (2018) mostrou que massagem pré-esforço não melhora força, sprint ou salto — e que sessões longas (acima de ~9 min) tendem a REDUZIR a força máxima de membros inferiores. Antes da prova, prefira aquecimento ativo e, se quiser, um estímulo curto e leve de ativação. A massagem entrega mesmo é no pós.",
+      },
+      {
+        pergunta: "Quando devo agendar a massagem depois de uma prova?",
+        resposta:
+          "O ideal é entre 24 e 72 horas depois — não no mesmo dia. A dor muscular tardia (DOMS) começa em 12-24h, pica entre 24 e 72h e some em 5-7 dias. É nessa janela que o corpo mais sente e que o alívio da massagem rende mais. No dia da prova, priorize desaquecimento ativo e hidratação.",
+      },
+      {
+        pergunta: "Massagem realmente ajuda na recuperação ou é só sensação boa?",
+        resposta:
+          "Ajuda de verdade, de forma modesta. A meta-análise de Dupuy et al (2018), com 99 estudos, apontou a massagem como a técnica mais eficaz para reduzir a dor muscular tardia e a fadiga percebida. O efeito é majoritariamente neural e perceptual — ela reduz a DOR, não 'conserta' o dano muscular nem encurta magicamente a recuperação. É um benefício real de conforto e prontidão, sem promessa de milagre.",
+      },
+      {
+        pergunta: "Se eu tenho foam roller e pistola de massagem, preciso de massagem manual?",
+        resposta:
+          "São camadas diferentes. O foam roller tem efeito pequeno mas real em dor e flexibilidade — é ótimo como manutenção em casa entre sessões. A pistola de percussão funciona para amplitude e dor, mas tem base científica fraca (Sams et al, 2023). A massagem manual tem a meta-análise mais favorável para DOMS e oferece pressão graduada e leitura do tecido — a terapeuta sente e ajusta onde está tenso, o que a ferramenta não faz. Use o rolo como manutenção; a massagem manual como a intervenção mais completa.",
+      },
+      {
+        pergunta: "Estou com uma dor aguda depois do treino. Posso massagear?",
+        resposta:
+          "Se for a dor difusa e generalizada do treino puxado (corpo 'moído'), sim. Mas se for uma dor aguda, localizada e diferente — um ponto específico que dói — evite massagem profunda nas primeiras 48-72h: pode ser um estiramento recente, que ainda está sangrando internamente, e a pressão piora. Nesse caso: gelo, repouso relativo e avaliação primeiro.",
+      },
+    ],
+    referencias: [
+      {
+        autor: "Dupuy O, Douzi W, Theurot D, Bosquet L, Dugué B",
+        titulo:
+          "An Evidence-Based Approach for Choosing Post-exercise Recovery Techniques to Reduce Markers of Muscle Damage, Soreness, Fatigue, and Inflammation: A Systematic Review With Meta-Analysis",
+        ano: 2018,
+        fonte: "Frontiers in Physiology, 9:403",
+        url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC5932411/",
+      },
+      {
+        autor: "Davis HL, Alabed S, Chico TJA",
+        titulo:
+          "Effect of sports massage on performance and recovery: a systematic review and meta-analysis",
+        ano: 2020,
+        fonte: "BMJ Open Sport & Exercise Medicine, 6:e000614",
+        url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC7228568/",
+      },
+      {
+        autor: "Guo J, Li L, Gong Y, et al",
+        titulo:
+          "Massage Alleviates Delayed Onset Muscle Soreness after Strenuous Exercise: A Systematic Review and Meta-Analysis",
+        ano: 2017,
+        fonte: "Frontiers in Physiology, 8:747 · PMID 29021762",
+        url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC5623674/",
+      },
+      {
+        autor: "Wiltshire EV, Poitras V, Pak M, Hong T, Rayner J, Tschakovsky ME",
+        titulo:
+          "Massage impairs postexercise muscle blood flow and 'lactic acid' removal",
+        ano: 2010,
+        fonte: "Medicine & Science in Sports & Exercise, 42(6):1062-71",
+        url: "https://pubmed.ncbi.nlm.nih.gov/19997015/",
+      },
+      {
+        autor: "Martin NA, Zoeller RF, Robertson RJ, Lephart SM",
+        titulo:
+          "The Comparative Effects of Sports Massage, Active Recovery, and Rest in Promoting Blood Lactate Clearance After Supramaximal Leg Exercise",
+        ano: 1998,
+        fonte: "Journal of Athletic Training, 33(1):30-35",
+        url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC1320372/",
+      },
+      {
+        autor: "Mine K, Lei D, Nakayama T",
+        titulo:
+          "Is Pre-performance Massage Effective to Improve Maximal Muscle Strength and Functional Performance? A Systematic Review",
+        ano: 2018,
+        fonte: "International Journal of Sports Physical Therapy, 13(5):901-912",
+        url: "https://pubmed.ncbi.nlm.nih.gov/30276011/",
+      },
+      {
+        autor: "Wiewelhove T, Döweling A, Schneider C, et al",
+        titulo: "A Meta-Analysis of the Effects of Foam Rolling on Performance and Recovery",
+        ano: 2019,
+        fonte: "Frontiers in Physiology, 10:376",
+        url: "https://www.frontiersin.org/journals/physiology/articles/10.3389/fphys.2019.00376/full",
+      },
+      {
+        autor: "Zhou X, et al",
+        titulo:
+          "Preventive effect of foam rolling on muscle soreness after exercise: A systematic review and meta-analysis",
+        ano: 2024,
+        fonte: "Journal of Bodywork and Movement Therapies · PMID 39593540",
+        url: "https://pubmed.ncbi.nlm.nih.gov/39593540/",
+      },
+      {
+        autor: "Sams L, Langdown BL, Simons J, Vseteckova J",
+        titulo:
+          "The Effect of Percussive Therapy on Musculoskeletal Performance and Experiences of Pain: A Systematic Literature Review",
+        ano: 2023,
+        fonte: "International Journal of Sports Physical Therapy",
+        url: "https://ijspt.scholasticahq.com/article/73795",
+      },
+      {
+        autor: "Connolly DAJ, Sayers SP, McHugh MP",
+        titulo: "Treatment and prevention of delayed onset muscle soreness",
+        ano: 2003,
+        fonte: "Journal of Strength and Conditioning Research, 17(1):197-208",
+        url: "https://pubmed.ncbi.nlm.nih.gov/12580677/",
+      },
+    ],
   },
   {
     slug: "recovery-pos-prova-48h",
