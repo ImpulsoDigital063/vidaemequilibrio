@@ -1,12 +1,28 @@
 import Image from "next/image";
 import Link from "next/link";
 import { IconArrowRight, IconWhatsApp } from "./Icons";
+import {
+  corridasFuturas,
+  formataData,
+  badgeData,
+  type Corrida,
+} from "@/data/corridas";
 
 const WA_RECOVERY = `https://wa.me/5563984843646?text=${encodeURIComponent(
   "Oii! Sou corredora e quero saber sobre o recovery pré e pós-prova. Pode me contar?"
 )}`;
 
+// CTA de recovery amarrado a uma prova específica.
+function waProva(c: Corrida): string {
+  const msg = `Oii! Vou correr a ${c.nome} (${formataData(
+    c.data
+  )}) e quero saber sobre o recovery pré e pós-prova. Pode me contar?`;
+  return `https://wa.me/5563984843646?text=${encodeURIComponent(msg)}`;
+}
+
 export default function CalendarioCorridas() {
+  const provas = corridasFuturas();
+
   return (
     <section
       id="corridas"
@@ -84,6 +100,86 @@ export default function CalendarioCorridas() {
           </div>
         </div>
       </div>
+
+      {/* Calendário real de provas de Palmas-TO · atualizado mensalmente */}
+      {provas.length > 0 && (
+        <div className="border-t border-ve-cream/10">
+          <div className="container-x py-16 md:py-24 md:max-w-5xl">
+            <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-10">
+              <div>
+                <p className="eyebrow text-ve-champagne mb-4">
+                  Agenda de provas
+                </p>
+                <h3 className="display text-2xl md:text-4xl leading-[1.1]">
+                  Próximas corridas em{" "}
+                  <span className="display-italic text-ve-champagne">
+                    Palmas-TO
+                  </span>
+                </h3>
+              </div>
+              <p className="text-xs text-ve-cream/50 font-light sm:text-right max-w-[14rem]">
+                Lista atualizada todo mês a partir dos calendários oficiais da
+                cidade.
+              </p>
+            </div>
+
+            <ul>
+              {provas.map((c) => {
+                const { dia, mes } = badgeData(c.data);
+                return (
+                  <li
+                    key={c.nome}
+                    className="flex flex-col gap-5 border-t border-ve-cream/10 py-6 sm:flex-row sm:items-center sm:justify-between sm:gap-6"
+                  >
+                    <div className="flex items-center gap-5">
+                      <div className="flex h-16 w-16 shrink-0 flex-col items-center justify-center border border-ve-champagne/40 text-ve-champagne">
+                        <span className="text-xl font-medium leading-none tabular-nums">
+                          {dia}
+                        </span>
+                        <span className="mt-1 text-[0.65rem] uppercase tracking-widest">
+                          {mes}
+                        </span>
+                      </div>
+                      <div>
+                        <p className="text-base md:text-lg text-ve-cream leading-snug">
+                          {c.nome}
+                        </p>
+                        {c.distancias.length > 0 && (
+                          <p className="mt-1.5 text-sm text-ve-champagne/70 font-light">
+                            {c.distancias.join(" · ")}
+                          </p>
+                        )}
+                      </div>
+                    </div>
+
+                    <div className="flex items-center gap-5 sm:shrink-0 pl-[5.25rem] sm:pl-0">
+                      {c.linkInscricao && (
+                        <a
+                          href={c.linkInscricao}
+                          target="_blank"
+                          rel="noopener"
+                          className="text-sm text-ve-cream/60 hover:text-ve-cream transition-colors font-light"
+                        >
+                          Inscrição
+                        </a>
+                      )}
+                      <a
+                        href={waProva(c)}
+                        target="_blank"
+                        rel="noopener"
+                        className="inline-flex items-center gap-2 text-sm font-medium text-ve-champagne hover:text-ve-cream transition-colors"
+                      >
+                        <IconWhatsApp className="w-4 h-4" />
+                        Recovery
+                      </a>
+                    </div>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+        </div>
+      )}
     </section>
   );
 }
