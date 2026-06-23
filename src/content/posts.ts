@@ -994,6 +994,7 @@ Se você treina pra uma prova específica, dá pra desenhar o cuidado em volta d
     leitura: "11 min de leitura",
     intro:
       "Beach tennis não machuca a perna — machuca o cotovelo e o ombro. Revisão honesta do que a epidemiologia mostra (estudo brasileiro com 698 jogadores), por que a areia é faca de dois gumes, e onde a massagem realmente ajuda — e onde ela é só adjuvante. Pra quem joga 2-3x na semana em Palmas.",
+    hero: "/img/beach-tennis.jpg",
     publishedAt: "2026-06-23",
     updatedAt: "2026-06-23",
     keywords: [
