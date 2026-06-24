@@ -250,7 +250,7 @@ export default async function PostPage({ params }: Params) {
             </p>
 
             <div className="mt-10 flex flex-wrap items-center gap-4 text-xs eyebrow text-ve-text-dark/55">
-              <span>Por Leandro Timóteo · Massoterapeuta</span>
+              <span>Vida em Equilíbrio · Revisão clínica</span>
               {post.publishedAt && (
                 <>
                   <span className="opacity-50">·</span>
