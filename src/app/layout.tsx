@@ -21,7 +21,7 @@ const inter = Inter({
 });
 
 const SITE_URL =
-  process.env.NEXT_PUBLIC_BASE_URL || "https://vidaemequilibrio.vercel.app";
+  process.env.NEXT_PUBLIC_BASE_URL || "https://www.vidaemequilibriopalmas.com.br";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     title: "Vida em Equilíbrio",
     description: "Clínica privativa de cuidado feminino em Palmas-TO.",
   },
-  robots: { index: false, follow: false }, // até deploy aprovado
+  robots: { index: true, follow: true }, // domínio próprio no ar (25/06)
 };
 
 export default function RootLayout({

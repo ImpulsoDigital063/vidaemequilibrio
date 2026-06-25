@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-const BASE = process.env.NEXT_PUBLIC_BASE_URL || "https://vidaemequilibrio.com.br";
+const BASE = process.env.NEXT_PUBLIC_BASE_URL || "https://www.vidaemequilibriopalmas.com.br";
 // PRA INDEXAR DE VERDADE quando o domínio próprio for ao ar:
 // 1. Definir env NEXT_PUBLIC_BASE_URL com a URL final
 // 2. Tirar `robots: { index: false, follow: false }` de layout.tsx

@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { POSTS_PUBLICADOS } from "@/content/posts";
 
-const BASE = process.env.NEXT_PUBLIC_BASE_URL || "https://vidaemequilibrio.com.br";
+const BASE = process.env.NEXT_PUBLIC_BASE_URL || "https://www.vidaemequilibriopalmas.com.br";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();

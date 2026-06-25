@@ -12,7 +12,7 @@ type SchemaProps = {
 };
 
 const SITE_URL =
-  process.env.NEXT_PUBLIC_BASE_URL || "https://vidaemequilibrio.com.br";
+  process.env.NEXT_PUBLIC_BASE_URL || "https://www.vidaemequilibriopalmas.com.br";
 
 const baseProvider = {
   "@type": "HealthAndBeautyBusiness",
