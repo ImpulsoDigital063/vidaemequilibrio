@@ -9,10 +9,10 @@ import SearchOverlay from "./SearchOverlay";
 
 const NAV = [
   { href: "/#massagens", label: "Massagens" },
+  { href: "/#clinica", label: "A Clínica" },
   { href: "/catalogo", label: "Catálogo" },
   { href: "/blog", label: "Blog" },
-  { href: "/#manifesto", label: "Quem cuida" },
-  { href: "/#como-chegar", label: "Como chegar" },
+  { href: "/#manifesto", label: "Sobre" },
   { href: "/#contato", label: "Contato" },
 ];
 
@@ -146,12 +146,12 @@ export default function Header() {
               onClick={() => setOpen(false)}
             />
 
-            {/* Drawer · vem da direita */}
+            {/* Drawer · vem da esquerda */}
             <motion.div
-              className="fixed top-0 right-0 bottom-0 z-[61] w-[88%] max-w-sm bg-ve-bg border-l border-[color:var(--ve-line)] flex flex-col md:hidden"
-              initial={{ x: "100%" }}
+              className="fixed top-0 left-0 bottom-0 z-[61] w-[88%] max-w-sm bg-ve-bg border-r border-[color:var(--ve-line)] flex flex-col md:hidden"
+              initial={{ x: "-100%" }}
               animate={{ x: 0 }}
-              exit={{ x: "100%" }}
+              exit={{ x: "-100%" }}
               transition={{ duration: 0.5, ease: EASE }}
             >
               {/* Topo · logo + close X animado */}
@@ -187,7 +187,7 @@ export default function Header() {
                     key={n.href}
                     href={n.href}
                     onClick={() => setOpen(false)}
-                    initial={{ opacity: 0, x: 24 }}
+                    initial={{ opacity: 0, x: -24 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{
                       duration: 0.45,
