@@ -47,9 +47,9 @@ const SERVICOS: Servico[] = [
   {
     icon: IconInchada,
     nome: "Drenagem Linfática",
-    indicacao: "Desincha e reduz medidas",
+    indicacao: "Desincha e dá leveza",
     descricao:
-      "Específica pra eliminar líquidos retidos e melhorar a circulação. Desincha, reduz medidas e melhora o aspecto da pele.",
+      "Técnica leve que mobiliza o líquido retido: alivia o inchaço, devolve leveza às pernas e melhora a circulação. A redução de medida é de líquido, não de gordura.",
     variacoes: [
       { duracao: "50 min", preco: "R$189" },
       { duracao: "80 min", preco: "R$249" },
