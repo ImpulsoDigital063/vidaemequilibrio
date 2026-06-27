@@ -13,7 +13,11 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         // Páginas internas + plano confidencial não vão pro Google
-        disallow: ["/plano-de-negocio", "/logo-preview"],
+        disallow: [
+          "/plano-de-negocio",
+          "/logo-preview",
+          "/guia-recovery-corredora.pdf",
+        ],
         allow: "/",
       },
     ],

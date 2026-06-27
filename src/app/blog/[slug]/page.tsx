@@ -16,6 +16,16 @@ import {
 const SITE_URL =
   process.env.NEXT_PUBLIC_BASE_URL || "https://www.vidaemequilibriopalmas.com.br";
 
+// Posts que oferecem a isca do guia de recovery (corredora/esporte)
+const ISCA_RECOVERY = new Set([
+  "massagem-desportiva-corredora",
+  "lesoes-mais-comuns-corrida-palmas",
+  "beach-tennis-lesoes-recovery-palmas",
+]);
+const WA_GUIA = `https://wa.me/5563984843646?text=${encodeURIComponent(
+  "Oii! Quero o guia de recovery pré e pós-prova (PDF). Pode me mandar?"
+)}`;
+
 type Params = { params: Promise<{ slug: string }> };
 
 export async function generateStaticParams() {
@@ -361,6 +371,33 @@ export default async function PostPage({ params }: Params) {
                     </p>
                   </details>
                 ))}
+              </div>
+            </section>
+          )}
+
+          {/* Isca · guia de recovery em PDF (gated por WhatsApp) */}
+          {ISCA_RECOVERY.has(post.slug) && (
+            <section className="container-x py-8 max-w-3xl">
+              <div className="border border-ve-terracota/30 bg-ve-champagne/[0.10] p-7 md:p-8 flex flex-col sm:flex-row sm:items-center gap-6">
+                <div className="flex-1">
+                  <p className="eyebrow text-ve-terracota mb-2">Guia grátis · PDF</p>
+                  <h3 className="display text-xl md:text-2xl text-ve-text-dark leading-snug">
+                    Recovery pré e pós-prova, num guia honesto
+                  </h3>
+                  <p className="mt-2 text-ve-text-dark/70 text-sm md:text-base">
+                    O resumo prático do que fazer antes, depois e na janela de
+                    48h. Te mando no WhatsApp, sem custo.
+                  </p>
+                </div>
+                <a
+                  href={WA_GUIA}
+                  target="_blank"
+                  rel="noopener"
+                  className="shrink-0 inline-flex items-center gap-2 bg-ve-terracota text-ve-cream px-6 py-3 text-sm font-medium hover:bg-ve-terracota/85 transition-colors"
+                >
+                  Quero o guia
+                  <IconArrowRight className="w-4 h-4" />
+                </a>
               </div>
             </section>
           )}
