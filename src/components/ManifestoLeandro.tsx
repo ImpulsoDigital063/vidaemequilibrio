@@ -3,7 +3,6 @@ import Link from "next/link";
 import { MarcaDagua, IconArrowRight, IconWhatsApp } from "./Icons";
 import Reveal from "./motion/Reveal";
 import Stagger, { StaggerItem } from "./motion/Stagger";
-import Parallax from "./motion/Parallax";
 import GlowOrb from "./motion/GlowOrb";
 import Spotlight from "./motion/Spotlight";
 
@@ -40,21 +39,19 @@ export default function ManifestoLeandro() {
         {/* Coluna foto · retrato editorial · entra da esquerda + parallax */}
         <Reveal
           direction="right"
-          className="md:col-span-5 order-2 md:order-1"
+          className="md:col-span-5"
           duration={1}
         >
           <div className="aspect-[4/5] border border-[color:var(--ve-line)] relative overflow-hidden">
-            <Parallax speed={-0.2} className="absolute inset-0">
-              <Image
-                src="/img/timoteo-sobre.jpg"
-                alt="Leandro Timóteo · massoterapeuta · Vida em Equilíbrio · Palmas-TO"
-                fill
-                sizes="(max-width: 768px) 100vw, (max-width: 1280px) 40vw, 480px"
-                className="object-cover scale-105"
-                style={{ objectPosition: "50% 20%" }}
-                priority
-              />
-            </Parallax>
+            <Image
+              src="/img/timoteo-sobre.jpg"
+              alt="Leandro Timóteo · massoterapeuta · Vida em Equilíbrio · Palmas-TO"
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1280px) 40vw, 480px"
+              className="object-cover"
+              style={{ objectPosition: "50% 22%" }}
+              priority
+            />
             <div
               className="absolute inset-0 pointer-events-none"
               style={{
@@ -71,7 +68,7 @@ export default function ManifestoLeandro() {
         {/* Coluna texto · entra da direita */}
         <Reveal
           direction="left"
-          className="md:col-span-7 order-1 md:order-2"
+          className="md:col-span-7"
           duration={1}
         >
           <p className="eyebrow text-ve-champagne mb-6">Sobre</p>
