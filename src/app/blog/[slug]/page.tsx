@@ -9,6 +9,8 @@ import {
   POSTS_PUBLICADOS,
   getPostBySlug,
   contarPalavras,
+  getCta,
+  getRelacionados,
 } from "@/content/posts";
 
 const SITE_URL =
@@ -105,6 +107,8 @@ export default async function PostPage({ params }: Params) {
   });
   marked.setOptions({ gfm: true, breaks: false });
   const html = marked.parse(post.conteudo) as string;
+  const cta = getCta(post.slug);
+  const relacionados = getRelacionados(post.slug);
 
   // ============== JSON-LD ==============
 
@@ -361,29 +365,60 @@ export default async function PostPage({ params }: Params) {
             </section>
           )}
 
-          {/* CTA fim de post */}
+          {/* CTA fim de post · contextual por tema */}
           <section className="container-x py-12 md:py-16 max-w-3xl">
             <div className="bg-ve-text-dark/5 border-l-4 border-ve-burgundy p-8 md:p-10">
-              <p className="eyebrow text-ve-terracota mb-3">Pra conversar</p>
+              <p className="eyebrow text-ve-terracota mb-3">
+                {cta?.eyebrow ?? "Pra conversar"}
+              </p>
               <h2 className="display text-2xl md:text-3xl text-ve-text-dark leading-tight">
-                Cada agenda é pensada caso a caso.
+                {cta?.titulo ?? "Cada agenda é pensada caso a caso."}
               </h2>
               <p className="mt-4 text-ve-text-dark/75 text-sm md:text-base">
-                Se algo aqui fez sentido pra você, vamos conversar no
-                WhatsApp · primeira resposta da equipe, depois entro
-                pessoalmente.
+                {cta?.texto ??
+                  "Se algo aqui fez sentido pra você, vamos conversar no WhatsApp · primeira resposta da equipe, depois entro pessoalmente."}
               </p>
               <a
-                href="https://wa.me/5563984843646"
+                href={`https://wa.me/5563984843646?text=${encodeURIComponent(
+                  cta?.msg ??
+                    "Oii! Vim pelo blog da Vida em Equilíbrio e quero conversar sobre uma massagem."
+                )}`}
                 target="_blank"
                 rel="noopener"
                 className="mt-6 inline-flex items-center gap-2 bg-ve-burgundy text-ve-cream px-6 py-3 text-sm font-medium hover:bg-ve-burgundy/85 transition-colors"
               >
-                Conversar pelo WhatsApp
+                {cta?.label ?? "Conversar pelo WhatsApp"}
                 <IconArrowRight className="w-4 h-4" />
               </a>
             </div>
           </section>
+
+          {/* Continue lendo · cluster interno */}
+          {relacionados.length > 0 && (
+            <section className="container-x py-12 md:py-16 max-w-3xl border-t border-ve-text-dark/10">
+              <p className="eyebrow text-ve-terracota mb-6">Continue lendo</p>
+              <div className="grid sm:grid-cols-2 gap-px bg-ve-text-dark/10">
+                {relacionados.map((r) => (
+                  <Link
+                    key={r.slug}
+                    href={`/blog/${r.slug}`}
+                    className="group bg-ve-cream p-6 flex flex-col hover:bg-ve-text-dark/[0.03] transition-colors"
+                  >
+                    <span className="eyebrow text-ve-text-dark/45 text-[0.65rem] mb-3">
+                      {r.categoria} · {r.leitura}
+                    </span>
+                    <h3 className="display text-lg md:text-xl text-ve-text-dark leading-snug">
+                      {r.titulo}
+                    </h3>
+                    <span className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-ve-burgundy group-hover:gap-3 transition-all">
+                      Ler
+                      <IconArrowRight className="w-4 h-4" />
+                    </span>
+                  </Link>
+                ))}
+              </div>
+            </section>
+          )}
 
           {/* Bibliografia · referências */}
           {post.referencias && post.referencias.length > 0 && (

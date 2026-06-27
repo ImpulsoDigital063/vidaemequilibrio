@@ -2070,3 +2070,141 @@ export function contarPalavras(md: string): number {
     .split(/\s+/)
     .filter(Boolean).length;
 }
+
+// ============================================================
+// CTA contextual por post (fim do artigo → WhatsApp tematizado)
+// ============================================================
+export type PostCta = {
+  eyebrow?: string;
+  titulo: string;
+  texto: string;
+  label: string;
+  msg: string; // texto pré-preenchido do WhatsApp
+};
+
+export const CTA_POR_SLUG: Record<string, PostCta> = {
+  "drenagem-linfatica-inchaco-guia": {
+    eyebrow: "Drenagem",
+    titulo: "Pensando em começar uma drenagem?",
+    texto:
+      "A gente conversa antes pra entender se faz sentido pra você — sessão pontual ou uma série regular, sem empurrar pacote.",
+    label: "Falar sobre drenagem",
+    msg: "Oii! Li o guia de drenagem linfática no blog e quero saber sobre começar. Pode me contar?",
+  },
+  "tecnicas-pedras-vela-bambu-ventosa": {
+    eyebrow: "Day Premium",
+    titulo: "Quer montar a sua sessão?",
+    texto:
+      "Dá pra fazer as técnicas isoladas ou juntas no Day Premium. A conversa antes decide o que faz sentido pro seu dia.",
+    label: "Montar minha sessão",
+    msg: "Oii! Li sobre as técnicas (pedras, vela, bambu, ventosa) e quero saber o que faz sentido pra mim. Pode me ajudar?",
+  },
+  "massagem-desportiva-corredora": {
+    eyebrow: "Recovery",
+    titulo: "Quer encaixar o recovery no seu treino?",
+    texto:
+      "Dá pra desenhar o cuidado em volta da sua prova — preparação antes, recovery na janela certa depois. Cada corpo pede uma coisa.",
+    label: "Falar sobre recovery",
+    msg: "Oii! Sou corredora e quero saber sobre o recovery pré e pós-prova. Pode me contar?",
+  },
+  "beach-tennis-lesoes-recovery-palmas": {
+    eyebrow: "Recovery",
+    titulo: "Joga e acorda dolorido no dia seguinte?",
+    texto:
+      "Pra quem joga 2-3x na semana, dá pra montar um recovery muscular na medida — e cuidar do cotovelo e do ombro antes de virar crônico.",
+    label: "Falar sobre recovery",
+    msg: "Oii! Jogo beach tennis e quero saber sobre recovery e cuidar das dores. Pode me contar?",
+  },
+  "pernas-incham-calor-palmas": {
+    eyebrow: "Drenagem",
+    titulo: "Pernas pesadas no calor?",
+    texto:
+      "Se o inchaço é frequente e incomoda, a drenagem em série ajuda a manter a leveza. A gente vê o que faz sentido — e se for caso de médico, eu te digo com franqueza.",
+    label: "Falar sobre drenagem",
+    msg: "Oii! Minhas pernas incham no calor e quero saber sobre a drenagem. Pode me contar?",
+  },
+  "dor-cervical-trabalho-sentado-palmas": {
+    eyebrow: "Tensão",
+    titulo: "Pescoço travado no fim do expediente?",
+    texto:
+      "A massagem solta a tensão acumulada e te dá conforto pra se mover melhor. A gente conversa sobre o que faz sentido pra sua rotina.",
+    label: "Falar sobre a massagem",
+    msg: "Oii! Trabalho sentado e vivo com o pescoço e a lombar tensos. Quero saber sobre a massagem. Pode me contar?",
+  },
+  "lesoes-mais-comuns-corrida-palmas": {
+    eyebrow: "Recovery",
+    titulo: "Quer cuidar do corpo entre os treinos?",
+    texto:
+      "O recovery na medida certa ajuda a manter as pernas leves e a rotina de pé. Sem promessa de cura — a gente conversa antes.",
+    label: "Falar sobre recovery",
+    msg: "Oii! Corro e quero encaixar o recovery na minha rotina. Pode me contar?",
+  },
+  "atm-mandibula-cefaleia-facial": {
+    eyebrow: "Facial",
+    titulo: "Mandíbula tensa, dor de cabeça no fim do dia?",
+    texto:
+      "A massagem facial focada no masseter e no temporal alivia a tensão de verdade. E quando o caso pede dentista, a gente te diz com franqueza.",
+    label: "Falar sobre a massagem facial",
+    msg: "Oii! Tenho tensão na mandíbula e dor de cabeça e quero saber sobre a massagem facial. Pode me contar?",
+  },
+};
+
+export function getCta(slug: string): PostCta | null {
+  return CTA_POR_SLUG[slug] ?? null;
+}
+
+// ============================================================
+// Cluster de links internos · "Continue lendo" (slugs relacionados)
+// ============================================================
+export const RELACIONADOS_POR_SLUG: Record<string, string[]> = {
+  "drenagem-linfatica-inchaco-guia": [
+    "pernas-incham-calor-palmas",
+    "tecnicas-pedras-vela-bambu-ventosa",
+  ],
+  "tecnicas-pedras-vela-bambu-ventosa": [
+    "drenagem-linfatica-inchaco-guia",
+    "atm-mandibula-cefaleia-facial",
+  ],
+  "massagem-desportiva-corredora": [
+    "lesoes-mais-comuns-corrida-palmas",
+    "beach-tennis-lesoes-recovery-palmas",
+  ],
+  "beach-tennis-lesoes-recovery-palmas": [
+    "massagem-desportiva-corredora",
+    "lesoes-mais-comuns-corrida-palmas",
+  ],
+  "pernas-incham-calor-palmas": [
+    "drenagem-linfatica-inchaco-guia",
+    "dor-cervical-trabalho-sentado-palmas",
+  ],
+  "dor-cervical-trabalho-sentado-palmas": [
+    "atm-mandibula-cefaleia-facial",
+    "pernas-incham-calor-palmas",
+  ],
+  "lesoes-mais-comuns-corrida-palmas": [
+    "massagem-desportiva-corredora",
+    "beach-tennis-lesoes-recovery-palmas",
+  ],
+  "atm-mandibula-cefaleia-facial": [
+    "dor-cervical-trabalho-sentado-palmas",
+    "tecnicas-pedras-vela-bambu-ventosa",
+  ],
+};
+
+// Posts relacionados publicados. Fallback: completa com a mesma categoria.
+export function getRelacionados(slug: string, max = 2): Post[] {
+  const explicitos = (RELACIONADOS_POR_SLUG[slug] ?? [])
+    .map((s) => POSTS.find((p) => p.slug === s && p.publishedAt !== null))
+    .filter((p): p is Post => Boolean(p));
+  if (explicitos.length >= max) return explicitos.slice(0, max);
+
+  const atual = POSTS.find((p) => p.slug === slug);
+  const mesmaCategoria = POSTS.filter(
+    (p) =>
+      p.publishedAt !== null &&
+      p.slug !== slug &&
+      p.categoria === atual?.categoria &&
+      !explicitos.some((e) => e.slug === p.slug)
+  );
+  return [...explicitos, ...mesmaCategoria].slice(0, max);
+}
