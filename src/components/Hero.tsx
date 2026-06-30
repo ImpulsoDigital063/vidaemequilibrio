@@ -59,7 +59,7 @@ export default function Hero() {
 
       {/* Conteúdo · ancorado no topo · parallax oposto (sobe enquanto rola) */}
       <motion.div
-        className="container-x relative z-10 min-h-[82vh] md:min-h-[92vh] flex flex-col justify-between pt-20 md:pt-24 pb-10"
+        className="container-x relative z-10 min-h-[82vh] md:min-h-[92vh] flex flex-col justify-between pt-20 md:pt-24 pb-16 md:pb-24"
         style={{ y: conteudoY }}
       >
         {/* Topo · logo grande (desliza pro header ao rolar) + título */}
@@ -116,7 +116,7 @@ export default function Hero() {
           </a>
           <a
             href="#massagens"
-            className="group inline-flex items-center gap-2 text-ve-cream/80 text-sm hover:text-ve-cream transition-colors"
+            className="group inline-flex items-center justify-center gap-2 border border-ve-cream/35 text-ve-cream px-6 py-3.5 text-sm font-medium hover:border-ve-champagne hover:text-ve-champagne transition-colors"
           >
             Ver as massagens
             <IconArrowDown className="w-4 h-4 transition-transform group-hover:translate-y-0.5" />
