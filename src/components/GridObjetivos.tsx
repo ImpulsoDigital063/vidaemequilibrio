@@ -55,7 +55,7 @@ const SERVICOS: Servico[] = [
       { duracao: "80 min", preco: "R$249" },
       { duracao: "110 min", preco: "R$299" },
     ],
-    img: "/img/drenagem.jpg",
+    img: "/img/drenagem-perna.jpg",
     badge: "Mais procurada",
     waMessage:
       "Oii! Quero agendar a Drenagem Linfática. Qual duração fica melhor: 50, 80 ou 110 min?",
@@ -70,7 +70,7 @@ const SERVICOS: Servico[] = [
       { duracao: "50 min", preco: "R$189" },
       { duracao: "80 min", preco: "R$249" },
     ],
-    img: "/img/massagem-modeladora.jpg",
+    img: "/img/modeladora-costas.jpg",
     waMessage:
       "Oii! Quero agendar a Massagem Modeladora. Qual duração fica melhor: 50 ou 80 min?",
   },
@@ -85,7 +85,7 @@ const SERVICOS: Servico[] = [
       { duracao: "80 min", preco: "R$249" },
       { duracao: "110 min", preco: "R$299" },
     ],
-    img: "/img/stillCupping.png",
+    img: "/img/ventosas-costas.jpg",
     waMessage:
       "Oii! Quero agendar a Massagem com Ventosas. Qual duração fica melhor: 50, 80 ou 110 min?",
   },
@@ -96,7 +96,7 @@ const SERVICOS: Servico[] = [
     descricao:
       "Tratamento natural pra dores musculares localizadas. Melhora a oxigenação dos tecidos e ajuda a liberar toxinas.",
     variacoes: [{ duracao: "30 min", preco: "R$119" }],
-    img: "/img/stillCupping.png",
+    img: "/img/ventosas-aplicacao.jpg",
     waMessage:
       "Oii! Quero agendar a Aplicação de Ventosas (30 min · R$119).",
   },
