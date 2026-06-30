@@ -59,14 +59,14 @@ export default function Hero() {
 
       {/* Conteúdo · ancorado no topo · parallax oposto (sobe enquanto rola) */}
       <motion.div
-        className="container-x relative z-10 min-h-[82vh] md:min-h-[92vh] flex flex-col justify-between pt-20 md:pt-24 pb-16 md:pb-24"
+        className="container-x relative z-10 min-h-[82vh] md:min-h-[92vh] flex flex-col justify-between pt-8 md:pt-14 pb-16 md:pb-24"
         style={{ y: conteudoY }}
       >
         {/* Topo · logo grande (desliza pro header ao rolar) + título */}
         <div>
         <motion.div
           style={{ opacity: logoOpacity, scale: logoScale, y: logoSlideY }}
-          className="origin-top mx-auto mb-10 w-[230px] md:w-[320px] drop-shadow-[0_2px_14px_rgba(15,11,8,0.55)]"
+          className="origin-top mx-auto mb-6 md:mb-8 w-[230px] md:w-[320px] drop-shadow-[0_2px_14px_rgba(15,11,8,0.55)]"
         >
           <motion.div
             initial={{ opacity: 0, y: 18 }}
