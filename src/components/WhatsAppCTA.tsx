@@ -46,7 +46,7 @@ export default function WhatsAppCTA() {
 
         <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center items-center">
           <a
-            href={`https://wa.me/5563984843646?text=${encodeURIComponent("Oii! Vim pelo site e quero saber mais sobre a Vida em Equilíbrio. Pode me contar?")}`}
+            href={`https://wa.me/5563984843646?text=${encodeURIComponent("Oii! Vim pelo site e queria saber mais. Me conta como funciona?")}`}
             target="_blank"
             rel="noopener"
             className="inline-flex items-center gap-3 bg-ve-champagne text-ve-bg px-8 py-4 text-base font-medium hover:bg-ve-cream transition-colors"

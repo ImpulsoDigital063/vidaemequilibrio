@@ -7,7 +7,7 @@ import GlowOrb from "./motion/GlowOrb";
 import Spotlight from "./motion/Spotlight";
 
 const WA = `https://wa.me/5563984843646?text=${encodeURIComponent(
-  "Oii! Vim pelo site e quero conversar sobre uma massagem. Pode me ajudar?"
+  "Oii! Vim pelo site e queria saber qual massagem é melhor pra mim."
 )}`;
 
 // id mantido como "manifesto" (menu "Sobre" e busca já apontam pra cá)

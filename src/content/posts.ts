@@ -2089,7 +2089,7 @@ export const CTA_POR_SLUG: Record<string, PostCta> = {
     texto:
       "A gente conversa antes pra entender se faz sentido pra você — sessão pontual ou uma série regular, sem empurrar pacote.",
     label: "Falar sobre drenagem",
-    msg: "Oii! Li o guia de drenagem linfática no blog e quero saber sobre começar. Pode me contar?",
+    msg: "Oii! Li o guia de drenagem e queria começar — como funciona?",
   },
   "tecnicas-pedras-vela-bambu-ventosa": {
     eyebrow: "Day Premium",
@@ -2097,7 +2097,7 @@ export const CTA_POR_SLUG: Record<string, PostCta> = {
     texto:
       "Dá pra fazer as técnicas isoladas ou juntas no Day Premium. A conversa antes decide o que faz sentido pro seu dia.",
     label: "Montar minha sessão",
-    msg: "Oii! Li sobre as técnicas (pedras, vela, bambu, ventosa) e quero saber o que faz sentido pra mim. Pode me ajudar?",
+    msg: "Oii! Li sobre as técnicas e fiquei na dúvida do que combina comigo.",
   },
   "massagem-desportiva-corredora": {
     eyebrow: "Recovery",
@@ -2105,7 +2105,7 @@ export const CTA_POR_SLUG: Record<string, PostCta> = {
     texto:
       "Dá pra desenhar o cuidado em volta da sua prova — preparação antes, recovery na janela certa depois. Cada corpo pede uma coisa.",
     label: "Falar sobre recovery",
-    msg: "Oii! Sou corredora e quero saber sobre o recovery pré e pós-prova. Pode me contar?",
+    msg: "Oii! Sou corredora e queria saber do recovery pré e pós-prova.",
   },
   "beach-tennis-lesoes-recovery-palmas": {
     eyebrow: "Recovery",
@@ -2113,7 +2113,7 @@ export const CTA_POR_SLUG: Record<string, PostCta> = {
     texto:
       "Pra quem joga 2-3x na semana, dá pra montar um recovery muscular na medida — e cuidar do cotovelo e do ombro antes de virar crônico.",
     label: "Falar sobre recovery",
-    msg: "Oii! Jogo beach tennis e quero saber sobre recovery e cuidar das dores. Pode me contar?",
+    msg: "Oii! Jogo beach tennis e queria cuidar das dores. Me conta como é o recovery?",
   },
   "pernas-incham-calor-palmas": {
     eyebrow: "Drenagem",
@@ -2121,7 +2121,7 @@ export const CTA_POR_SLUG: Record<string, PostCta> = {
     texto:
       "Se o inchaço é frequente e incomoda, a drenagem em série ajuda a manter a leveza. A gente vê o que faz sentido — e se for caso de médico, eu te digo com franqueza.",
     label: "Falar sobre drenagem",
-    msg: "Oii! Minhas pernas incham no calor e quero saber sobre a drenagem. Pode me contar?",
+    msg: "Oii! Minhas pernas incham no calor — a drenagem ajuda nisso?",
   },
   "dor-cervical-trabalho-sentado-palmas": {
     eyebrow: "Tensão",
@@ -2129,7 +2129,7 @@ export const CTA_POR_SLUG: Record<string, PostCta> = {
     texto:
       "A massagem solta a tensão acumulada e te dá conforto pra se mover melhor. A gente conversa sobre o que faz sentido pra sua rotina.",
     label: "Falar sobre a massagem",
-    msg: "Oii! Trabalho sentado e vivo com o pescoço e a lombar tensos. Quero saber sobre a massagem. Pode me contar?",
+    msg: "Oii! Trabalho o dia todo sentado e vivo com o pescoço tenso. A massagem ajuda?",
   },
   "lesoes-mais-comuns-corrida-palmas": {
     eyebrow: "Recovery",
@@ -2137,7 +2137,7 @@ export const CTA_POR_SLUG: Record<string, PostCta> = {
     texto:
       "O recovery na medida certa ajuda a manter as pernas leves e a rotina de pé. Sem promessa de cura — a gente conversa antes.",
     label: "Falar sobre recovery",
-    msg: "Oii! Corro e quero encaixar o recovery na minha rotina. Pode me contar?",
+    msg: "Oii! Corro e queria encaixar o recovery na minha rotina.",
   },
   "atm-mandibula-cefaleia-facial": {
     eyebrow: "Facial",
@@ -2145,7 +2145,7 @@ export const CTA_POR_SLUG: Record<string, PostCta> = {
     texto:
       "A massagem facial focada no masseter e no temporal alivia a tensão de verdade. E quando o caso pede dentista, a gente te diz com franqueza.",
     label: "Falar sobre a massagem facial",
-    msg: "Oii! Tenho tensão na mandíbula e dor de cabeça e quero saber sobre a massagem facial. Pode me contar?",
+    msg: "Oii! Tenho tensão na mandíbula e dor de cabeça — a massagem facial ajuda?",
   },
 };
 

@@ -23,7 +23,7 @@ const ISCA_RECOVERY = new Set([
   "beach-tennis-lesoes-recovery-palmas",
 ]);
 const WA_GUIA = `https://wa.me/5563984843646?text=${encodeURIComponent(
-  "Oii! Quero o guia de recovery pré e pós-prova (PDF). Pode me mandar?"
+  "Oii! Queria o guia de recovery em PDF. Me manda?"
 )}`;
 
 type Params = { params: Promise<{ slug: string }> };
@@ -418,7 +418,7 @@ export default async function PostPage({ params }: Params) {
               <a
                 href={`https://wa.me/5563984843646?text=${encodeURIComponent(
                   cta?.msg ??
-                    "Oii! Vim pelo blog da Vida em Equilíbrio e quero conversar sobre uma massagem."
+                    "Oii! Vim pelo blog e queria conversar sobre uma massagem."
                 )}`}
                 target="_blank"
                 rel="noopener"

@@ -3,7 +3,7 @@ import Reveal from "./motion/Reveal";
 import Stagger, { StaggerItem } from "./motion/Stagger";
 
 const WA_GERAL = `https://wa.me/5563984843646?text=${encodeURIComponent(
-  "Oii! Quero garantir um vale-presente do Vida em Equilíbrio e fechar pelo PIX. Pode me ajudar?"
+  "Oii! Quero dar um vale-presente de massagem. Como faço?"
 )}`;
 
 const MODALIDADES = [
@@ -12,14 +12,14 @@ const MODALIDADES = [
     preco: "a partir de R$119",
     descricao:
       "Você escolhe uma massagem do catálogo e presenteia. A pessoa agenda quando quiser, na clínica ou em casa.",
-    wa: "Oii! Quero garantir um Vale Massagem do Vida em Equilíbrio. Já quero fechar pelo PIX — pode me passar os próximos passos?",
+    wa: "Oii! Quero presentear alguém com um Vale Massagem. Como funciona?",
   },
   {
     nome: "Vale Crédito",
     preco: "R$200 · R$400 · R$600",
     descricao:
       "Prefere deixar a escolha com ela? Presenteia um valor — ela usa na massagem que quiser, ou completa pra uma mais longa.",
-    wa: "Oii! Quero garantir um Vale Crédito do Vida em Equilíbrio. Já quero fechar pelo PIX — pode me passar os próximos passos?",
+    wa: "Oii! Quero presentear com um Vale Crédito. Como funciona?",
   },
 ];
 
