@@ -1,4 +1,4 @@
-import { IconArrowRight, IconWhatsApp, MarcaDagua } from "./Icons";
+import { IconArrowRight, IconWhatsApp, IconPresente, MarcaDagua } from "./Icons";
 import Reveal from "./motion/Reveal";
 import Stagger, { StaggerItem } from "./motion/Stagger";
 
@@ -144,8 +144,9 @@ export default function ValePresente() {
               key={m.nome}
               direction="up"
               distance={28}
-              className="flex flex-col border border-ve-champagne/15 p-8 md:p-10 hover:border-ve-champagne/35 transition-colors"
+              className="flex flex-col bg-ve-bg-card border border-ve-champagne/15 p-8 md:p-10 hover:border-ve-champagne/35 transition-colors"
             >
+              <IconPresente className="w-7 h-7 text-ve-champagne mb-5" />
               <p className="eyebrow text-ve-champagne mb-3">Modalidade</p>
               <h3 className="display text-2xl md:text-3xl text-ve-cream">
                 {m.nome}

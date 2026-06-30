@@ -70,6 +70,18 @@ export function IconFlorescer(props: IconProps) {
   );
 }
 
+export function IconPresente(props: IconProps) {
+  return (
+    <svg {...baseProps} {...props}>
+      <path d="M5 11h14v9H5z" />
+      <path d="M4 8h16v3H4z" />
+      <path d="M12 8v12" />
+      <path d="M12 8c0-2-3.4-3.4-3.4-1.1 0 1.4 1.9 1.1 3.4 1.1z" />
+      <path d="M12 8c0-2 3.4-3.4 3.4-1.1 0 1.4-1.9 1.1-3.4 1.1z" />
+    </svg>
+  );
+}
+
 // ============ TÉCNICAS ============
 
 export function IconVela(props: IconProps) {
